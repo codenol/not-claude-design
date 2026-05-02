@@ -1,0 +1,102 @@
+// Auto-generated Figma Variables bundle
+@import './scss/indexTokens.scss';
+
+// Backward compatibility — old naming → new Figma naming
+// Must be on BODY because Figma component tokens are scoped to body
+body {
+  // --- Spacing ---
+  --spacing-spacer-0: var(--spacingspacer-0, 0px);
+  --spacing-spacer-50: var(--spacingspacer-50, 1px);
+  --spacing-spacer-100: var(--spacingspacer-100, 2px);
+  --spacing-spacer-200: var(--spacingspacer-200, 4px);
+  --spacing-spacer-250: var(--spacingspacer-250, 5px);
+  --spacing-spacer-300: var(--spacingspacer-300, 6px);
+  --spacing-spacer-350: var(--spacingspacer-350, 7px);
+  --spacing-spacer-400: var(--spacingspacer-400, 8px);
+  --spacing-spacer-450: var(--spacingspacer-450, 9px);
+  --spacing-spacer-500: var(--spacingspacer-500, 10px);
+  --spacing-spacer-600: var(--spacingspacer-600, 12px);
+  --spacing-spacer-800: var(--spacingspacer-800, 16px);
+  --spacing-spacer-1000: var(--spacingspacer-1000, 20px);
+  --spacing-spacer-1200: var(--spacingspacer-1200, 24px);
+  --spacing-spacer-1400: var(--spacingspacer-1400, 28px);
+
+  // --- Border radius ---
+  --border-radius-m: var(--border-radiusm, 8px);
+  --border-radius-s: var(--border-radiuss, 6px);
+  --border-radius-l: var(--border-radiusl, 10px);
+  --border-radius-xl: var(--border-radiusxl, 12px);
+  --border-radius-xs: var(--border-radiusxs, 4px);
+  --border-radius-xxl: var(--border-radiusxxl, 16px);
+  --border-radius-xxs: var(--border-radiusxxs, 2px);
+  --border-radius-xxxxl: var(--border-radiusxxxxl, 4000px);
+
+  // --- Old semantic → new palette ---
+  --color-brand-primary: var(--bondi-blue-600, #2d98b4);
+  --color-brand-secondary: var(--violet-550, #9747ff);
+
+  // --- Button: -bg → -background-default, -bg-hover → -background-hover, -text → -text-default, -border → -border-default ---
+  --button-filled-accent-bg: var(--button-filled-accent-background-default);
+  --button-filled-accent-bg-hover: var(--button-filled-accent-background-hover);
+  --button-filled-accent-text: var(--button-filled-accent-text-default);
+  --button-filled-danger-bg: var(--button-filled-danger-background-default);
+  --button-filled-danger-bg-hover: var(--button-filled-danger-background-hover);
+  --button-filled-danger-text: var(--button-filled-danger-text-default);
+  --button-filled-warning-bg: var(--button-filled-warning-background-default);
+  --button-filled-warning-bg-hover: var(--button-filled-warning-background-hover);
+  --button-filled-warning-text: var(--button-filled-warning-text-default);
+  --button-filled-success-bg: var(--button-filled-success-background-default);
+  --button-filled-success-bg-hover: var(--button-filled-success-background-hover);
+  --button-filled-success-text: var(--button-filled-success-text-default);
+  --button-filled-info-bg: var(--button-filled-info-background-default);
+  --button-filled-info-bg-hover: var(--button-filled-info-background-hover);
+  --button-filled-info-text: var(--button-filled-info-text-default);
+  --button-filled-secondary-bg: var(--button-filled-secondary-background-default);
+  --button-filled-secondary-bg-hover: var(--button-filled-secondary-background-hover);
+  --button-filled-secondary-text: var(--button-filled-secondary-text-default);
+
+  // Button outline
+  --button-outline-accent-text: var(--button-outline-accent-text-default);
+  --button-outline-accent-border: var(--button-outline-accent-border-default);
+  --button-outline-accent-bg-hover: var(--button-outline-accent-background-hover);
+  --button-outline-danger-text: var(--button-outline-danger-text-default);
+  --button-outline-danger-border: var(--button-outline-danger-border-default);
+  --button-outline-danger-bg-hover: var(--button-outline-danger-background-hover);
+  --button-outline-warning-text: var(--button-outline-warning-text-default);
+  --button-outline-warning-border: var(--button-outline-warning-border-default);
+  --button-outline-warning-bg-hover: var(--button-outline-warning-background-hover);
+  --button-outline-success-text: var(--button-outline-success-text-default);
+  --button-outline-success-border: var(--button-outline-success-border-default);
+  --button-outline-success-bg-hover: var(--button-outline-success-background-hover);
+  --button-outline-info-text: var(--button-outline-info-text-default);
+  --button-outline-info-border: var(--button-outline-info-border-default);
+  --button-outline-info-bg-hover: var(--button-outline-info-background-hover);
+  --button-outline-secondary-text: var(--button-outline-secondary-text-default);
+  --button-outline-secondary-border: var(--button-outline-secondary-border-default);
+  --button-outline-secondary-bg-hover: var(--button-outline-secondary-background-hover);
+
+  // Button ghost
+  --button-ghost-accent-text: var(--button-ghost-accent-text-default);
+  --button-ghost-accent-bg-hover: var(--button-ghost-accent-background-hover);
+  --button-ghost-danger-text: var(--button-ghost-danger-text-default);
+  --button-ghost-danger-bg-hover: var(--button-ghost-danger-background-hover);
+  --button-ghost-warning-text: var(--button-ghost-warning-text-default);
+  --button-ghost-warning-bg-hover: var(--button-ghost-warning-background-hover);
+  --button-ghost-success-text: var(--button-ghost-success-text-default);
+  --button-ghost-success-bg-hover: var(--button-ghost-success-background-hover);
+  --button-ghost-info-text: var(--button-ghost-info-text-default);
+  --button-ghost-info-bg-hover: var(--button-ghost-info-background-hover);
+  --button-ghost-secondary-text: var(--button-ghost-secondary-text-default);
+  --button-ghost-secondary-bg-hover: var(--button-ghost-secondary-background-hover);
+
+  // --- Badge: -text → -text-default, -filled-bg → -filled-background-default, -outline-bg → -outline-background-default, etc. ---
+  $badgeColors: gray, gray-strong, gray-warm, nile-blue, tory-blue, cornflower-blue, bondi-blue, java, green, shamrock, yellow, orange, red, rose, violet;
+
+  @each $color in $badgeColors {
+    --badge-#{$color}-text: var(--badge-#{$color}-text-default);
+    --badge-#{$color}-filled-bg: var(--badge-#{$color}-filled-background-default);
+    --badge-#{$color}-outline-bg: var(--badge-#{$color}-outline-background-default);
+    --badge-#{$color}-outline-border: var(--badge-#{$color}-outline-border-default);
+    --badge-#{$color}-icon: var(--badge-#{$color}-icon-default);
+  }
+}

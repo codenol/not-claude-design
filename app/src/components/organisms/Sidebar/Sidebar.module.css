@@ -69,7 +69,7 @@
   width: 32px;
   height: 32px;
   border-radius: 16px;
-  background: var(--button-primary-info-default-bg);
+  background: var(--sidebar-avatar-background-default);
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -79,7 +79,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  color: var(--text-white);
+  color: var(--sidebar-avatar-text-default);
   text-align: center;
   letter-spacing: 0.14px;
 }
@@ -91,7 +91,7 @@
   width: 200px;
   min-width: 200px;
   height: 100%;
-  background: var(--sidebar-menupanel-background);
+  background: var(--sidebar-background-default);
   border-left: 1px solid var(--sidebar-border-default);
   border-radius: 0 var(--border-radius-xxl) var(--border-radius-xxl) 0;
   box-sizing: border-box;
@@ -200,7 +200,7 @@
   width: 49px;
   min-width: 49px;
   height: 100%;
-  background: var(--sidebar-menupanel-background);
+  background: var(--sidebar-background-default);
   border-left: 1px solid var(--sidebar-border-default);
   border-radius: 0 var(--border-radius-xxl) var(--border-radius-xxl) 0;
   box-sizing: border-box;

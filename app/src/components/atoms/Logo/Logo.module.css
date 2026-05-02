@@ -29,7 +29,7 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 18px;
-  color: #11244d;
+  color: var(--sidebar-logo-text-default);
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -50,13 +50,13 @@
 }
 
 .vision-caret {
-  color: #00bec8;
+  color: var(--sidebar-logo-accent-default);
   font-size: 31px;
   line-height: normal;
 }
 
 .vision-name {
-  color: #11244d;
+  color: var(--sidebar-logo-text-default);
   font-size: 31px;
   line-height: normal;
 }

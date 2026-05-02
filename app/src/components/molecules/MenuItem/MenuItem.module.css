@@ -25,11 +25,11 @@
 }
 
 .contextMenu:hover {
-  background: #eef1f5;
+  background: var(--context-menu-menu-item-background-hover);
 }
 
 .contextMenu.active {
-  background: #eef1f5;
+  background: var(--context-menu-menu-item-background-hover);
 }
 
 .contextMenu .icon {
@@ -39,7 +39,7 @@
 }
 
 .contextMenu .text {
-  color: #3f4146;
+  color: var(--context-menu-menu-item-text-default);
 }
 
 .icon {

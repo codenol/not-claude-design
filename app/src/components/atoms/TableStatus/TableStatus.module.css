@@ -50,21 +50,21 @@
 }
 
 /* ===== FILLED COLORS ===== */
-.success { background: #d5f6d8; color: #113615; }
-.degradation { background: #fbf4ac; color: #3e3605; }
-.warning { background: #fee2ba; color: #513403; }
-.critical { background: #f98989; color: #5b0c0d; }
-.info { background: #cdeafe; color: #06253b; }
-.maintenance { background: #e7e5e5; color: #272525; }
-.additional { background: #c9edf6; color: #0e2732; }
-.stop { background: #8d8f95; color: #ffffff; }
-.new { background: #b6f9fa; color: #002c2c; }
+.success { background: var(--status-filled-success-background-default); color: var(--status-filled-success-text-default); }
+.degradation { background: var(--status-filled-degradation-background-default); color: var(--status-filled-degradation-text-default); }
+.warning { background: var(--status-filled-warning-background-default); color: var(--status-filled-warning-text-default); }
+.critical { background: var(--status-filled-critical-background-default); color: var(--status-filled-critical-text-default); }
+.info { background: var(--status-filled-info-background-default); color: var(--status-filled-info-text-default); }
+.maintenance { background: var(--status-filled-maintenance-background-default); color: var(--status-filled-maintenance-text-default); }
+.additional { background: var(--status-filled-additional-background-default); color: var(--status-filled-additional-text-default); }
+.stop { background: var(--status-filled-unavailable-background-default); color: var(--status-filled-unavailable-text-default); }
+.new { background: var(--status-filled-new-background-default); color: var(--status-filled-new-text-default); }
 
 /* ===== LOAD ===== */
 .load {
-  background: #d0ddf7;
-  color: #0d1a36;
-  border-bottom: 2px solid #25499c;
+  background: var(--status-filled-load-background-default);
+  color: var(--status-filled-load-text-default);
+  border-bottom: 2px solid var(--status-filled-load-stroke-default);
   overflow: hidden;
   position: relative;
 }
@@ -76,7 +76,7 @@
   left: -100%;
   width: 100%;
   height: 2px;
-  background: #25499c;
+  background: var(--status-filled-load-stroke-default);
   animation: loadSlide 1.5s ease-in-out infinite;
 }
 
@@ -88,61 +88,61 @@
 
 /* ===== OUTLINE COLORS ===== */
 .outline.success {
-  background: rgba(153, 225, 160, 0.2);
-  border-color: rgba(105, 198, 115, 0.4);
-  color: #1b4d20;
+  background: var(--status-outline-success-background-default);
+  border-color: var(--status-outline-success-border-default);
+  color: var(--status-outline-success-text-default);
 }
 
 .outline.warning {
-  background: rgba(255, 197, 112, 0.2);
-  border-color: rgba(245, 158, 11, 0.4);
-  color: #6b4a00;
+  background: var(--status-outline-warning-background-default);
+  border-color: var(--status-outline-warning-border-default);
+  color: var(--status-outline-warning-text-default);
 }
 
 .outline.degradation {
-  background: rgba(251, 231, 108, 0.2);
-  border-color: rgba(246, 211, 0, 0.4);
-  color: #4a4200;
+  background: var(--status-outline-degradation-background-default);
+  border-color: var(--status-outline-degradation-border-default);
+  color: var(--status-outline-degradation-text-default);
 }
 
 .outline.critical {
-  background: rgba(249, 137, 137, 0.2);
-  border-color: rgba(229, 51, 52, 0.4);
-  color: #5b0c0d;
+  background: var(--status-outline-critical-background-default);
+  border-color: var(--status-outline-critical-border-default);
+  color: var(--status-outline-critical-text-default);
 }
 
 .outline.info {
-  background: rgba(155, 213, 255, 0.2);
-  border-color: rgba(67, 158, 228, 0.4);
-  color: #06253b;
+  background: var(--status-outline-info-background-default);
+  border-color: var(--status-outline-info-border-default);
+  color: var(--status-outline-info-text-default);
 }
 
 .outline.maintenance {
-  background: rgba(205, 208, 215, 0.2);
-  border-color: rgba(141, 143, 149, 0.4);
-  color: #272525;
+  background: var(--status-outline-maintenance-background-default);
+  border-color: var(--status-outline-maintenance-border-default);
+  color: var(--status-outline-maintenance-text-default);
 }
 
 .outline.additional {
-  background: rgba(152, 220, 236, 0.2);
-  border-color: rgba(56, 177, 208, 0.4);
-  color: #0e2732;
+  background: var(--status-outline-additional-background-default);
+  border-color: var(--status-outline-additional-border-default);
+  color: var(--status-outline-additional-text-default);
 }
 
 .outline.stop {
-  background: rgba(141, 143, 149, 0.3);
-  border-color: rgba(141, 143, 149, 0.4);
-  color: #3f4146;
+  background: var(--status-outline-unavailable-background-default);
+  border-color: var(--status-outline-unavailable-border-default);
+  color: var(--status-outline-unavailable-text-default);
 }
 
 .outline.new {
-  background: rgba(117, 234, 237, 0.2);
-  border-color: rgba(0, 190, 200, 0.4);
-  color: #002c2c;
+  background: var(--status-outline-new-background-default);
+  border-color: var(--status-outline-new-border-default);
+  color: var(--status-outline-new-text-default);
 }
 
 .outline.load {
-  background: rgba(157, 197, 248, 0.2);
-  border-color: rgba(87, 135, 196, 0.4);
-  color: #3b5e8b;
+  background: var(--status-outline-load-background-default);
+  border-color: var(--status-outline-load-border-default);
+  color: var(--status-outline-load-text-default);
 }

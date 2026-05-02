@@ -5,6 +5,7 @@ import {
   Logo,
   MenuItem,
 } from '../../index'
+import { useTheme } from '../../../theme/ThemeContext'
 import styles from './Sidebar.module.css'
 
 export type SidebarLogoVariant = 'genom' | 'vision' | 'spektr' | 'spektr-s3' | 'spektr-ai'
@@ -87,6 +88,7 @@ export function Sidebar({
   className,
 }: SidebarProps) {
   const [activeItem, setActiveItem] = useState<string | null>(null)
+  const { theme, toggle } = useTheme()
 
   return (
     <div className={`${styles.sidebar} ${collapsed ? styles.collapsed : ''} ${className || ''}`}>
@@ -103,9 +105,17 @@ export function Sidebar({
 
           {/* Bottom slot */}
           <div className={`${styles.slot} ${styles.bottomSlot}`}>
-            {bottomActions.map((action, i) => (
-              <MenuButton key={`bottom-${i}`} icon={action.icon as any} active={action.active} />
-            ))}
+            {bottomActions.map((action, i) => {
+               const isThemeButton = action.icon === 'Moon'
+               return (
+                 <MenuButton
+                   key={`bottom-${i}`}
+                   icon={(isThemeButton ? (theme === 'dark' ? 'Sun' : 'Moon') : action.icon) as any}
+                   active={action.active}
+                   onClick={isThemeButton ? toggle : undefined}
+                 />
+               )
+             })}
             <div className={styles.avatarWrapper}>
               <div className={styles.avatar}>
                 <span>{avatarInitials}</span>

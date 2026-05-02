@@ -1,6 +1,6 @@
 .container {
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid #dfe2e6;
+  background: var(--table-row-background-default);
+  border: 1px solid var(--table-row-border-default);
   border-radius: 16px;
   padding: 24px;
   display: flex;
@@ -38,14 +38,14 @@
   gap: 8px;
   padding: 8px 16px;
   border-radius: 4000px;
-  border: 1px solid #38b1d0;
-  background: rgba(179, 229, 240, 0.3);
+  border: 1px solid var(--buttonchip-outline-accent-border-active);
+  background: var(--buttonchip-outline-accent-background-active);
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.14px;
-  color: #2d98b4;
+  color: var(--buttonchip-outline-accent-text-active);
   cursor: pointer;
   white-space: nowrap;
   flex-shrink: 0;
@@ -53,7 +53,7 @@
 }
 
 .filterChip:hover {
-  background: rgba(179, 229, 240, 0.5);
+  background: var(--buttonchip-outline-accent-background-hover);
 }
 
 .filterChipIcon {
@@ -74,12 +74,12 @@
   align-items: center;
   gap: 12px;
   padding: 8px 16px;
-  background: #eef1f5;
+  background: var(--table-row-background-hover);
   border-radius: 8px;
   flex-shrink: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  color: #3f4146;
+  color: var(--table-text-primary);
 }
 
 .bulkCount {
@@ -94,7 +94,7 @@
 
 /* ===== TABLE GRID ===== */
 .table {
-  border: 1px solid #dfe2e6;
+  border: 1px solid var(--table-header-border-default);
   border-radius: 16px;
   overflow: hidden;
   flex: 1 0 auto;
@@ -118,9 +118,9 @@
   align-items: center;
   height: 44px;
   padding: 0 16px;
-  background: #f2f5f9;
-  border-bottom: 1px solid #dfe2e6;
-  border-right: 1px solid #dfe2e6;
+  background: var(--table-header-background-default);
+  border-bottom: 1px solid var(--table-header-border-default);
+  border-right: 1px solid var(--table-header-border-default);
   gap: 8px;
   flex-shrink: 0;
   box-sizing: border-box;
@@ -139,7 +139,7 @@
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.28px;
-  color: #3f4146;
+  color: var(--table-text-primary);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -159,15 +159,15 @@
   width: 12px;
   height: 12px;
   cursor: pointer;
-  color: #75777b;
+  color: var(--table-icon-default);
 }
 
 .headerSort:hover {
-  color: #3f4146;
+  color: var(--table-text-primary);
 }
 
 .headerSortActive {
-  color: #2d98b4;
+  color: var(--content-text-hover);
 }
 
 .headerFilter {
@@ -177,7 +177,7 @@
   width: 12px;
   height: 12px;
   cursor: pointer;
-  color: #75777b;
+  color: var(--table-icon-default);
 }
 
 .headerSettings {
@@ -187,7 +187,7 @@
   width: 20px;
   height: 20px;
   cursor: pointer;
-  color: #75777b;
+  color: var(--table-icon-default);
   flex-shrink: 0;
 }
 
@@ -196,15 +196,15 @@
   position: sticky;
   left: 0;
   z-index: 2;
-  background: #f2f5f9;
+  background: var(--table-header-background-default);
 }
 
 .rowStickyLeft {
-  background: white;
+  background: var(--table-row-background-default);
 }
 
 .rowStickyLeft.alt {
-  background: #f8f9fb;
+  background: var(--table-row-background-alternative);
 }
 
 /* ===== TABLE BODY ===== */
@@ -222,25 +222,25 @@
 
 .tableRow:nth-child(even) .cell,
 .tableRow:nth-child(even) .rowStickyLeft {
-  background: #f8f9fb;
+  background: var(--table-row-background-alternative);
 }
 
 .tableRow:nth-child(odd) .cell,
 .tableRow:nth-child(odd) .rowStickyLeft {
-  background: white;
+  background: var(--table-row-background-default);
 }
 
 .tableRow:hover .cell,
 .tableRow:hover .rowStickyLeft {
-  background: #eef1f5;
+  background: var(--table-row-background-hover);
 }
 
 .cell {
   display: flex;
   align-items: center;
   padding: 0 16px;
-  border-bottom: 1px solid #dfe2e6;
-  border-right: 1px solid #dfe2e6;
+  border-bottom: 1px solid var(--table-row-border-default);
+  border-right: 1px solid var(--table-row-border-default);
   flex-shrink: 0;
   box-sizing: border-box;
   overflow: hidden;
@@ -258,7 +258,7 @@
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.14px;
-  color: #3f4146;
+  color: var(--table-text-primary);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -278,8 +278,8 @@
   width: 20px;
   height: 20px;
   border-radius: 6px;
-  border: 1px solid #d5d9de;
-  background: white;
+  border: 1px solid var(--checkbox-unchecked-border-default);
+  background: var(--checkbox-unchecked-background-default);
   flex-shrink: 0;
   cursor: pointer;
   color: transparent;
@@ -287,13 +287,13 @@
 }
 
 .checkbox:hover {
-  border-color: #2d98b4;
+  border-color: var(--checkbox-unchecked-border-hover);
 }
 
 .checkboxChecked {
-  background: #2d98b4;
-  border-color: #2d98b4;
-  color: white;
+  background: var(--checkbox-checked-background-default);
+  border-color: var(--checkbox-checked-border-default);
+  color: var(--checkbox-checked-icon-default);
 }
 
 .rowAction {
@@ -303,11 +303,11 @@
   width: 20px;
   height: 20px;
   cursor: pointer;
-  color: #75777b;
+  color: var(--table-icon-default);
 }
 
 .rowAction:hover {
-  color: #3f4146;
+  color: var(--table-text-primary);
 }
 
 /* ===== PAGINATION ===== */
@@ -340,12 +340,12 @@
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.14px;
-  color: #3f4146;
+  color: var(--pagination-item-number-text-default);
   padding: 8px;
 }
 
 .pageBtn:hover {
-  background: #eef1f5;
+  background: var(--pagination-item-number-background-hover);
 }
 
 .pageBtn:disabled {
@@ -354,7 +354,7 @@
 }
 
 .pageBtnActive {
-  background: #eef1f5;
+  background: var(--pagination-item-number-background-selected);
 }
 
 .pageSize {
@@ -362,22 +362,22 @@
   align-items: center;
   gap: 8px;
   padding: 7px 8px 7px 12px;
-  border: 1px solid #dfe2e6;
+  border: 1px solid var(--table-header-border-default);
   border-radius: 8px;
-  background: white;
+  background: var(--table-row-background-default);
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 18px;
-  color: #3f4146;
+  color: var(--table-text-primary);
   cursor: pointer;
 }
 
 .pageSize:hover {
-  border-color: #2d98b4;
+  border-color: var(--content-text-hover);
 }
 
 .pageSizeIcon {
   width: 16px;
   height: 16px;
-  color: #75777b;
+  color: var(--table-icon-default);
 }

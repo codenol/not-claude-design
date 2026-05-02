@@ -39,5 +39,5 @@
   background: var(--sidebar-status-indicator-lock);
 }
 .lock .icon {
-  color: #75777b;
+  color: var(--sidebar-menubutton-icon-default);
 }

@@ -58,7 +58,7 @@
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.14px;
-  color: #75777b;
+  color: var(--modal-text-secondary);
   margin: 0;
 }
 
@@ -89,7 +89,7 @@
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.14px;
-  color: #75777b;
+  color: var(--modal-text-secondary);
   margin: 0;
   text-align: left;
 }
