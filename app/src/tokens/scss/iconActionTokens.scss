@@ -1,0 +1,49 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: icon-action
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --icon-action-icon-danger: var(--red-650);
+  --icon-action-icon-default: var(--cool-gray-200);
+  --icon-action-icon-disabled: var(--cool-gray-600);
+  --icon-action-icon-focus: var(--bondi-blue-600);
+  --icon-action-icon-hover: var(--bondi-blue-600);
+  --icon-action-icon-info: var(--cornflower-blue-550);
+  --icon-action-icon-success: var(--green-500);
+}
+body.layout-theme-light {
+  --icon-action-icon-danger: var(--red-600);
+  --icon-action-icon-default: var(--cool-gray-700);
+  --icon-action-icon-disabled: var(--cool-gray-400);
+  --icon-action-icon-focus: var(--bondi-blue-600);
+  --icon-action-icon-hover: var(--bondi-blue-600);
+  --icon-action-icon-info: var(--cornflower-blue-550);
+  --icon-action-icon-success: var(--green-550);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --icon-action-icon-danger: var(--red-600);
+  --icon-action-icon-default: var(--cool-gray-700);
+  --icon-action-icon-disabled: var(--cool-gray-400);
+  --icon-action-icon-focus: var(--bondi-blue-600);
+  --icon-action-icon-hover: var(--bondi-blue-600);
+  --icon-action-icon-info: var(--cornflower-blue-550);
+  --icon-action-icon-success: var(--green-550);
+}
+body.layout-theme-dark {
+  --icon-action-icon-danger: var(--red-650);
+  --icon-action-icon-default: var(--cool-gray-200);
+  --icon-action-icon-disabled: var(--cool-gray-600);
+  --icon-action-icon-focus: var(--bondi-blue-600);
+  --icon-action-icon-hover: var(--bondi-blue-600);
+  --icon-action-icon-info: var(--cornflower-blue-550);
+  --icon-action-icon-success: var(--green-500);
+}
+}

@@ -1,0 +1,81 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: toolbar
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --toolbar-border-default: var(--nile-blue-750);
+  --toolbar-header-background-default: var(--nile-blue-900);
+  --toolbar-icon-default: var(--cool-gray-200);
+  --toolbar-icon-info: var(--cornflower-blue-400);
+  --toolbar-tab-menu-border-active: #ffffff;
+  --toolbar-tab-menu-border-default: var(--nile-blue-750);
+  --toolbar-tab-menu-border-disabled: #ffffff;
+  --toolbar-tab-menu-border-hover: #ffffff;
+  --toolbar-tab-menu-text-active: #ffffff;
+  --toolbar-tab-menu-text-default: #ffffff;
+  --toolbar-tab-menu-text-disabled: #ffffff;
+  --toolbar-tab-menu-text-hover: #ffffff;
+  --toolbar-text-primery: var(--cool-gray-200);
+  --toolbar-text-secondary: var(--cool-gray-500);
+  --toolbar-text-tertiary: var(--cool-gray-650);
+}
+body.layout-theme-light {
+  --toolbar-border-default: var(--cool-gray-200);
+  --toolbar-header-background-default: var(--cool-gray-50);
+  --toolbar-icon-default: var(--cool-gray-700);
+  --toolbar-icon-info: var(--cornflower-blue-550);
+  --toolbar-tab-menu-border-active: var(--bondi-blue-600);
+  --toolbar-tab-menu-border-default: var(--cool-gray-200);
+  --toolbar-tab-menu-border-disabled: var(--cool-gray-200);
+  --toolbar-tab-menu-border-hover: var(--bondi-blue-500);
+  --toolbar-tab-menu-text-active: var(--bondi-blue-600);
+  --toolbar-tab-menu-text-default: var(--cool-gray-550);
+  --toolbar-tab-menu-text-disabled: var(--cool-gray-200);
+  --toolbar-tab-menu-text-hover: var(--bondi-blue-500);
+  --toolbar-text-primery: var(--cool-gray-800);
+  --toolbar-text-secondary: var(--cool-gray-700);
+  --toolbar-text-tertiary: var(--cool-gray-550);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --toolbar-border-default: var(--cool-gray-200);
+  --toolbar-header-background-default: var(--cool-gray-50);
+  --toolbar-icon-default: var(--cool-gray-700);
+  --toolbar-icon-info: var(--cornflower-blue-550);
+  --toolbar-tab-menu-border-active: var(--bondi-blue-600);
+  --toolbar-tab-menu-border-default: var(--cool-gray-200);
+  --toolbar-tab-menu-border-disabled: var(--cool-gray-200);
+  --toolbar-tab-menu-border-hover: var(--bondi-blue-500);
+  --toolbar-tab-menu-text-active: var(--bondi-blue-600);
+  --toolbar-tab-menu-text-default: var(--cool-gray-550);
+  --toolbar-tab-menu-text-disabled: var(--cool-gray-200);
+  --toolbar-tab-menu-text-hover: var(--bondi-blue-500);
+  --toolbar-text-primery: var(--cool-gray-800);
+  --toolbar-text-secondary: var(--cool-gray-700);
+  --toolbar-text-tertiary: var(--cool-gray-550);
+}
+body.layout-theme-dark {
+  --toolbar-border-default: var(--nile-blue-750);
+  --toolbar-header-background-default: var(--nile-blue-900);
+  --toolbar-icon-default: var(--cool-gray-200);
+  --toolbar-icon-info: var(--cornflower-blue-400);
+  --toolbar-tab-menu-border-active: #ffffff;
+  --toolbar-tab-menu-border-default: var(--nile-blue-750);
+  --toolbar-tab-menu-border-disabled: #ffffff;
+  --toolbar-tab-menu-border-hover: #ffffff;
+  --toolbar-tab-menu-text-active: #ffffff;
+  --toolbar-tab-menu-text-default: #ffffff;
+  --toolbar-tab-menu-text-disabled: #ffffff;
+  --toolbar-tab-menu-text-hover: #ffffff;
+  --toolbar-text-primery: var(--cool-gray-200);
+  --toolbar-text-secondary: var(--cool-gray-500);
+  --toolbar-text-tertiary: var(--cool-gray-650);
+}
+}

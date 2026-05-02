@@ -1,0 +1,350 @@
+:root {
+  /* Brand */
+  --color-brand-primary: #2d98b4;
+  --color-brand-secondary: #9747ff;
+
+  /* Neutral */
+  --color-neutral-black: #000000;
+  --color-neutral-900: #17212f;
+  --color-neutral-800: #3f4146;
+  --color-neutral-700: #5c5d62;
+  --color-neutral-600: #8d8f95;
+  --color-neutral-500: #b5b9c5;
+  --color-neutral-400: #cdd0d7;
+  --color-neutral-300: #dfe2e6;
+  --color-neutral-200: #e9e9e9;
+  --color-neutral-100: #f2f5f9;
+  --color-neutral-50: #f8f9fb;
+  --color-neutral-white: #ffffff;
+
+  /* Accent */
+  --color-accent-success: #22c55e;
+  --color-accent-success-bg: #d5f6d8;
+  --color-accent-warning: #f59e0b;
+  --color-accent-warning-bg: #fee2ba;
+  --color-accent-danger: #e53334;
+  --color-accent-danger-bg: #fed3d3;
+  --color-accent-info: #2196f3;
+  --color-accent-info-bg: #cdeafe;
+
+  /* Semantic */
+  --color-bg-default: var(--color-neutral-white);
+  --color-bg-subtle: var(--color-neutral-50);
+  --color-bg-surface: var(--color-neutral-100);
+  --color-bg-overlay: var(--color-neutral-900);
+  --color-text-default: var(--color-neutral-black);
+  --color-text-subtle: var(--color-neutral-600);
+  --color-text-inverse: var(--color-neutral-white);
+  --color-border-default: var(--color-neutral-300);
+  --color-border-subtle: var(--color-neutral-200);
+  --color-brand-default: var(--color-brand-primary);
+  --color-brand-hover: #1f849e;
+
+  /* Spacing */
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-modal: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06);
+  --shadow-focus: 0 0 0 3px rgba(45,152,180,0.3);
+
+  /* Spacing (Figma) */
+  --spacing-spacer-200: 4px;
+  --spacing-spacer-300: 6px;
+  --spacing-spacer-400: 8px;
+  --spacing-spacer-600: 12px;
+  --spacing-spacer-1000: 20px;
+
+  /* Border Radius (Figma) */
+  --border-radius-m: 8px;
+
+  /* Button tokens (from Figma) */
+  --button-filled-accent-bg: #2d98b4;
+  --button-filled-accent-bg-hover: #60c4dd;
+  --button-filled-accent-text: #ffffff;
+  --button-filled-danger-bg: #e53334;
+  --button-filled-danger-bg-hover: #f54f4f;
+  --button-filled-danger-text: #ffffff;
+  --button-filled-warning-bg: #f59e0b;
+  --button-filled-warning-bg-hover: #ffc570;
+  --button-filled-warning-text: #ffffff;
+  --button-filled-success-bg: #56b361;
+  --button-filled-success-bg-hover: #7fd787;
+  --button-filled-success-text: #ffffff;
+  --button-filled-info-bg: #439ee4;
+  --button-filled-info-bg-hover: #6cb7f2;
+  --button-filled-info-text: #ffffff;
+  --button-filled-secondary-bg: #cdd0d7;
+  --button-filled-secondary-bg-hover: #d5d9de;
+  --button-filled-secondary-text: #3f4146;
+
+  --button-outline-accent-text: #2d98b4;
+  --button-outline-accent-border: #2d98b4;
+  --button-outline-accent-bg-hover: #dbf7ff;
+  --button-outline-danger-text: #d41f20;
+  --button-outline-danger-border: #d41f20;
+  --button-outline-danger-bg-hover: #ffe8e8;
+  --button-outline-warning-text: #c47e08;
+  --button-outline-warning-border: #c47e08;
+  --button-outline-warning-bg-hover: #fff2e0;
+  --button-outline-success-text: #26752f;
+  --button-outline-success-border: #399d45;
+  --button-outline-success-bg-hover: #e5ffe8;
+  --button-outline-info-text: #157fd4;
+  --button-outline-info-border: #157fd4;
+  --button-outline-info-bg-hover: #dff2ff;
+  --button-outline-secondary-text: #808286;
+  --button-outline-secondary-border: #808286;
+  --button-outline-secondary-bg-hover: #eef1f5;
+
+  --button-ghost-accent-text: #2d98b4;
+  --button-ghost-accent-bg-hover: #dbf7ff;
+  --button-ghost-danger-text: #d41f20;
+  --button-ghost-danger-bg-hover: #ffe8e8;
+  --button-ghost-warning-text: #c47e08;
+  --button-ghost-warning-bg-hover: #fff2e0;
+  --button-ghost-success-text: #26752f;
+  --button-ghost-success-bg-hover: #e5ffe8;
+  --button-ghost-info-text: #157fd4;
+  --button-ghost-info-bg-hover: #dff2ff;
+  --button-ghost-secondary-text: #808286;
+  --button-ghost-secondary-bg-hover: #eef1f5;
+
+  /* Badge tokens (from Figma) */
+  --border-radius-s: 6px;
+  --spacing-spacer-0: 0px;
+  --spacing-spacer-50: 1px;
+
+  --badge-gray-text: #3f4146;
+  --badge-gray-filled-bg: #d5d9de;
+  --badge-gray-outline-bg: #eef1f5;
+  --badge-gray-outline-border: #cdd0d7;
+  --badge-gray-icon: #3f4146;
+
+  --badge-gray-strong-text: #3f4146;
+  --badge-gray-strong-filled-bg: #cdd0d7;
+  --badge-gray-strong-outline-bg: #eef1f5;
+  --badge-gray-strong-outline-border: #3f4146;
+  --badge-gray-strong-icon: #3f4146;
+
+  --badge-gray-warm-text: #454040;
+  --badge-gray-warm-filled-bg: #e0dfdf;
+  --badge-gray-warm-outline-bg: #f2f0f0;
+  --badge-gray-warm-outline-border: #d7d4d4;
+  --badge-gray-warm-icon: #454040;
+
+  --badge-nile-blue-text: #233752;
+  --badge-nile-blue-filled-bg: #bad7fc;
+  --badge-nile-blue-outline-bg: #deecfc;
+  --badge-nile-blue-outline-border: #9dc5f8;
+  --badge-nile-blue-icon: #233752;
+
+  --badge-tory-blue-text: #142a59;
+  --badge-tory-blue-filled-bg: #bbcef7;
+  --badge-tory-blue-outline-bg: #dde9ff;
+  --badge-tory-blue-outline-border: #9dbaf9;
+  --badge-tory-blue-icon: #142a59;
+
+  --badge-cornflower-blue-text: #073c64;
+  --badge-cornflower-blue-filled-bg: #bae2ff;
+  --badge-cornflower-blue-outline-bg: #dff2ff;
+  --badge-cornflower-blue-outline-border: #9bd5ff;
+  --badge-cornflower-blue-icon: #073c64;
+
+  --badge-bondi-blue-text: #175a73;
+  --badge-bondi-blue-filled-bg: #b3e5f0;
+  --badge-bondi-blue-outline-bg: #dbf7ff;
+  --badge-bondi-blue-outline-border: #98dcec;
+  --badge-bondi-blue-icon: #175a73;
+
+  --badge-java-text: #066568;
+  --badge-java-filled-bg: #b6f9fa;
+  --badge-java-outline-bg: #cdfdfd;
+  --badge-java-outline-border: #75eaed;
+  --badge-java-icon: #066568;
+
+  --badge-green-text: #1c5d24;
+  --badge-green-filled-bg: #c0eec4;
+  --badge-green-outline-bg: #e5ffe8;
+  --badge-green-outline-border: #99e1a0;
+  --badge-green-icon: #1c5d24;
+
+  --badge-shamrock-text: #0b4e35;
+  --badge-shamrock-filled-bg: #a5f2d4;
+  --badge-shamrock-outline-bg: #cdffec;
+  --badge-shamrock-outline-border: #7ce7bf;
+  --badge-shamrock-icon: #0b4e35;
+
+  --badge-yellow-text: #3e3605;
+  --badge-yellow-filled-bg: #ffed84;
+  --badge-yellow-outline-bg: #fffbd0;
+  --badge-yellow-outline-border: #fbe76c;
+  --badge-yellow-icon: #3e3605;
+
+  --badge-orange-text: #513403;
+  --badge-orange-filled-bg: #ffc570;
+  --badge-orange-outline-bg: #fff2e0;
+  --badge-orange-outline-border: #ffc570;
+  --badge-orange-icon: #513403;
+
+  --badge-red-text: #5b0c0d;
+  --badge-red-filled-bg: #fed3d3;
+  --badge-red-outline-bg: #ffe8e8;
+  --badge-red-outline-border: #f98989;
+  --badge-red-icon: #5b0c0d;
+
+  --badge-rose-text: #5b021d;
+  --badge-rose-filled-bg: #ffa1bd;
+  --badge-rose-outline-bg: #ffe3e5;
+  --badge-rose-outline-border: #ff7aa2;
+  --badge-rose-icon: #5b021d;
+
+  --badge-violet-text: #4b059a;
+  --badge-violet-filled-bg: #e2c8ff;
+  --badge-violet-outline-bg: #ecdbff;
+  --badge-violet-outline-border: #c796fe;
+  --badge-violet-icon: #4b059a;
+
+  /* MenuItem tokens (from Figma) */
+  --sidebar-menuitem-bg-default: transparent;
+  --sidebar-menuitem-border-default: transparent;
+  --sidebar-menuitem-icon-default: #3f4146;
+  --sidebar-menuitem-text-default: #3f4146;
+
+  --sidebar-menuitem-bg-hover: #eef1f5;
+  --sidebar-menuitem-border-hover: transparent;
+  --sidebar-menuitem-icon-hover: #3f4146;
+  --sidebar-menuitem-text-hover: #3f4146;
+
+  --sidebar-menuitem-bg-active: #eef1f5;
+  --sidebar-menuitem-border-active: #2d98b4;
+  --sidebar-menuitem-icon-active: #3f4146;
+  --sidebar-menuitem-text-active: #3f4146;
+
+  --sidebar-menuitem-bg-active-hover: #60c4dd;
+  --sidebar-menuitem-border-active-hover: transparent;
+  --sidebar-menuitem-icon-active-hover: #ffffff;
+  --sidebar-menuitem-text-active-hover: #ffffff;
+
+  /* MenuButton tokens (from Figma) */
+  --sidebar-menubutton-bg-default: transparent;
+  --sidebar-menubutton-border-default: transparent;
+  --sidebar-menubutton-icon-default: #75777b;
+
+  --sidebar-menubutton-bg-hover: #eef1f5;
+  --sidebar-menubutton-border-hover: transparent;
+  --sidebar-menubutton-icon-hover: #75777b;
+
+  --sidebar-menubutton-bg-active: #eef1f5;
+  --sidebar-menubutton-border-active: #2d98b4;
+  --sidebar-menubutton-icon-active: #75777b;
+
+  --sidebar-menubutton-bg-active-hover: #60c4dd;
+  --sidebar-menubutton-border-active-hover: transparent;
+  --sidebar-menubutton-icon-active-hover: #ffffff;
+
+  /* Status tokens (from Figma) */
+  --sidebar-status-indicator-default: #56b361;
+  --sidebar-status-indicator-danger: #d41f20;
+  --sidebar-status-indicator-lock: #d5d9de;
+
+  /* Sidebar tokens (from Figma) */
+  --sidebar-background-default: #ffffff;
+  --sidebar-menupanel-background: #f8f9fb;
+  --sidebar-border-default: #dfe2e6;
+  --sidebar-logo-accent-default: #00bec8;
+  --sidebar-logo-text-default: #11244d;
+  --sidebar-text-default: #3f4146;
+  --text-white: #ffffff;
+  --button-primary-info-default-bg: #439ee4;
+  --border-radius-xxl: 16px;
+  --spacing-spacer-0: 0px;
+  --spacing-spacer-800: 16px;
+
+  /* Input tokens (from Figma) */
+  --input-background-default: #ffffff;
+  --input-background-disabled: #eef1f5;
+  --input-border-default: #dfe2e6;
+  --input-border-hover: #2d98b4;
+  --input-border-focused: #60c4dd;
+  --input-border-warning: #e19109;
+  --input-border-error: #e53334;
+  --input-border-disabled: #dfe2e6;
+  --input-text-default: #8d8f95;
+  --input-text-filled: #3f4146;
+  --input-text-warning: #3f4146;
+  --input-text-error: #3f4146;
+  --input-text-disabled: #cdd0d7;
+  --input-label-text-default: #3f4146;
+  --input-hint-color: #cdd0d7;
+  --input-focus-shadow: 0 0 0 2px rgba(96, 196, 221, 0.3);
+  --spacing-spacer-350: 7px;
+
+  /* Dropdown tokens (from Figma) */
+  --dropdown-background-default: #ffffff;
+  --dropdown-background-disabled: #eef1f5;
+  --dropdown-border-default: #dfe2e6;
+  --dropdown-border-hover: #2d98b4;
+  --dropdown-border-focused: #60c4dd;
+  --dropdown-border-warning: #e19109;
+  --dropdown-border-error: #e53334;
+  --dropdown-border-disabled: #dfe2e6;
+  --dropdown-text-default: #8d8f95;
+  --dropdown-text-filled: #3f4146;
+  --dropdown-text-warning: #3f4146;
+  --dropdown-text-error: #3f4146;
+  --dropdown-text-disabled: #cdd0d7;
+  --dropdown-icon-default: #75777b;
+  --dropdown-label-text-default: #3f4146;
+  --dropdown-focus-shadow: 0 0 0 2px rgba(96, 196, 221, 0.3);
+
+  /* Modal tokens (from Figma) */
+  --modal-background-primary: #ffffff;
+  --modal-border-default: #dfe2e6;
+  --modal-text-primary: #3f4146;
+  --modal-overlay-background: rgba(0, 0, 0, 0.15);
+
+  /* Breadcrumbs tokens (from Figma) */
+  --breadcrumbs-background-default: rgba(255, 255, 255, 0.75);
+  --breadcrumbs-border-default: #dfe2e6;
+  --breadcrumbs-text-default: #3f4146;
+  --breadcrumbs-text-secondary: #75777b;
+  --spacing-spacer-1000: 20px;
+  --spacing-spacer-1200: 24px;
+
+  /* Textarea tokens (from Figma) */
+  --textarea-background-default: #ffffff;
+  --textarea-background-disabled: #eef1f5;
+  --textarea-border-default: #dfe2e6;
+  --textarea-border-hover: #2d98b4;
+  --textarea-border-focused: #60c4dd;
+  --textarea-border-warning: #e19109;
+  --textarea-border-error: #e53334;
+  --textarea-border-disabled: #dfe2e6;
+  --textarea-text-default: #8d8f95;
+  --textarea-text-filled: #3f4146;
+  --textarea-text-warning: #3f4146;
+  --textarea-text-error: #3f4146;
+  --textarea-text-disabled: #cdd0d7;
+  --textarea-label-text-default: #3f4146;
+  --textarea-hint-disabled: #cdd0d7;
+  --textarea-icon-resize-default: #cdd0d7;
+  --textarea-focus-shadow: 0 0 0 2px rgba(96, 196, 221, 0.3);
+}
+}

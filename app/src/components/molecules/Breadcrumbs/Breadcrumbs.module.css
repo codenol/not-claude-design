@@ -1,0 +1,51 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-spacer-400);
+  height: 48px;
+  padding: var(--spacing-spacer-800) var(--spacing-spacer-1000) var(--spacing-spacer-800) var(--spacing-spacer-1200);
+  border: 1px solid var(--breadcrumbs-border-default);
+  border-radius: 16px;
+  background: var(--breadcrumbs-background-default);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.itemWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.item {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.secondary {
+  color: var(--breadcrumbs-text-secondary);
+  cursor: pointer;
+}
+
+.secondary:hover {
+  text-decoration: underline;
+}
+
+.current {
+  color: var(--breadcrumbs-text-default);
+}
+
+.separator {
+  color: #949494;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}

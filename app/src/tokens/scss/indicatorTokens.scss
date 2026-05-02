@@ -1,0 +1,73 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: indicator
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --indicator-additional-background-default: var(--bondi-blue-550-t);
+  --indicator-critical-background-default: var(--red-650-t);
+  --indicator-critical-background-shadow: var(--red-600-t);
+  --indicator-degradation-background-default: var(--yellow-550-t);
+  --indicator-info-background-default: var(--cornflower-blue-550-t);
+  --indicator-load-background-default: var(--tory-blue-550-t);
+  --indicator-maitenance-background-default: var(--warm-gray-600-t);
+  --indicator-new-background-default: var(--java-550-t);
+  --indicator-success-background-default: var(--green-600-t);
+  --indicator-success-background-shadow: var(--green-550-t);
+  --indicator-unavailable-background-default: var(--cool-gray-600-t);
+  --indicator-warning-background-default: var(--orange-600-t);
+  --indicator-warning-background-shadow: var(--orange-550-t);
+}
+body.layout-theme-light {
+  --indicator-additional-background-default: var(--bondi-blue-400);
+  --indicator-critical-background-default: var(--red-650-t);
+  --indicator-critical-background-shadow: var(--red-600-t);
+  --indicator-degradation-background-default: var(--yellow-550);
+  --indicator-info-background-default: var(--cornflower-blue-500);
+  --indicator-load-background-default: var(--tory-blue-400);
+  --indicator-maitenance-background-default: var(--warm-gray-400);
+  --indicator-new-background-default: var(--java-400);
+  --indicator-success-background-default: var(--green-600-t);
+  --indicator-success-background-shadow: var(--green-550-t);
+  --indicator-unavailable-background-default: var(--cool-gray-600);
+  --indicator-warning-background-default: var(--orange-600-t);
+  --indicator-warning-background-shadow: var(--orange-550-t);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --indicator-additional-background-default: var(--bondi-blue-400);
+  --indicator-critical-background-default: var(--red-650-t);
+  --indicator-critical-background-shadow: var(--red-600-t);
+  --indicator-degradation-background-default: var(--yellow-550);
+  --indicator-info-background-default: var(--cornflower-blue-500);
+  --indicator-load-background-default: var(--tory-blue-400);
+  --indicator-maitenance-background-default: var(--warm-gray-400);
+  --indicator-new-background-default: var(--java-400);
+  --indicator-success-background-default: var(--green-600-t);
+  --indicator-success-background-shadow: var(--green-550-t);
+  --indicator-unavailable-background-default: var(--cool-gray-600);
+  --indicator-warning-background-default: var(--orange-600-t);
+  --indicator-warning-background-shadow: var(--orange-550-t);
+}
+body.layout-theme-dark {
+  --indicator-additional-background-default: var(--bondi-blue-550-t);
+  --indicator-critical-background-default: var(--red-650-t);
+  --indicator-critical-background-shadow: var(--red-600-t);
+  --indicator-degradation-background-default: var(--yellow-550-t);
+  --indicator-info-background-default: var(--cornflower-blue-550-t);
+  --indicator-load-background-default: var(--tory-blue-550-t);
+  --indicator-maitenance-background-default: var(--warm-gray-600-t);
+  --indicator-new-background-default: var(--java-550-t);
+  --indicator-success-background-default: var(--green-600-t);
+  --indicator-success-background-shadow: var(--green-550-t);
+  --indicator-unavailable-background-default: var(--cool-gray-600-t);
+  --indicator-warning-background-default: var(--orange-600-t);
+  --indicator-warning-background-shadow: var(--orange-550-t);
+}
+}

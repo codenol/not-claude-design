@@ -1,0 +1,105 @@
+.menuitem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-spacer-400);
+  padding: var(--spacing-spacer-400) var(--spacing-spacer-600);
+  border-radius: var(--border-radius-m);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 1px solid transparent;
+  border-style: solid;
+  background: var(--sidebar-menuitem-bg-default);
+  border-color: var(--sidebar-menuitem-border-default);
+  box-sizing: border-box;
+}
+
+/* ===== CONTEXT MENU VARIANT ===== */
+.contextMenu {
+  gap: var(--spacing-spacer-400);
+  padding: var(--spacing-spacer-300) var(--spacing-spacer-400);
+  background: transparent;
+  border-color: transparent;
+  width: 100%;
+}
+
+.contextMenu:hover {
+  background: #eef1f5;
+}
+
+.contextMenu.active {
+  background: #eef1f5;
+}
+
+.contextMenu .icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 0;
+}
+
+.contextMenu .text {
+  color: #3f4146;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 1px;
+  color: var(--sidebar-menuitem-icon-default);
+  transition: color 0.15s ease;
+}
+
+.text {
+  flex: 1 0 0;
+  min-width: 0;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  word-break: break-word;
+  text-align: left;
+  color: var(--sidebar-menuitem-text-default);
+  transition: color 0.15s ease;
+}
+
+/* ===== HOVER (not active) ===== */
+.menuitem:hover:not(.active) {
+  background: var(--sidebar-menuitem-bg-hover);
+  border-color: var(--sidebar-menuitem-border-hover);
+}
+.menuitem:hover:not(.active) .icon {
+  color: var(--sidebar-menuitem-icon-hover);
+}
+.menuitem:hover:not(.active) .text {
+  color: var(--sidebar-menuitem-text-hover);
+}
+
+/* ===== ACTIVE (not hovered) ===== */
+.menuitem.active {
+  background: var(--sidebar-menuitem-bg-active);
+  border-color: var(--sidebar-menuitem-border-active);
+}
+.menuitem.active .icon {
+  color: var(--sidebar-menuitem-icon-active);
+}
+.menuitem.active .text {
+  color: var(--sidebar-menuitem-text-active);
+}
+
+/* ===== ACTIVE + HOVER ===== */
+.menuitem.active:hover {
+  background: var(--sidebar-menuitem-bg-active-hover);
+  border-color: var(--sidebar-menuitem-border-active-hover);
+}
+.menuitem.active:hover .icon {
+  color: var(--sidebar-menuitem-icon-active-hover);
+}
+.menuitem.active:hover .text {
+  color: var(--sidebar-menuitem-text-active-hover);
+}

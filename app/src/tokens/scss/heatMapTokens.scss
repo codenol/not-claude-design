@@ -1,0 +1,61 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: heat-map
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --heat-map-cube-default: var(--nile-blue-750-t);
+  --heat-map-cube-level-1: var(--red-300-t);
+  --heat-map-cube-level-2: var(--red-400-t);
+  --heat-map-cube-level-3: var(--red-600-t);
+  --heat-map-cube-level-4: var(--red-750-t);
+  --heat-map-cube-level-5: var(--red-800-t);
+  --heat-map-cube-level-6: var(--red-900-t);
+  --heat-map-icon-border: var(--bondi-blue-500);
+  --heat-map-text-default: var(--cool-gray-200);
+  --heat-map-text-history: var(--bondi-blue-500);
+}
+body.layout-theme-light {
+  --heat-map-cube-default: var(--cool-gray-300);
+  --heat-map-cube-level-1: var(--red-300);
+  --heat-map-cube-level-2: var(--red-400);
+  --heat-map-cube-level-3: var(--red-600);
+  --heat-map-cube-level-4: var(--red-750);
+  --heat-map-cube-level-5: var(--red-800);
+  --heat-map-cube-level-6: var(--red-950);
+  --heat-map-icon-border: var(--bondi-blue-400);
+  --heat-map-text-default: var(--cool-gray-800);
+  --heat-map-text-history: var(--bondi-blue-400);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --heat-map-cube-default: var(--cool-gray-300);
+  --heat-map-cube-level-1: var(--red-300);
+  --heat-map-cube-level-2: var(--red-400);
+  --heat-map-cube-level-3: var(--red-600);
+  --heat-map-cube-level-4: var(--red-750);
+  --heat-map-cube-level-5: var(--red-800);
+  --heat-map-cube-level-6: var(--red-950);
+  --heat-map-icon-border: var(--bondi-blue-400);
+  --heat-map-text-default: var(--cool-gray-800);
+  --heat-map-text-history: var(--bondi-blue-400);
+}
+body.layout-theme-dark {
+  --heat-map-cube-default: var(--nile-blue-750-t);
+  --heat-map-cube-level-1: var(--red-300-t);
+  --heat-map-cube-level-2: var(--red-400-t);
+  --heat-map-cube-level-3: var(--red-600-t);
+  --heat-map-cube-level-4: var(--red-750-t);
+  --heat-map-cube-level-5: var(--red-800-t);
+  --heat-map-cube-level-6: var(--red-900-t);
+  --heat-map-icon-border: var(--bondi-blue-500);
+  --heat-map-text-default: var(--cool-gray-200);
+  --heat-map-text-history: var(--bondi-blue-500);
+}
+}

@@ -1,0 +1,73 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: switch
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --switch-thumb-default: var(--white-950);
+  --switch-track-off-background-default: var(--warm-gray-600-t);
+  --switch-track-off-background-disabled: var(--cool-gray-600-t);
+  --switch-track-off-background-hover: var(--cool-gray-750);
+  --switch-track-off-icon-default: var(--cool-gray-700);
+  --switch-track-off-icon-disabled: var(--cool-gray-600);
+  --switch-track-off-icon-hover: var(--cool-gray-700);
+  --switch-track-on-background-default: var(--bondi-blue-600);
+  --switch-track-on-background-disabled: var(--bondi-blue-800);
+  --switch-track-on-background-hover: var(--bondi-blue-500);
+  --switch-track-on-icon-default: var(--bondi-blue-600);
+  --switch-track-on-icon-disabled: var(--bondi-blue-800);
+  --switch-track-on-icon-hover: var(--bondi-blue-500);
+}
+body.layout-theme-light {
+  --switch-thumb-default: var(--white-950);
+  --switch-track-off-background-default: var(--cool-gray-200);
+  --switch-track-off-background-disabled: var(--cool-gray-100);
+  --switch-track-off-background-hover: var(--cool-gray-300);
+  --switch-track-off-icon-default: var(--cool-gray-200);
+  --switch-track-off-icon-disabled: var(--cool-gray-100);
+  --switch-track-off-icon-hover: var(--cool-gray-300);
+  --switch-track-on-background-default: var(--bondi-blue-600);
+  --switch-track-on-background-disabled: var(--bondi-blue-200);
+  --switch-track-on-background-hover: var(--bondi-blue-500);
+  --switch-track-on-icon-default: var(--bondi-blue-600);
+  --switch-track-on-icon-disabled: var(--bondi-blue-200);
+  --switch-track-on-icon-hover: var(--bondi-blue-500);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --switch-thumb-default: var(--white-950);
+  --switch-track-off-background-default: var(--cool-gray-200);
+  --switch-track-off-background-disabled: var(--cool-gray-100);
+  --switch-track-off-background-hover: var(--cool-gray-300);
+  --switch-track-off-icon-default: var(--cool-gray-200);
+  --switch-track-off-icon-disabled: var(--cool-gray-100);
+  --switch-track-off-icon-hover: var(--cool-gray-300);
+  --switch-track-on-background-default: var(--bondi-blue-600);
+  --switch-track-on-background-disabled: var(--bondi-blue-200);
+  --switch-track-on-background-hover: var(--bondi-blue-500);
+  --switch-track-on-icon-default: var(--bondi-blue-600);
+  --switch-track-on-icon-disabled: var(--bondi-blue-200);
+  --switch-track-on-icon-hover: var(--bondi-blue-500);
+}
+body.layout-theme-dark {
+  --switch-thumb-default: var(--white-950);
+  --switch-track-off-background-default: var(--warm-gray-600-t);
+  --switch-track-off-background-disabled: var(--cool-gray-600-t);
+  --switch-track-off-background-hover: var(--cool-gray-750);
+  --switch-track-off-icon-default: var(--cool-gray-700);
+  --switch-track-off-icon-disabled: var(--cool-gray-600);
+  --switch-track-off-icon-hover: var(--cool-gray-700);
+  --switch-track-on-background-default: var(--bondi-blue-600);
+  --switch-track-on-background-disabled: var(--bondi-blue-800);
+  --switch-track-on-background-hover: var(--bondi-blue-500);
+  --switch-track-on-icon-default: var(--bondi-blue-600);
+  --switch-track-on-icon-disabled: var(--bondi-blue-800);
+  --switch-track-on-icon-hover: var(--bondi-blue-500);
+}
+}

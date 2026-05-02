@@ -1,0 +1,33 @@
+.app h1 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+  margin-bottom: var(--space-6);
+  color: var(--color-text-default);
+}
+
+.app h2 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  color: var(--color-text-default);
+}
+
+section {
+  margin-bottom: var(--space-8);
+}
+
+.demo-row {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  margin-bottom: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.demo-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}

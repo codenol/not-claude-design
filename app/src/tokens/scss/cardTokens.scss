@@ -1,0 +1,69 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: card
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --card-background-critical: var(--red-650-t-5);
+  --card-background-primary: var(--nile-blue-900-t-85);
+  --card-background-secondary: var(--nile-blue-900);
+  --card-background-success: var(--green-600-t-5);
+  --card-background-unavailable: var(--cool-gray-600-t-5);
+  --card-background-warning: var(--orange-600-t-5);
+  --card-border-critical: var(--red-650-t-5);
+  --card-border-hover: var(--bondi-blue-550);
+  --card-border-primary: var(--nile-blue-750);
+  --card-border-success: var(--green-600-t-5);
+  --card-border-unavailable: var(--cool-gray-600-t-5);
+  --card-border-warning: var(--orange-600-t-5);
+}
+body.layout-theme-light {
+  --card-background-critical: var(--red-650-t-5);
+  --card-background-primary: var(--white-950);
+  --card-background-secondary: var(--cool-gray-75);
+  --card-background-success: var(--green-600-t-5);
+  --card-background-unavailable: var(--cool-gray-600-t-5);
+  --card-background-warning: var(--orange-600-t-5);
+  --card-border-critical: var(--red-650-t-5);
+  --card-border-hover: var(--bondi-blue-600);
+  --card-border-primary: var(--cool-gray-200);
+  --card-border-success: var(--green-600-t-5);
+  --card-border-unavailable: var(--cool-gray-600-t);
+  --card-border-warning: var(--orange-600-t-5);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --card-background-critical: var(--red-650-t-5);
+  --card-background-primary: var(--white-950);
+  --card-background-secondary: var(--cool-gray-75);
+  --card-background-success: var(--green-600-t-5);
+  --card-background-unavailable: var(--cool-gray-600-t-5);
+  --card-background-warning: var(--orange-600-t-5);
+  --card-border-critical: var(--red-650-t-5);
+  --card-border-hover: var(--bondi-blue-600);
+  --card-border-primary: var(--cool-gray-200);
+  --card-border-success: var(--green-600-t-5);
+  --card-border-unavailable: var(--cool-gray-600-t);
+  --card-border-warning: var(--orange-600-t-5);
+}
+body.layout-theme-dark {
+  --card-background-critical: var(--red-650-t-5);
+  --card-background-primary: var(--nile-blue-900-t-85);
+  --card-background-secondary: var(--nile-blue-900);
+  --card-background-success: var(--green-600-t-5);
+  --card-background-unavailable: var(--cool-gray-600-t-5);
+  --card-background-warning: var(--orange-600-t-5);
+  --card-border-critical: var(--red-650-t-5);
+  --card-border-hover: var(--bondi-blue-550);
+  --card-border-primary: var(--nile-blue-750);
+  --card-border-success: var(--green-600-t-5);
+  --card-border-unavailable: var(--cool-gray-600-t-5);
+  --card-border-warning: var(--orange-600-t-5);
+}
+}

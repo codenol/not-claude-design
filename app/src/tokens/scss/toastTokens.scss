@@ -1,0 +1,97 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: toast
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --toast-base-background-default: var(--nile-blue-750);
+  --toast-base-icon-default: var(--cool-gray-200);
+  --toast-base-text-default: var(--cool-gray-200);
+  --toast-danger-background-default: var(--nile-blue-750);
+  --toast-danger-icon-default: var(--cool-gray-200);
+  --toast-danger-indicator-border-default: var(--red-600);
+  --toast-danger-text-default: var(--cool-gray-200);
+  --toast-info-background-default: var(--nile-blue-750);
+  --toast-info-icon-default: var(--cool-gray-200);
+  --toast-info-indicator-border-default: var(--cornflower-blue-550);
+  --toast-info-text-default: var(--cool-gray-200);
+  --toast-success-background-default: var(--nile-blue-750);
+  --toast-success-icon-default: var(--cool-gray-200);
+  --toast-success-indicator-border-default: var(--green-650);
+  --toast-success-text-default: var(--cool-gray-200);
+  --toast-warning-background-default: var(--nile-blue-750);
+  --toast-warning-icon-default: var(--cool-gray-200);
+  --toast-warning-indicator-border-default: var(--orange-500);
+  --toast-warning-text-default: var(--cool-gray-200);
+}
+body.layout-theme-light {
+  --toast-base-background-default: var(--white-950);
+  --toast-base-icon-default: var(--cool-gray-800);
+  --toast-base-text-default: var(--cool-gray-800);
+  --toast-danger-background-default: var(--white-950);
+  --toast-danger-icon-default: var(--cool-gray-800);
+  --toast-danger-indicator-border-default: var(--red-700);
+  --toast-danger-text-default: var(--cool-gray-800);
+  --toast-info-background-default: var(--white-950);
+  --toast-info-icon-default: var(--cool-gray-800);
+  --toast-info-indicator-border-default: var(--cornflower-blue-650);
+  --toast-info-text-default: var(--cool-gray-800);
+  --toast-success-background-default: var(--white-950);
+  --toast-success-icon-default: var(--cool-gray-800);
+  --toast-success-indicator-border-default: var(--green-750);
+  --toast-success-text-default: var(--cool-gray-800);
+  --toast-warning-background-default: var(--white-950);
+  --toast-warning-icon-default: var(--cool-gray-800);
+  --toast-warning-indicator-border-default: var(--orange-600);
+  --toast-warning-text-default: var(--cool-gray-800);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --toast-base-background-default: var(--white-950);
+  --toast-base-icon-default: var(--cool-gray-800);
+  --toast-base-text-default: var(--cool-gray-800);
+  --toast-danger-background-default: var(--white-950);
+  --toast-danger-icon-default: var(--cool-gray-800);
+  --toast-danger-indicator-border-default: var(--red-700);
+  --toast-danger-text-default: var(--cool-gray-800);
+  --toast-info-background-default: var(--white-950);
+  --toast-info-icon-default: var(--cool-gray-800);
+  --toast-info-indicator-border-default: var(--cornflower-blue-650);
+  --toast-info-text-default: var(--cool-gray-800);
+  --toast-success-background-default: var(--white-950);
+  --toast-success-icon-default: var(--cool-gray-800);
+  --toast-success-indicator-border-default: var(--green-750);
+  --toast-success-text-default: var(--cool-gray-800);
+  --toast-warning-background-default: var(--white-950);
+  --toast-warning-icon-default: var(--cool-gray-800);
+  --toast-warning-indicator-border-default: var(--orange-600);
+  --toast-warning-text-default: var(--cool-gray-800);
+}
+body.layout-theme-dark {
+  --toast-base-background-default: var(--nile-blue-750);
+  --toast-base-icon-default: var(--cool-gray-200);
+  --toast-base-text-default: var(--cool-gray-200);
+  --toast-danger-background-default: var(--nile-blue-750);
+  --toast-danger-icon-default: var(--cool-gray-200);
+  --toast-danger-indicator-border-default: var(--red-600);
+  --toast-danger-text-default: var(--cool-gray-200);
+  --toast-info-background-default: var(--nile-blue-750);
+  --toast-info-icon-default: var(--cool-gray-200);
+  --toast-info-indicator-border-default: var(--cornflower-blue-550);
+  --toast-info-text-default: var(--cool-gray-200);
+  --toast-success-background-default: var(--nile-blue-750);
+  --toast-success-icon-default: var(--cool-gray-200);
+  --toast-success-indicator-border-default: var(--green-650);
+  --toast-success-text-default: var(--cool-gray-200);
+  --toast-warning-background-default: var(--nile-blue-750);
+  --toast-warning-icon-default: var(--cool-gray-200);
+  --toast-warning-indicator-border-default: var(--orange-500);
+  --toast-warning-text-default: var(--cool-gray-200);
+}
+}

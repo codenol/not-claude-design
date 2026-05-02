@@ -1,0 +1,165 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: dropdown
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --dropdown-background-default: var(--nile-blue-900);
+  --dropdown-background-disabled: var(--cool-gray-600-t);
+  --dropdown-background-error: var(--nile-blue-900);
+  --dropdown-background-filled: var(--nile-blue-900);
+  --dropdown-background-focus: var(--nile-blue-900);
+  --dropdown-background-hover: var(--nile-blue-900);
+  --dropdown-background-warning: var(--nile-blue-900);
+  --dropdown-border-default: var(--nile-blue-500);
+  --dropdown-border-disabled: var(--cool-gray-600-t);
+  --dropdown-border-error: var(--red-650);
+  --dropdown-border-filled: var(--nile-blue-650);
+  --dropdown-border-focus: var(--bondi-blue-500);
+  --dropdown-border-hover: var(--bondi-blue-600);
+  --dropdown-border-warning: var(--orange-550);
+  --dropdown-hint-default: var(--cool-gray-550);
+  --dropdown-hint-disabled: var(--cool-gray-600);
+  --dropdown-hint-error: var(--red-650);
+  --dropdown-hint-filled: var(--cool-gray-200);
+  --dropdown-hint-focus: var(--cool-gray-550);
+  --dropdown-hint-hover: var(--cool-gray-550);
+  --dropdown-hint-warning: var(--orange-550);
+  --dropdown-icon-default: var(--cool-gray-550);
+  --dropdown-icon-disabled: var(--cool-gray-600);
+  --dropdown-icon-error: var(--cool-gray-550);
+  --dropdown-icon-filled: var(--cool-gray-550);
+  --dropdown-icon-focus: var(--cool-gray-550);
+  --dropdown-icon-hover: var(--cool-gray-550);
+  --dropdown-icon-warning: var(--cool-gray-550);
+  --dropdown-label-text-default: var(--cool-gray-200);
+  --dropdown-text-default: var(--cool-gray-550);
+  --dropdown-text-disabled: var(--cool-gray-600);
+  --dropdown-text-error: var(--cool-gray-200);
+  --dropdown-text-filled: var(--cool-gray-200);
+  --dropdown-text-focus: var(--cool-gray-550);
+  --dropdown-text-hover: var(--cool-gray-550);
+  --dropdown-text-warning: var(--cool-gray-200);
+}
+body.layout-theme-light {
+  --dropdown-background-default: var(--white-950);
+  --dropdown-background-disabled: var(--cool-gray-100);
+  --dropdown-background-error: var(--white-950);
+  --dropdown-background-filled: var(--white-950);
+  --dropdown-background-focus: var(--white-950);
+  --dropdown-background-hover: var(--white-950);
+  --dropdown-background-warning: var(--white-950);
+  --dropdown-border-default: var(--cool-gray-200);
+  --dropdown-border-disabled: var(--cool-gray-200);
+  --dropdown-border-error: var(--red-600);
+  --dropdown-border-filled: var(--cool-gray-200);
+  --dropdown-border-focus: var(--bondi-blue-500);
+  --dropdown-border-hover: var(--bondi-blue-600);
+  --dropdown-border-warning: var(--orange-600);
+  --dropdown-hint-default: var(--cool-gray-600);
+  --dropdown-hint-disabled: var(--cool-gray-400);
+  --dropdown-hint-error: var(--red-600);
+  --dropdown-hint-filled: var(--cool-gray-800);
+  --dropdown-hint-focus: var(--cool-gray-600);
+  --dropdown-hint-hover: var(--cool-gray-600);
+  --dropdown-hint-warning: var(--orange-600);
+  --dropdown-icon-default: var(--cool-gray-700);
+  --dropdown-icon-disabled: var(--cool-gray-400);
+  --dropdown-icon-error: var(--cool-gray-700);
+  --dropdown-icon-filled: var(--cool-gray-700);
+  --dropdown-icon-focus: var(--cool-gray-700);
+  --dropdown-icon-hover: var(--cool-gray-700);
+  --dropdown-icon-warning: var(--cool-gray-700);
+  --dropdown-label-text-default: var(--cool-gray-800);
+  --dropdown-text-default: var(--cool-gray-600);
+  --dropdown-text-disabled: var(--cool-gray-400);
+  --dropdown-text-error: var(--cool-gray-800);
+  --dropdown-text-filled: var(--cool-gray-800);
+  --dropdown-text-focus: var(--cool-gray-600);
+  --dropdown-text-hover: var(--cool-gray-600);
+  --dropdown-text-warning: var(--cool-gray-800);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --dropdown-background-default: var(--white-950);
+  --dropdown-background-disabled: var(--cool-gray-100);
+  --dropdown-background-error: var(--white-950);
+  --dropdown-background-filled: var(--white-950);
+  --dropdown-background-focus: var(--white-950);
+  --dropdown-background-hover: var(--white-950);
+  --dropdown-background-warning: var(--white-950);
+  --dropdown-border-default: var(--cool-gray-200);
+  --dropdown-border-disabled: var(--cool-gray-200);
+  --dropdown-border-error: var(--red-600);
+  --dropdown-border-filled: var(--cool-gray-200);
+  --dropdown-border-focus: var(--bondi-blue-500);
+  --dropdown-border-hover: var(--bondi-blue-600);
+  --dropdown-border-warning: var(--orange-600);
+  --dropdown-hint-default: var(--cool-gray-600);
+  --dropdown-hint-disabled: var(--cool-gray-400);
+  --dropdown-hint-error: var(--red-600);
+  --dropdown-hint-filled: var(--cool-gray-800);
+  --dropdown-hint-focus: var(--cool-gray-600);
+  --dropdown-hint-hover: var(--cool-gray-600);
+  --dropdown-hint-warning: var(--orange-600);
+  --dropdown-icon-default: var(--cool-gray-700);
+  --dropdown-icon-disabled: var(--cool-gray-400);
+  --dropdown-icon-error: var(--cool-gray-700);
+  --dropdown-icon-filled: var(--cool-gray-700);
+  --dropdown-icon-focus: var(--cool-gray-700);
+  --dropdown-icon-hover: var(--cool-gray-700);
+  --dropdown-icon-warning: var(--cool-gray-700);
+  --dropdown-label-text-default: var(--cool-gray-800);
+  --dropdown-text-default: var(--cool-gray-600);
+  --dropdown-text-disabled: var(--cool-gray-400);
+  --dropdown-text-error: var(--cool-gray-800);
+  --dropdown-text-filled: var(--cool-gray-800);
+  --dropdown-text-focus: var(--cool-gray-600);
+  --dropdown-text-hover: var(--cool-gray-600);
+  --dropdown-text-warning: var(--cool-gray-800);
+}
+body.layout-theme-dark {
+  --dropdown-background-default: var(--nile-blue-900);
+  --dropdown-background-disabled: var(--cool-gray-600-t);
+  --dropdown-background-error: var(--nile-blue-900);
+  --dropdown-background-filled: var(--nile-blue-900);
+  --dropdown-background-focus: var(--nile-blue-900);
+  --dropdown-background-hover: var(--nile-blue-900);
+  --dropdown-background-warning: var(--nile-blue-900);
+  --dropdown-border-default: var(--nile-blue-500);
+  --dropdown-border-disabled: var(--cool-gray-600-t);
+  --dropdown-border-error: var(--red-650);
+  --dropdown-border-filled: var(--nile-blue-650);
+  --dropdown-border-focus: var(--bondi-blue-500);
+  --dropdown-border-hover: var(--bondi-blue-600);
+  --dropdown-border-warning: var(--orange-550);
+  --dropdown-hint-default: var(--cool-gray-550);
+  --dropdown-hint-disabled: var(--cool-gray-600);
+  --dropdown-hint-error: var(--red-650);
+  --dropdown-hint-filled: var(--cool-gray-200);
+  --dropdown-hint-focus: var(--cool-gray-550);
+  --dropdown-hint-hover: var(--cool-gray-550);
+  --dropdown-hint-warning: var(--orange-550);
+  --dropdown-icon-default: var(--cool-gray-550);
+  --dropdown-icon-disabled: var(--cool-gray-600);
+  --dropdown-icon-error: var(--cool-gray-550);
+  --dropdown-icon-filled: var(--cool-gray-550);
+  --dropdown-icon-focus: var(--cool-gray-550);
+  --dropdown-icon-hover: var(--cool-gray-550);
+  --dropdown-icon-warning: var(--cool-gray-550);
+  --dropdown-label-text-default: var(--cool-gray-200);
+  --dropdown-text-default: var(--cool-gray-550);
+  --dropdown-text-disabled: var(--cool-gray-600);
+  --dropdown-text-error: var(--cool-gray-200);
+  --dropdown-text-filled: var(--cool-gray-200);
+  --dropdown-text-focus: var(--cool-gray-550);
+  --dropdown-text-hover: var(--cool-gray-550);
+  --dropdown-text-warning: var(--cool-gray-200);
+}
+}

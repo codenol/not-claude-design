@@ -1,0 +1,57 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: drawer
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --drawer-background-primary: var(--nile-blue-900);
+  --drawer-background-secondary: var(--nile-blue-850);
+  --drawer-border-default: var(--nile-blue-750);
+  --drawer-icon-primary: var(--cool-gray-200);
+  --drawer-icon-secondary: var(--cool-gray-550);
+  --drawer-icon-tertiary: var(--cool-gray-700);
+  --drawer-text-primary: var(--cool-gray-200);
+  --drawer-text-secondary: var(--cool-gray-550);
+  --drawer-text-tertiary: var(--cool-gray-700);
+}
+body.layout-theme-light {
+  --drawer-background-primary: var(--white-950);
+  --drawer-background-secondary: var(--cool-gray-50);
+  --drawer-border-default: var(--cool-gray-200);
+  --drawer-icon-primary: var(--cool-gray-800);
+  --drawer-icon-secondary: var(--cool-gray-700);
+  --drawer-icon-tertiary: var(--cool-gray-550);
+  --drawer-text-primary: var(--cool-gray-800);
+  --drawer-text-secondary: var(--cool-gray-700);
+  --drawer-text-tertiary: var(--cool-gray-550);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --drawer-background-primary: var(--white-950);
+  --drawer-background-secondary: var(--cool-gray-50);
+  --drawer-border-default: var(--cool-gray-200);
+  --drawer-icon-primary: var(--cool-gray-800);
+  --drawer-icon-secondary: var(--cool-gray-700);
+  --drawer-icon-tertiary: var(--cool-gray-550);
+  --drawer-text-primary: var(--cool-gray-800);
+  --drawer-text-secondary: var(--cool-gray-700);
+  --drawer-text-tertiary: var(--cool-gray-550);
+}
+body.layout-theme-dark {
+  --drawer-background-primary: var(--nile-blue-900);
+  --drawer-background-secondary: var(--nile-blue-850);
+  --drawer-border-default: var(--nile-blue-750);
+  --drawer-icon-primary: var(--cool-gray-200);
+  --drawer-icon-secondary: var(--cool-gray-550);
+  --drawer-icon-tertiary: var(--cool-gray-700);
+  --drawer-text-primary: var(--cool-gray-200);
+  --drawer-text-secondary: var(--cool-gray-550);
+  --drawer-text-tertiary: var(--cool-gray-700);
+}
+}

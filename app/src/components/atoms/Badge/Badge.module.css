@@ -1,0 +1,272 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-spacer-200);
+  padding: 4px 8px;
+  border-radius: var(--border-radius-s);
+  white-space: nowrap;
+  box-sizing: border-box;
+  height: 24px;
+}
+
+.text {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ===== FILLED (text-only) ===== */
+.text-only.gray {
+  background: var(--badge-gray-filled-bg);
+  color: var(--badge-gray-text);
+}
+
+.text-only.gray-strong {
+  background: var(--badge-gray-strong-filled-bg);
+  color: var(--badge-gray-strong-text);
+}
+
+.text-only.gray-warm {
+  background: var(--badge-gray-warm-filled-bg);
+  color: var(--badge-gray-warm-text);
+}
+
+.text-only.nile-blue {
+  background: var(--badge-nile-blue-filled-bg);
+  color: var(--badge-nile-blue-text);
+}
+
+.text-only.tory-blue {
+  background: var(--badge-tory-blue-filled-bg);
+  color: var(--badge-tory-blue-text);
+}
+
+.text-only.cornflower-blue {
+  background: var(--badge-cornflower-blue-filled-bg);
+  color: var(--badge-cornflower-blue-text);
+}
+
+.text-only.bondi-blue {
+  background: var(--badge-bondi-blue-filled-bg);
+  color: var(--badge-bondi-blue-text);
+}
+
+.text-only.java {
+  background: var(--badge-java-filled-bg);
+  color: var(--badge-java-text);
+}
+
+.text-only.green {
+  background: var(--badge-green-filled-bg);
+  color: var(--badge-green-text);
+}
+
+.text-only.shamrock {
+  background: var(--badge-shamrock-filled-bg);
+  color: var(--badge-shamrock-text);
+}
+
+.text-only.yellow {
+  background: var(--badge-yellow-filled-bg);
+  color: var(--badge-yellow-text);
+}
+
+.text-only.orange {
+  background: var(--badge-orange-filled-bg);
+  color: var(--badge-orange-text);
+}
+
+.text-only.red {
+  background: var(--badge-red-filled-bg);
+  color: var(--badge-red-text);
+}
+
+.text-only.rose {
+  background: var(--badge-rose-filled-bg);
+  color: var(--badge-rose-text);
+}
+
+.text-only.violet {
+  background: var(--badge-violet-filled-bg);
+  color: var(--badge-violet-text);
+}
+
+/* ===== OUTLINE ===== */
+.outline.gray {
+  background: var(--badge-gray-outline-bg);
+  color: var(--badge-gray-text);
+  border: 1px solid var(--badge-gray-outline-border);
+}
+
+.outline.gray-strong {
+  background: var(--badge-gray-strong-outline-bg);
+  color: var(--badge-gray-strong-text);
+  border: 1px solid var(--badge-gray-strong-outline-border);
+}
+
+.outline.gray-warm {
+  background: var(--badge-gray-warm-outline-bg);
+  color: var(--badge-gray-warm-text);
+  border: 1px solid var(--badge-gray-warm-outline-border);
+}
+
+.outline.nile-blue {
+  background: var(--badge-nile-blue-outline-bg);
+  color: var(--badge-nile-blue-text);
+  border: 1px solid var(--badge-nile-blue-outline-border);
+}
+
+.outline.tory-blue {
+  background: var(--badge-tory-blue-outline-bg);
+  color: var(--badge-tory-blue-text);
+  border: 1px solid var(--badge-tory-blue-outline-border);
+}
+
+.outline.cornflower-blue {
+  background: var(--badge-cornflower-blue-outline-bg);
+  color: var(--badge-cornflower-blue-text);
+  border: 1px solid var(--badge-cornflower-blue-outline-border);
+}
+
+.outline.bondi-blue {
+  background: var(--badge-bondi-blue-outline-bg);
+  color: var(--badge-bondi-blue-text);
+  border: 1px solid var(--badge-bondi-blue-outline-border);
+}
+
+.outline.java {
+  background: var(--badge-java-outline-bg);
+  color: var(--badge-java-text);
+  border: 1px solid var(--badge-java-outline-border);
+}
+
+.outline.green {
+  background: var(--badge-green-outline-bg);
+  color: var(--badge-green-text);
+  border: 1px solid var(--badge-green-outline-border);
+}
+
+.outline.shamrock {
+  background: var(--badge-shamrock-outline-bg);
+  color: var(--badge-shamrock-text);
+  border: 1px solid var(--badge-shamrock-outline-border);
+}
+
+.outline.yellow {
+  background: var(--badge-yellow-outline-bg);
+  color: var(--badge-yellow-text);
+  border: 1px solid var(--badge-yellow-outline-border);
+}
+
+.outline.orange {
+  background: var(--badge-orange-outline-bg);
+  color: var(--badge-orange-text);
+  border: 1px solid var(--badge-orange-outline-border);
+}
+
+.outline.red {
+  background: var(--badge-red-outline-bg);
+  color: var(--badge-red-text);
+  border: 1px solid var(--badge-red-outline-border);
+}
+
+.outline.rose {
+  background: var(--badge-rose-outline-bg);
+  color: var(--badge-rose-text);
+  border: 1px solid var(--badge-rose-outline-border);
+}
+
+.outline.violet {
+  background: var(--badge-violet-outline-bg);
+  color: var(--badge-violet-text);
+  border: 1px solid var(--badge-violet-outline-border);
+}
+
+/* ===== TEXT AND ICON ===== */
+.text-and-icon {
+  /* Same as filled, just with icon gap */
+}
+
+.text-and-icon.gray {
+  background: var(--badge-gray-filled-bg);
+  color: var(--badge-gray-text);
+}
+
+.text-and-icon.gray-strong {
+  background: var(--badge-gray-strong-filled-bg);
+  color: var(--badge-gray-strong-text);
+}
+
+.text-and-icon.gray-warm {
+  background: var(--badge-gray-warm-filled-bg);
+  color: var(--badge-gray-warm-text);
+}
+
+.text-and-icon.nile-blue {
+  background: var(--badge-nile-blue-filled-bg);
+  color: var(--badge-nile-blue-text);
+}
+
+.text-and-icon.tory-blue {
+  background: var(--badge-tory-blue-filled-bg);
+  color: var(--badge-tory-blue-text);
+}
+
+.text-and-icon.cornflower-blue {
+  background: var(--badge-cornflower-blue-filled-bg);
+  color: var(--badge-cornflower-blue-text);
+}
+
+.text-and-icon.bondi-blue {
+  background: var(--badge-bondi-blue-filled-bg);
+  color: var(--badge-bondi-blue-text);
+}
+
+.text-and-icon.java {
+  background: var(--badge-java-filled-bg);
+  color: var(--badge-java-text);
+}
+
+.text-and-icon.green {
+  background: var(--badge-green-filled-bg);
+  color: var(--badge-green-text);
+}
+
+.text-and-icon.shamrock {
+  background: var(--badge-shamrock-filled-bg);
+  color: var(--badge-shamrock-text);
+}
+
+.text-and-icon.yellow {
+  background: var(--badge-yellow-filled-bg);
+  color: var(--badge-yellow-text);
+}
+
+.text-and-icon.orange {
+  background: var(--badge-orange-filled-bg);
+  color: var(--badge-orange-text);
+}
+
+.text-and-icon.red {
+  background: var(--badge-red-filled-bg);
+  color: var(--badge-red-text);
+}
+
+.text-and-icon.rose {
+  background: var(--badge-rose-filled-bg);
+  color: var(--badge-rose-text);
+}
+
+.text-and-icon.violet {
+  background: var(--badge-violet-filled-bg);
+  color: var(--badge-violet-text);
+}

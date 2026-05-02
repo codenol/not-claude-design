@@ -1,0 +1,105 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: accordion
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --accordion-background-critical: var(--red-650-t-5);
+  --accordion-background-default: var(--nile-blue-900-t);
+  --accordion-background-secondary: var(--nile-blue-900-t);
+  --accordion-background-success: var(--green-600-t-5);
+  --accordion-background-unavailable: var(--cool-gray-600-t-5);
+  --accordion-background-warning: var(--orange-600-t-5);
+  --accordion-border-critical: var(--red-650-t);
+  --accordion-border-default: var(--nile-blue-550);
+  --accordion-border-focus: var(--bondi-blue-500);
+  --accordion-border-hover: var(--bondi-blue-600);
+  --accordion-border-success: var(--green-600-t);
+  --accordion-border-unavailable: var(--cool-gray-600-t);
+  --accordion-border-warning: var(--orange-600-t);
+  --accordion-icon-default: var(--nile-blue-750);
+  --accordion-primery-background-default: var(--nile-blue-900-t);
+  --accordion-primery-border-2-default: var(--nile-blue-550);
+  --accordion-primery-border-2-hover: var(--bondi-blue-550);
+  --accordion-secondary-background-default: var(--nile-blue-900-t);
+  --accordion-secondary-border-default: var(--nile-blue-550);
+  --accordion-secondary-border-hover: var(--bondi-blue-550);
+  --accordion-secondary-icon-default: var(--nile-blue-750);
+}
+body.layout-theme-light {
+  --accordion-background-critical: var(--red-650-t-5);
+  --accordion-background-default: var(--white-950);
+  --accordion-background-secondary: var(--white-950);
+  --accordion-background-success: var(--green-600-t-5);
+  --accordion-background-unavailable: var(--cool-gray-600-t-5);
+  --accordion-background-warning: var(--orange-600-t-5);
+  --accordion-border-critical: var(--red-650-t);
+  --accordion-border-default: var(--cool-gray-200);
+  --accordion-border-focus: var(--bondi-blue-500);
+  --accordion-border-hover: var(--bondi-blue-600);
+  --accordion-border-success: var(--green-600-t);
+  --accordion-border-unavailable: var(--cool-gray-600);
+  --accordion-border-warning: var(--orange-600-t);
+  --accordion-icon-default: var(--cool-gray-700);
+  --accordion-primery-background-default: var(--white-950);
+  --accordion-primery-border-2-default: var(--cool-gray-200);
+  --accordion-primery-border-2-hover: var(--bondi-blue-600);
+  --accordion-secondary-background-default: var(--cool-gray-50);
+  --accordion-secondary-border-default: var(--cool-gray-300);
+  --accordion-secondary-border-hover: var(--bondi-blue-600);
+  --accordion-secondary-icon-default: var(--cool-gray-700);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --accordion-background-critical: var(--red-650-t-5);
+  --accordion-background-default: var(--white-950);
+  --accordion-background-secondary: var(--white-950);
+  --accordion-background-success: var(--green-600-t-5);
+  --accordion-background-unavailable: var(--cool-gray-600-t-5);
+  --accordion-background-warning: var(--orange-600-t-5);
+  --accordion-border-critical: var(--red-650-t);
+  --accordion-border-default: var(--cool-gray-200);
+  --accordion-border-focus: var(--bondi-blue-500);
+  --accordion-border-hover: var(--bondi-blue-600);
+  --accordion-border-success: var(--green-600-t);
+  --accordion-border-unavailable: var(--cool-gray-600);
+  --accordion-border-warning: var(--orange-600-t);
+  --accordion-icon-default: var(--cool-gray-700);
+  --accordion-primery-background-default: var(--white-950);
+  --accordion-primery-border-2-default: var(--cool-gray-200);
+  --accordion-primery-border-2-hover: var(--bondi-blue-600);
+  --accordion-secondary-background-default: var(--cool-gray-50);
+  --accordion-secondary-border-default: var(--cool-gray-300);
+  --accordion-secondary-border-hover: var(--bondi-blue-600);
+  --accordion-secondary-icon-default: var(--cool-gray-700);
+}
+body.layout-theme-dark {
+  --accordion-background-critical: var(--red-650-t-5);
+  --accordion-background-default: var(--nile-blue-900-t);
+  --accordion-background-secondary: var(--nile-blue-900-t);
+  --accordion-background-success: var(--green-600-t-5);
+  --accordion-background-unavailable: var(--cool-gray-600-t-5);
+  --accordion-background-warning: var(--orange-600-t-5);
+  --accordion-border-critical: var(--red-650-t);
+  --accordion-border-default: var(--nile-blue-550);
+  --accordion-border-focus: var(--bondi-blue-500);
+  --accordion-border-hover: var(--bondi-blue-600);
+  --accordion-border-success: var(--green-600-t);
+  --accordion-border-unavailable: var(--cool-gray-600-t);
+  --accordion-border-warning: var(--orange-600-t);
+  --accordion-icon-default: var(--nile-blue-750);
+  --accordion-primery-background-default: var(--nile-blue-900-t);
+  --accordion-primery-border-2-default: var(--nile-blue-550);
+  --accordion-primery-border-2-hover: var(--bondi-blue-550);
+  --accordion-secondary-background-default: var(--nile-blue-900-t);
+  --accordion-secondary-border-default: var(--nile-blue-550);
+  --accordion-secondary-border-hover: var(--bondi-blue-550);
+  --accordion-secondary-icon-default: var(--nile-blue-750);
+}
+}

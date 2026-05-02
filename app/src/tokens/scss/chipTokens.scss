@@ -1,0 +1,37 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: chip
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --chip-background-default: var(--nile-blue-800);
+  --chip-background-disabled: var(--nile-blue-750-t);
+  --chip-text-default: var(--cool-gray-200);
+  --chip-text-disabled: var(--white-300-t);
+}
+body.layout-theme-light {
+  --chip-background-default: var(--cool-gray-100);
+  --chip-background-disabled: var(--cool-gray-50);
+  --chip-text-default: var(--cool-gray-850);
+  --chip-text-disabled: var(--cool-gray-400);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --chip-background-default: var(--cool-gray-100);
+  --chip-background-disabled: var(--cool-gray-50);
+  --chip-text-default: var(--cool-gray-850);
+  --chip-text-disabled: var(--cool-gray-400);
+}
+body.layout-theme-dark {
+  --chip-background-default: var(--nile-blue-800);
+  --chip-background-disabled: var(--nile-blue-750-t);
+  --chip-text-default: var(--cool-gray-200);
+  --chip-text-disabled: var(--white-300-t);
+}
+}

@@ -1,0 +1,33 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: container
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --container-background-default: var(--nile-blue-900-t);
+  --container-border-default: var(--nile-blue-800);
+  --container-icon-default: var(--cool-gray-200);
+}
+body.layout-theme-light {
+  --container-background-default: var(--white-550-t);
+  --container-border-default: var(--cool-gray-200);
+  --container-icon-default: var(--cool-gray-800);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --container-background-default: var(--white-550-t);
+  --container-border-default: var(--cool-gray-200);
+  --container-icon-default: var(--cool-gray-800);
+}
+body.layout-theme-dark {
+  --container-background-default: var(--nile-blue-900-t);
+  --container-border-default: var(--nile-blue-800);
+  --container-icon-default: var(--cool-gray-200);
+}
+}

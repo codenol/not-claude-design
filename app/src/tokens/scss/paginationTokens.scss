@@ -1,0 +1,81 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: pagination
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --pagination-item-arrow-background-default: var(--white-0-t);
+  --pagination-item-arrow-background-disabled: var(--white-0-t);
+  --pagination-item-arrow-background-hover: var(--nile-blue-850);
+  --pagination-item-arrow-icon-default: var(--cool-gray-200);
+  --pagination-item-arrow-icon-disabled: var(--cool-gray-600);
+  --pagination-item-arrow-icon-hover: var(--cool-gray-200);
+  --pagination-item-ellipsis-background-default: var(--white-0-t);
+  --pagination-item-ellipsis-icon-default: var(--cool-gray-200);
+  --pagination-item-number-background-default: var(--white-0-t);
+  --pagination-item-number-background-hover: var(--nile-blue-850);
+  --pagination-item-number-background-selected: var(--nile-blue-850);
+  --pagination-item-number-text-default: var(--cool-gray-200);
+  --pagination-item-number-text-hover: var(--cool-gray-200);
+  --pagination-item-number-text-selected: var(--cool-gray-200);
+  --pagination-text-default: var(--cool-gray-200);
+}
+body.layout-theme-light {
+  --pagination-item-arrow-background-default: var(--white-0-t);
+  --pagination-item-arrow-background-disabled: var(--white-0-t);
+  --pagination-item-arrow-background-hover: var(--cool-gray-100);
+  --pagination-item-arrow-icon-default: var(--cool-gray-800);
+  --pagination-item-arrow-icon-disabled: var(--cool-gray-400);
+  --pagination-item-arrow-icon-hover: var(--cool-gray-800);
+  --pagination-item-ellipsis-background-default: var(--white-0-t);
+  --pagination-item-ellipsis-icon-default: var(--cool-gray-800);
+  --pagination-item-number-background-default: var(--white-0-t);
+  --pagination-item-number-background-hover: var(--cool-gray-100);
+  --pagination-item-number-background-selected: var(--cool-gray-100);
+  --pagination-item-number-text-default: var(--cool-gray-800);
+  --pagination-item-number-text-hover: var(--cool-gray-800);
+  --pagination-item-number-text-selected: var(--cool-gray-800);
+  --pagination-text-default: var(--cool-gray-800);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --pagination-item-arrow-background-default: var(--white-0-t);
+  --pagination-item-arrow-background-disabled: var(--white-0-t);
+  --pagination-item-arrow-background-hover: var(--cool-gray-100);
+  --pagination-item-arrow-icon-default: var(--cool-gray-800);
+  --pagination-item-arrow-icon-disabled: var(--cool-gray-400);
+  --pagination-item-arrow-icon-hover: var(--cool-gray-800);
+  --pagination-item-ellipsis-background-default: var(--white-0-t);
+  --pagination-item-ellipsis-icon-default: var(--cool-gray-800);
+  --pagination-item-number-background-default: var(--white-0-t);
+  --pagination-item-number-background-hover: var(--cool-gray-100);
+  --pagination-item-number-background-selected: var(--cool-gray-100);
+  --pagination-item-number-text-default: var(--cool-gray-800);
+  --pagination-item-number-text-hover: var(--cool-gray-800);
+  --pagination-item-number-text-selected: var(--cool-gray-800);
+  --pagination-text-default: var(--cool-gray-800);
+}
+body.layout-theme-dark {
+  --pagination-item-arrow-background-default: var(--white-0-t);
+  --pagination-item-arrow-background-disabled: var(--white-0-t);
+  --pagination-item-arrow-background-hover: var(--nile-blue-850);
+  --pagination-item-arrow-icon-default: var(--cool-gray-200);
+  --pagination-item-arrow-icon-disabled: var(--cool-gray-600);
+  --pagination-item-arrow-icon-hover: var(--cool-gray-200);
+  --pagination-item-ellipsis-background-default: var(--white-0-t);
+  --pagination-item-ellipsis-icon-default: var(--cool-gray-200);
+  --pagination-item-number-background-default: var(--white-0-t);
+  --pagination-item-number-background-hover: var(--nile-blue-850);
+  --pagination-item-number-background-selected: var(--nile-blue-850);
+  --pagination-item-number-text-default: var(--cool-gray-200);
+  --pagination-item-number-text-hover: var(--cool-gray-200);
+  --pagination-item-number-text-selected: var(--cool-gray-200);
+  --pagination-text-default: var(--cool-gray-200);
+}
+}

@@ -1,0 +1,73 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: context-menu
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --context-menu-background-default: var(--nile-blue-900);
+  --context-menu-menu-item-background-default: var(--white-0-t);
+  --context-menu-menu-item-background-disabled: var(--white-0-t);
+  --context-menu-menu-item-background-hover: var(--nile-blue-850);
+  --context-menu-menu-item-icon-danger: var(--red-550);
+  --context-menu-menu-item-icon-default: var(--cool-gray-550);
+  --context-menu-menu-item-icon-disabled: var(--cool-gray-750);
+  --context-menu-menu-item-icon-hover: var(--cool-gray-550);
+  --context-menu-menu-item-icon-info: var(--cornflower-blue-500);
+  --context-menu-menu-item-icon-success: var(--green-500);
+  --context-menu-menu-item-text-default: var(--cool-gray-200);
+  --context-menu-menu-item-text-disabled: var(--cool-gray-750);
+  --context-menu-menu-item-text-hover: var(--cool-gray-200);
+}
+body.layout-theme-light {
+  --context-menu-background-default: var(--white-950);
+  --context-menu-menu-item-background-default: var(--white-0-t);
+  --context-menu-menu-item-background-disabled: var(--white-0-t);
+  --context-menu-menu-item-background-hover: var(--cool-gray-100);
+  --context-menu-menu-item-icon-danger: var(--red-650);
+  --context-menu-menu-item-icon-default: var(--cool-gray-700);
+  --context-menu-menu-item-icon-disabled: var(--cool-gray-400);
+  --context-menu-menu-item-icon-hover: var(--cool-gray-700);
+  --context-menu-menu-item-icon-info: var(--cornflower-blue-550);
+  --context-menu-menu-item-icon-success: var(--green-550);
+  --context-menu-menu-item-text-default: var(--cool-gray-800);
+  --context-menu-menu-item-text-disabled: var(--cool-gray-400);
+  --context-menu-menu-item-text-hover: var(--cool-gray-800);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --context-menu-background-default: var(--white-950);
+  --context-menu-menu-item-background-default: var(--white-0-t);
+  --context-menu-menu-item-background-disabled: var(--white-0-t);
+  --context-menu-menu-item-background-hover: var(--cool-gray-100);
+  --context-menu-menu-item-icon-danger: var(--red-650);
+  --context-menu-menu-item-icon-default: var(--cool-gray-700);
+  --context-menu-menu-item-icon-disabled: var(--cool-gray-400);
+  --context-menu-menu-item-icon-hover: var(--cool-gray-700);
+  --context-menu-menu-item-icon-info: var(--cornflower-blue-550);
+  --context-menu-menu-item-icon-success: var(--green-550);
+  --context-menu-menu-item-text-default: var(--cool-gray-800);
+  --context-menu-menu-item-text-disabled: var(--cool-gray-400);
+  --context-menu-menu-item-text-hover: var(--cool-gray-800);
+}
+body.layout-theme-dark {
+  --context-menu-background-default: var(--nile-blue-900);
+  --context-menu-menu-item-background-default: var(--white-0-t);
+  --context-menu-menu-item-background-disabled: var(--white-0-t);
+  --context-menu-menu-item-background-hover: var(--nile-blue-850);
+  --context-menu-menu-item-icon-danger: var(--red-550);
+  --context-menu-menu-item-icon-default: var(--cool-gray-550);
+  --context-menu-menu-item-icon-disabled: var(--cool-gray-750);
+  --context-menu-menu-item-icon-hover: var(--cool-gray-550);
+  --context-menu-menu-item-icon-info: var(--cornflower-blue-500);
+  --context-menu-menu-item-icon-success: var(--green-500);
+  --context-menu-menu-item-text-default: var(--cool-gray-200);
+  --context-menu-menu-item-text-disabled: var(--cool-gray-750);
+  --context-menu-menu-item-text-hover: var(--cool-gray-200);
+}
+}

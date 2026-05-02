@@ -1,0 +1,53 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: validation-tooltip
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --validation-tooltip-error-arrow-default: var(--red-600);
+  --validation-tooltip-error-background-default: var(--nile-blue-900);
+  --validation-tooltip-error-border-default: var(--red-600);
+  --validation-tooltip-error-text-default: var(--red-600);
+  --validation-tooltip-warning-arrow-default: var(--orange-550);
+  --validation-tooltip-warning-background-default: var(--nile-blue-900);
+  --validation-tooltip-warning-border-default: var(--orange-550);
+  --validation-tooltip-warning-text-default: var(--orange-550);
+}
+body.layout-theme-light {
+  --validation-tooltip-error-arrow-default: var(--red-600);
+  --validation-tooltip-error-background-default: var(--white-950);
+  --validation-tooltip-error-border-default: var(--red-600);
+  --validation-tooltip-error-text-default: var(--red-600);
+  --validation-tooltip-warning-arrow-default: var(--orange-600);
+  --validation-tooltip-warning-background-default: var(--white-950);
+  --validation-tooltip-warning-border-default: var(--orange-600);
+  --validation-tooltip-warning-text-default: var(--orange-600);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --validation-tooltip-error-arrow-default: var(--red-600);
+  --validation-tooltip-error-background-default: var(--white-950);
+  --validation-tooltip-error-border-default: var(--red-600);
+  --validation-tooltip-error-text-default: var(--red-600);
+  --validation-tooltip-warning-arrow-default: var(--orange-600);
+  --validation-tooltip-warning-background-default: var(--white-950);
+  --validation-tooltip-warning-border-default: var(--orange-600);
+  --validation-tooltip-warning-text-default: var(--orange-600);
+}
+body.layout-theme-dark {
+  --validation-tooltip-error-arrow-default: var(--red-600);
+  --validation-tooltip-error-background-default: var(--nile-blue-900);
+  --validation-tooltip-error-border-default: var(--red-600);
+  --validation-tooltip-error-text-default: var(--red-600);
+  --validation-tooltip-warning-arrow-default: var(--orange-550);
+  --validation-tooltip-warning-background-default: var(--nile-blue-900);
+  --validation-tooltip-warning-border-default: var(--orange-550);
+  --validation-tooltip-warning-text-default: var(--orange-550);
+}
+}

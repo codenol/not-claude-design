@@ -1,0 +1,57 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: multiselect-option
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --multiselect-option-background-default: var(--nile-blue-900);
+  --multiselect-option-option-item-background-default: var(--white-0-t);
+  --multiselect-option-option-item-background-disabled: var(--white-0-t);
+  --multiselect-option-option-item-background-focus: var(--nile-blue-850);
+  --multiselect-option-option-item-background-hover: var(--nile-blue-850);
+  --multiselect-option-option-item-text-default: var(--cool-gray-200);
+  --multiselect-option-option-item-text-disabled: var(--cool-gray-750);
+  --multiselect-option-option-item-text-focus: var(--cool-gray-200);
+  --multiselect-option-option-item-text-hover: var(--cool-gray-200);
+}
+body.layout-theme-light {
+  --multiselect-option-background-default: var(--white-950);
+  --multiselect-option-option-item-background-default: var(--white-0-t);
+  --multiselect-option-option-item-background-disabled: var(--white-0-t);
+  --multiselect-option-option-item-background-focus: var(--cool-gray-100);
+  --multiselect-option-option-item-background-hover: var(--cool-gray-100);
+  --multiselect-option-option-item-text-default: var(--cool-gray-800);
+  --multiselect-option-option-item-text-disabled: var(--cool-gray-400);
+  --multiselect-option-option-item-text-focus: var(--cool-gray-800);
+  --multiselect-option-option-item-text-hover: var(--cool-gray-800);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --multiselect-option-background-default: var(--white-950);
+  --multiselect-option-option-item-background-default: var(--white-0-t);
+  --multiselect-option-option-item-background-disabled: var(--white-0-t);
+  --multiselect-option-option-item-background-focus: var(--cool-gray-100);
+  --multiselect-option-option-item-background-hover: var(--cool-gray-100);
+  --multiselect-option-option-item-text-default: var(--cool-gray-800);
+  --multiselect-option-option-item-text-disabled: var(--cool-gray-400);
+  --multiselect-option-option-item-text-focus: var(--cool-gray-800);
+  --multiselect-option-option-item-text-hover: var(--cool-gray-800);
+}
+body.layout-theme-dark {
+  --multiselect-option-background-default: var(--nile-blue-900);
+  --multiselect-option-option-item-background-default: var(--white-0-t);
+  --multiselect-option-option-item-background-disabled: var(--white-0-t);
+  --multiselect-option-option-item-background-focus: var(--nile-blue-850);
+  --multiselect-option-option-item-background-hover: var(--nile-blue-850);
+  --multiselect-option-option-item-text-default: var(--cool-gray-200);
+  --multiselect-option-option-item-text-disabled: var(--cool-gray-750);
+  --multiselect-option-option-item-text-focus: var(--cool-gray-200);
+  --multiselect-option-option-item-text-hover: var(--cool-gray-200);
+}
+}

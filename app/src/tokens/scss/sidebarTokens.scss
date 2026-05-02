@@ -1,0 +1,177 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: sidebar
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --sidebar-avatar-background-default: var(--cornflower-blue-550);
+  --sidebar-avatar-text-default: var(--white-950);
+  --sidebar-background-default: var(--nile-blue-900-t);
+  --sidebar-border-default: var(--nile-blue-800);
+  --sidebar-divider-horizontal-default: var(--nile-blue-750);
+  --sidebar-logo-accent-default: var(--java-550);
+  --sidebar-logo-text-default: var(--white-950);
+  --sidebar-menubutton-background-active: var(--nile-blue-750);
+  --sidebar-menubutton-background-active-hover: var(--bondi-blue-500);
+  --sidebar-menubutton-background-default: var(--white-0-t);
+  --sidebar-menubutton-background-hover: var(--nile-blue-750);
+  --sidebar-menubutton-border-active: var(--bondi-blue-600);
+  --sidebar-menubutton-border-active-hover: var(--white-0-t);
+  --sidebar-menubutton-border-default: var(--white-0-t);
+  --sidebar-menubutton-border-hover: var(--white-0-t);
+  --sidebar-menubutton-icon-active: var(--cool-gray-500);
+  --sidebar-menubutton-icon-active-hover: var(--white-950);
+  --sidebar-menubutton-icon-default: var(--cool-gray-550);
+  --sidebar-menubutton-icon-hover: var(--cool-gray-500);
+  --sidebar-menuitem-background-active: var(--nile-blue-750);
+  --sidebar-menuitem-background-active-hover: var(--bondi-blue-500);
+  --sidebar-menuitem-background-default: var(--white-0-t);
+  --sidebar-menuitem-background-hover: var(--nile-blue-750);
+  --sidebar-menuitem-border-active: var(--bondi-blue-600);
+  --sidebar-menuitem-border-active-hover: var(--white-0-t);
+  --sidebar-menuitem-border-default: var(--white-0-t);
+  --sidebar-menuitem-border-hover: var(--white-0-t);
+  --sidebar-menuitem-icon-active: var(--cool-gray-200);
+  --sidebar-menuitem-icon-active-hover: var(--white-950);
+  --sidebar-menuitem-icon-default: var(--cool-gray-200);
+  --sidebar-menuitem-icon-hover: var(--cool-gray-200);
+  --sidebar-menuitem-text-active: var(--cool-gray-200);
+  --sidebar-menuitem-text-active-hover: var(--white-950);
+  --sidebar-menuitem-text-default: var(--cool-gray-200);
+  --sidebar-menuitem-text-hover: var(--cool-gray-200);
+  --sidebar-status-indicator-danger: var(--red-600);
+  --sidebar-status-indicator-default: var(--green-600);
+  --sidebar-status-indicator-lock: var(--nile-blue-600);
+  --sidebar-text-default: var(--cool-gray-200);
+}
+body.layout-theme-light {
+  --sidebar-avatar-background-default: var(--cornflower-blue-550);
+  --sidebar-avatar-text-default: var(--white-950);
+  --sidebar-background-default: var(--white-550-t);
+  --sidebar-border-default: var(--cool-gray-200);
+  --sidebar-divider-horizontal-default: var(--cool-gray-800);
+  --sidebar-logo-accent-default: var(--java-550);
+  --sidebar-logo-text-default: var(--tory-blue-850);
+  --sidebar-menubutton-background-active: var(--cool-gray-100);
+  --sidebar-menubutton-background-active-hover: var(--bondi-blue-500);
+  --sidebar-menubutton-background-default: var(--white-0-t);
+  --sidebar-menubutton-background-hover: var(--cool-gray-100);
+  --sidebar-menubutton-border-active: var(--bondi-blue-600);
+  --sidebar-menubutton-border-active-hover: var(--white-0-t);
+  --sidebar-menubutton-border-default: var(--white-0-t);
+  --sidebar-menubutton-border-hover: var(--white-0-t);
+  --sidebar-menubutton-icon-active: var(--cool-gray-700);
+  --sidebar-menubutton-icon-active-hover: var(--white-950);
+  --sidebar-menubutton-icon-default: var(--cool-gray-700);
+  --sidebar-menubutton-icon-hover: var(--cool-gray-700);
+  --sidebar-menuitem-background-active: var(--cool-gray-100);
+  --sidebar-menuitem-background-active-hover: var(--bondi-blue-500);
+  --sidebar-menuitem-background-default: var(--white-0-t);
+  --sidebar-menuitem-background-hover: var(--cool-gray-100);
+  --sidebar-menuitem-border-active: var(--bondi-blue-600);
+  --sidebar-menuitem-border-active-hover: var(--white-0-t);
+  --sidebar-menuitem-border-default: var(--white-0-t);
+  --sidebar-menuitem-border-hover: var(--white-0-t);
+  --sidebar-menuitem-icon-active: var(--cool-gray-800);
+  --sidebar-menuitem-icon-active-hover: var(--white-950);
+  --sidebar-menuitem-icon-default: var(--cool-gray-800);
+  --sidebar-menuitem-icon-hover: var(--cool-gray-800);
+  --sidebar-menuitem-text-active: var(--cool-gray-800);
+  --sidebar-menuitem-text-active-hover: var(--white-950);
+  --sidebar-menuitem-text-default: var(--cool-gray-800);
+  --sidebar-menuitem-text-hover: var(--cool-gray-800);
+  --sidebar-status-indicator-danger: var(--red-650);
+  --sidebar-status-indicator-default: var(--green-600);
+  --sidebar-status-indicator-lock: var(--cool-gray-300);
+  --sidebar-text-default: var(--cool-gray-800);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --sidebar-avatar-background-default: var(--cornflower-blue-550);
+  --sidebar-avatar-text-default: var(--white-950);
+  --sidebar-background-default: var(--white-550-t);
+  --sidebar-border-default: var(--cool-gray-200);
+  --sidebar-divider-horizontal-default: var(--cool-gray-800);
+  --sidebar-logo-accent-default: var(--java-550);
+  --sidebar-logo-text-default: var(--tory-blue-850);
+  --sidebar-menubutton-background-active: var(--cool-gray-100);
+  --sidebar-menubutton-background-active-hover: var(--bondi-blue-500);
+  --sidebar-menubutton-background-default: var(--white-0-t);
+  --sidebar-menubutton-background-hover: var(--cool-gray-100);
+  --sidebar-menubutton-border-active: var(--bondi-blue-600);
+  --sidebar-menubutton-border-active-hover: var(--white-0-t);
+  --sidebar-menubutton-border-default: var(--white-0-t);
+  --sidebar-menubutton-border-hover: var(--white-0-t);
+  --sidebar-menubutton-icon-active: var(--cool-gray-700);
+  --sidebar-menubutton-icon-active-hover: var(--white-950);
+  --sidebar-menubutton-icon-default: var(--cool-gray-700);
+  --sidebar-menubutton-icon-hover: var(--cool-gray-700);
+  --sidebar-menuitem-background-active: var(--cool-gray-100);
+  --sidebar-menuitem-background-active-hover: var(--bondi-blue-500);
+  --sidebar-menuitem-background-default: var(--white-0-t);
+  --sidebar-menuitem-background-hover: var(--cool-gray-100);
+  --sidebar-menuitem-border-active: var(--bondi-blue-600);
+  --sidebar-menuitem-border-active-hover: var(--white-0-t);
+  --sidebar-menuitem-border-default: var(--white-0-t);
+  --sidebar-menuitem-border-hover: var(--white-0-t);
+  --sidebar-menuitem-icon-active: var(--cool-gray-800);
+  --sidebar-menuitem-icon-active-hover: var(--white-950);
+  --sidebar-menuitem-icon-default: var(--cool-gray-800);
+  --sidebar-menuitem-icon-hover: var(--cool-gray-800);
+  --sidebar-menuitem-text-active: var(--cool-gray-800);
+  --sidebar-menuitem-text-active-hover: var(--white-950);
+  --sidebar-menuitem-text-default: var(--cool-gray-800);
+  --sidebar-menuitem-text-hover: var(--cool-gray-800);
+  --sidebar-status-indicator-danger: var(--red-650);
+  --sidebar-status-indicator-default: var(--green-600);
+  --sidebar-status-indicator-lock: var(--cool-gray-300);
+  --sidebar-text-default: var(--cool-gray-800);
+}
+body.layout-theme-dark {
+  --sidebar-avatar-background-default: var(--cornflower-blue-550);
+  --sidebar-avatar-text-default: var(--white-950);
+  --sidebar-background-default: var(--nile-blue-900-t);
+  --sidebar-border-default: var(--nile-blue-800);
+  --sidebar-divider-horizontal-default: var(--nile-blue-750);
+  --sidebar-logo-accent-default: var(--java-550);
+  --sidebar-logo-text-default: var(--white-950);
+  --sidebar-menubutton-background-active: var(--nile-blue-750);
+  --sidebar-menubutton-background-active-hover: var(--bondi-blue-500);
+  --sidebar-menubutton-background-default: var(--white-0-t);
+  --sidebar-menubutton-background-hover: var(--nile-blue-750);
+  --sidebar-menubutton-border-active: var(--bondi-blue-600);
+  --sidebar-menubutton-border-active-hover: var(--white-0-t);
+  --sidebar-menubutton-border-default: var(--white-0-t);
+  --sidebar-menubutton-border-hover: var(--white-0-t);
+  --sidebar-menubutton-icon-active: var(--cool-gray-500);
+  --sidebar-menubutton-icon-active-hover: var(--white-950);
+  --sidebar-menubutton-icon-default: var(--cool-gray-550);
+  --sidebar-menubutton-icon-hover: var(--cool-gray-500);
+  --sidebar-menuitem-background-active: var(--nile-blue-750);
+  --sidebar-menuitem-background-active-hover: var(--bondi-blue-500);
+  --sidebar-menuitem-background-default: var(--white-0-t);
+  --sidebar-menuitem-background-hover: var(--nile-blue-750);
+  --sidebar-menuitem-border-active: var(--bondi-blue-600);
+  --sidebar-menuitem-border-active-hover: var(--white-0-t);
+  --sidebar-menuitem-border-default: var(--white-0-t);
+  --sidebar-menuitem-border-hover: var(--white-0-t);
+  --sidebar-menuitem-icon-active: var(--cool-gray-200);
+  --sidebar-menuitem-icon-active-hover: var(--white-950);
+  --sidebar-menuitem-icon-default: var(--cool-gray-200);
+  --sidebar-menuitem-icon-hover: var(--cool-gray-200);
+  --sidebar-menuitem-text-active: var(--cool-gray-200);
+  --sidebar-menuitem-text-active-hover: var(--white-950);
+  --sidebar-menuitem-text-default: var(--cool-gray-200);
+  --sidebar-menuitem-text-hover: var(--cool-gray-200);
+  --sidebar-status-indicator-danger: var(--red-600);
+  --sidebar-status-indicator-default: var(--green-600);
+  --sidebar-status-indicator-lock: var(--nile-blue-600);
+  --sidebar-text-default: var(--cool-gray-200);
+}
+}

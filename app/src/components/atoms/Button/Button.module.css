@@ -1,0 +1,288 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-style: solid;
+  cursor: pointer;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  border-radius: var(--border-radius-m);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  outline: none;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button:focus-visible {
+  border-width: 2px;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ===== FILLED ===== */
+.filled.accent {
+  background: var(--button-filled-accent-bg);
+  color: var(--button-filled-accent-text);
+  border-color: transparent;
+}
+.filled.accent:hover:not(:disabled) {
+  background: var(--button-filled-accent-bg-hover);
+  border-color: transparent;
+}
+.filled.accent:focus-visible {
+  background: var(--button-filled-accent-bg);
+  border-color: var(--button-filled-accent-bg-hover);
+}
+
+.filled.danger {
+  background: var(--button-filled-danger-bg);
+  color: var(--button-filled-danger-text);
+  border-color: transparent;
+}
+.filled.danger:hover:not(:disabled) {
+  background: var(--button-filled-danger-bg-hover);
+}
+.filled.danger:focus-visible {
+  border-color: var(--button-filled-danger-bg-hover);
+}
+
+.filled.warning {
+  background: var(--button-filled-warning-bg);
+  color: var(--button-filled-warning-text);
+  border-color: transparent;
+}
+.filled.warning:hover:not(:disabled) {
+  background: var(--button-filled-warning-bg-hover);
+}
+.filled.warning:focus-visible {
+  border-color: var(--button-filled-warning-bg-hover);
+}
+
+.filled.success {
+  background: var(--button-filled-success-bg);
+  color: var(--button-filled-success-text);
+  border-color: transparent;
+}
+.filled.success:hover:not(:disabled) {
+  background: var(--button-filled-success-bg-hover);
+}
+.filled.success:focus-visible {
+  border-color: var(--button-filled-success-bg-hover);
+}
+
+.filled.info {
+  background: var(--button-filled-info-bg);
+  color: var(--button-filled-info-text);
+  border-color: transparent;
+}
+.filled.info:hover:not(:disabled) {
+  background: var(--button-filled-info-bg-hover);
+}
+.filled.info:focus-visible {
+  border-color: var(--button-filled-info-bg-hover);
+}
+
+.filled.secondary {
+  background: var(--button-filled-secondary-bg);
+  color: var(--button-filled-secondary-text);
+  border-color: transparent;
+}
+.filled.secondary:hover:not(:disabled) {
+  background: var(--button-filled-secondary-bg-hover);
+}
+.filled.secondary:focus-visible {
+  border-color: var(--button-filled-secondary-bg-hover);
+}
+
+/* ===== OUTLINE ===== */
+.outline.accent {
+  background: transparent;
+  color: var(--button-outline-accent-text);
+  border-color: var(--button-outline-accent-border);
+}
+.outline.accent:hover:not(:disabled) {
+  background: var(--button-outline-accent-bg-hover);
+}
+.outline.accent:focus-visible {
+  background: var(--button-outline-accent-bg-hover);
+}
+
+.outline.danger {
+  background: transparent;
+  color: var(--button-outline-danger-text);
+  border-color: var(--button-outline-danger-border);
+}
+.outline.danger:hover:not(:disabled) {
+  background: var(--button-outline-danger-bg-hover);
+}
+.outline.danger:focus-visible {
+  background: var(--button-outline-danger-bg-hover);
+}
+
+.outline.warning {
+  background: transparent;
+  color: var(--button-outline-warning-text);
+  border-color: var(--button-outline-warning-border);
+}
+.outline.warning:hover:not(:disabled) {
+  background: var(--button-outline-warning-bg-hover);
+}
+.outline.warning:focus-visible {
+  background: var(--button-outline-warning-bg-hover);
+}
+
+.outline.success {
+  background: transparent;
+  color: var(--button-outline-success-text);
+  border-color: var(--button-outline-success-border);
+}
+.outline.success:hover:not(:disabled) {
+  background: var(--button-outline-success-bg-hover);
+}
+.outline.success:focus-visible {
+  background: var(--button-outline-success-bg-hover);
+}
+
+.outline.info {
+  background: transparent;
+  color: var(--button-outline-info-text);
+  border-color: var(--button-outline-info-border);
+}
+.outline.info:hover:not(:disabled) {
+  background: var(--button-outline-info-bg-hover);
+}
+.outline.info:focus-visible {
+  background: var(--button-outline-info-bg-hover);
+}
+
+.outline.secondary {
+  background: transparent;
+  color: var(--button-outline-secondary-text);
+  border-color: var(--button-outline-secondary-border);
+}
+.outline.secondary:hover:not(:disabled) {
+  background: var(--button-outline-secondary-bg-hover);
+}
+.outline.secondary:focus-visible {
+  background: var(--button-outline-secondary-bg-hover);
+}
+
+/* ===== GHOST ===== */
+.ghost.accent {
+  background: transparent;
+  color: var(--button-ghost-accent-text);
+  border-color: transparent;
+}
+.ghost.accent:hover:not(:disabled) {
+  background: var(--button-ghost-accent-bg-hover);
+}
+.ghost.accent:focus-visible {
+  background: var(--button-ghost-accent-bg-hover);
+}
+
+.ghost.danger {
+  background: transparent;
+  color: var(--button-ghost-danger-text);
+  border-color: transparent;
+}
+.ghost.danger:hover:not(:disabled) {
+  background: var(--button-ghost-danger-bg-hover);
+}
+.ghost.danger:focus-visible {
+  background: var(--button-ghost-danger-bg-hover);
+}
+
+.ghost.warning {
+  background: transparent;
+  color: var(--button-ghost-warning-text);
+  border-color: transparent;
+}
+.ghost.warning:hover:not(:disabled) {
+  background: var(--button-ghost-warning-bg-hover);
+}
+.ghost.warning:focus-visible {
+  background: var(--button-ghost-warning-bg-hover);
+}
+
+.ghost.success {
+  background: transparent;
+  color: var(--button-ghost-success-text);
+  border-color: transparent;
+}
+.ghost.success:hover:not(:disabled) {
+  background: var(--button-ghost-success-bg-hover);
+}
+.ghost.success:focus-visible {
+  background: var(--button-ghost-success-bg-hover);
+}
+
+.ghost.info {
+  background: transparent;
+  color: var(--button-ghost-info-text);
+  border-color: transparent;
+}
+.ghost.info:hover:not(:disabled) {
+  background: var(--button-ghost-info-bg-hover);
+}
+.ghost.info:focus-visible {
+  background: var(--button-ghost-info-bg-hover);
+}
+
+.ghost.secondary {
+  background: transparent;
+  color: var(--button-ghost-secondary-text);
+  border-color: transparent;
+}
+.ghost.secondary:hover:not(:disabled) {
+  background: var(--button-ghost-secondary-bg-hover);
+}
+.ghost.secondary:focus-visible {
+  background: var(--button-ghost-secondary-bg-hover);
+}
+
+/* ===== SIZES ===== */
+.large {
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.14px;
+  gap: var(--spacing-spacer-300);
+  height: 32px;
+  box-sizing: border-box;
+}
+
+.small {
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.14px;
+  gap: var(--spacing-spacer-300);
+  height: 24px;
+  box-sizing: border-box;
+}
+
+/* ===== ICON ONLY ===== */
+.icon-only.large {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+.icon-only.small {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+}

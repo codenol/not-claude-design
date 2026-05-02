@@ -1,0 +1,69 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: table
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --table-header-background-default: var(--nile-blue-850-t);
+  --table-header-border-default: var(--nile-blue-750-t);
+  --table-icon-default: var(--cool-gray-200);
+  --table-icon-info: var(--cornflower-blue-400);
+  --table-row-background-alternative: var(--nile-blue-800-t-2);
+  --table-row-background-default: var(--nile-blue-800-t);
+  --table-row-background-hover: var(--nile-blue-750);
+  --table-row-background-press: var(--nile-blue-700);
+  --table-row-border-default: var(--nile-blue-750-t);
+  --table-text-primary: var(--cool-gray-200);
+  --table-text-secondary: var(--cool-gray-500);
+  --table-text-tertiary: var(--cool-gray-650);
+}
+body.layout-theme-light {
+  --table-header-background-default: var(--cool-gray-75);
+  --table-header-border-default: var(--cool-gray-200);
+  --table-icon-default: var(--cool-gray-700);
+  --table-icon-info: var(--cornflower-blue-550);
+  --table-row-background-alternative: var(--cool-gray-50);
+  --table-row-background-default: var(--white-950);
+  --table-row-background-hover: var(--cool-gray-100);
+  --table-row-background-press: var(--cool-gray-200);
+  --table-row-border-default: var(--cool-gray-200);
+  --table-text-primary: var(--cool-gray-800);
+  --table-text-secondary: var(--cool-gray-700);
+  --table-text-tertiary: var(--cool-gray-550);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --table-header-background-default: var(--cool-gray-75);
+  --table-header-border-default: var(--cool-gray-200);
+  --table-icon-default: var(--cool-gray-700);
+  --table-icon-info: var(--cornflower-blue-550);
+  --table-row-background-alternative: var(--cool-gray-50);
+  --table-row-background-default: var(--white-950);
+  --table-row-background-hover: var(--cool-gray-100);
+  --table-row-background-press: var(--cool-gray-200);
+  --table-row-border-default: var(--cool-gray-200);
+  --table-text-primary: var(--cool-gray-800);
+  --table-text-secondary: var(--cool-gray-700);
+  --table-text-tertiary: var(--cool-gray-550);
+}
+body.layout-theme-dark {
+  --table-header-background-default: var(--nile-blue-850-t);
+  --table-header-border-default: var(--nile-blue-750-t);
+  --table-icon-default: var(--cool-gray-200);
+  --table-icon-info: var(--cornflower-blue-400);
+  --table-row-background-alternative: var(--nile-blue-800-t-2);
+  --table-row-background-default: var(--nile-blue-800-t);
+  --table-row-background-hover: var(--nile-blue-750);
+  --table-row-background-press: var(--nile-blue-700);
+  --table-row-border-default: var(--nile-blue-750-t);
+  --table-text-primary: var(--cool-gray-200);
+  --table-text-secondary: var(--cool-gray-500);
+  --table-text-tertiary: var(--cool-gray-650);
+}
+}

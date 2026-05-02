@@ -1,0 +1,117 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: message
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --message-critical-background-default: var(--red-200-t-90);
+  --message-critical-details-background-default: var(--red-100);
+  --message-critical-details-border-default: var(--red-750);
+  --message-critical-icon-default: var(--red-800);
+  --message-critical-indicator-border-default: var(--red-600);
+  --message-critical-text-default: var(--red-800);
+  --message-info-background-default: var(--cornflower-blue-200-t);
+  --message-info-details-background-default: var(--cornflower-blue-100);
+  --message-info-details-border-default: var(--cornflower-blue-750);
+  --message-info-icon-default: var(--cornflower-blue-800);
+  --message-info-indicator-border-default: var(--cornflower-blue-600);
+  --message-info-text-default: var(--cornflower-blue-800);
+  --message-success-background-default: var(--green-300-t);
+  --message-success-details-background-default: var(--green-200);
+  --message-success-details-border-default: var(--green-750);
+  --message-success-icon-default: var(--green-850);
+  --message-success-indicator-border-default: var(--green-750);
+  --message-success-text-default: var(--green-850);
+  --message-warning-background-default: var(--orange-200-t);
+  --message-warning-details-background-default: var(--orange-100);
+  --message-warning-details-border-default: var(--orange-750);
+  --message-warning-icon-default: var(--orange-800);
+  --message-warning-indicator-border-default: var(--orange-550);
+  --message-warning-text-default: var(--orange-800);
+}
+body.layout-theme-light {
+  --message-critical-background-default: var(--red-100);
+  --message-critical-details-background-default: var(--red-75);
+  --message-critical-details-border-default: var(--red-750);
+  --message-critical-icon-default: var(--red-800);
+  --message-critical-indicator-border-default: var(--red-600);
+  --message-critical-text-default: var(--red-800);
+  --message-info-background-default: var(--cornflower-blue-100);
+  --message-info-details-background-default: var(--cornflower-blue-75);
+  --message-info-details-border-default: var(--cornflower-blue-750);
+  --message-info-icon-default: var(--cornflower-blue-800);
+  --message-info-indicator-border-default: var(--cornflower-blue-600);
+  --message-info-text-default: var(--cornflower-blue-800);
+  --message-success-background-default: var(--green-100);
+  --message-success-details-background-default: var(--green-75);
+  --message-success-details-border-default: var(--green-750);
+  --message-success-icon-default: var(--green-850);
+  --message-success-indicator-border-default: var(--green-750);
+  --message-success-text-default: var(--green-850);
+  --message-warning-background-default: var(--orange-100);
+  --message-warning-details-background-default: var(--orange-75);
+  --message-warning-details-border-default: var(--orange-750);
+  --message-warning-icon-default: var(--orange-800);
+  --message-warning-indicator-border-default: var(--orange-550);
+  --message-warning-text-default: var(--orange-800);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --message-critical-background-default: var(--red-100);
+  --message-critical-details-background-default: var(--red-75);
+  --message-critical-details-border-default: var(--red-750);
+  --message-critical-icon-default: var(--red-800);
+  --message-critical-indicator-border-default: var(--red-600);
+  --message-critical-text-default: var(--red-800);
+  --message-info-background-default: var(--cornflower-blue-100);
+  --message-info-details-background-default: var(--cornflower-blue-75);
+  --message-info-details-border-default: var(--cornflower-blue-750);
+  --message-info-icon-default: var(--cornflower-blue-800);
+  --message-info-indicator-border-default: var(--cornflower-blue-600);
+  --message-info-text-default: var(--cornflower-blue-800);
+  --message-success-background-default: var(--green-100);
+  --message-success-details-background-default: var(--green-75);
+  --message-success-details-border-default: var(--green-750);
+  --message-success-icon-default: var(--green-850);
+  --message-success-indicator-border-default: var(--green-750);
+  --message-success-text-default: var(--green-850);
+  --message-warning-background-default: var(--orange-100);
+  --message-warning-details-background-default: var(--orange-75);
+  --message-warning-details-border-default: var(--orange-750);
+  --message-warning-icon-default: var(--orange-800);
+  --message-warning-indicator-border-default: var(--orange-550);
+  --message-warning-text-default: var(--orange-800);
+}
+body.layout-theme-dark {
+  --message-critical-background-default: var(--red-200-t-90);
+  --message-critical-details-background-default: var(--red-100);
+  --message-critical-details-border-default: var(--red-750);
+  --message-critical-icon-default: var(--red-800);
+  --message-critical-indicator-border-default: var(--red-600);
+  --message-critical-text-default: var(--red-800);
+  --message-info-background-default: var(--cornflower-blue-200-t);
+  --message-info-details-background-default: var(--cornflower-blue-100);
+  --message-info-details-border-default: var(--cornflower-blue-750);
+  --message-info-icon-default: var(--cornflower-blue-800);
+  --message-info-indicator-border-default: var(--cornflower-blue-600);
+  --message-info-text-default: var(--cornflower-blue-800);
+  --message-success-background-default: var(--green-300-t);
+  --message-success-details-background-default: var(--green-200);
+  --message-success-details-border-default: var(--green-750);
+  --message-success-icon-default: var(--green-850);
+  --message-success-indicator-border-default: var(--green-750);
+  --message-success-text-default: var(--green-850);
+  --message-warning-background-default: var(--orange-200-t);
+  --message-warning-details-background-default: var(--orange-100);
+  --message-warning-details-border-default: var(--orange-750);
+  --message-warning-icon-default: var(--orange-800);
+  --message-warning-indicator-border-default: var(--orange-550);
+  --message-warning-text-default: var(--orange-800);
+}
+}

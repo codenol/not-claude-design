@@ -1,0 +1,29 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: layout
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --layout-background-default: var(--nile-blue-950);
+  --layout-overlay-background-default: var(--black-500-t);
+}
+body.layout-theme-light {
+  --layout-background-default: var(--cool-gray-100);
+  --layout-overlay-background-default: var(--black-200-t);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --layout-background-default: var(--cool-gray-100);
+  --layout-overlay-background-default: var(--black-200-t);
+}
+body.layout-theme-dark {
+  --layout-background-default: var(--nile-blue-950);
+  --layout-overlay-background-default: var(--black-500-t);
+}
+}

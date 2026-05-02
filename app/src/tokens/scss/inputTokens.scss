@@ -1,0 +1,169 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: input
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --input-background-default: var(--nile-blue-900);
+  --input-background-disabled: var(--cool-gray-600-t);
+  --input-background-error: var(--nile-blue-900);
+  --input-background-filled: var(--nile-blue-900);
+  --input-background-focused: var(--nile-blue-900);
+  --input-background-hover: var(--nile-blue-900);
+  --input-background-warning: var(--nile-blue-900);
+  --input-border-default: var(--nile-blue-550);
+  --input-border-disabled: var(--cool-gray-600-t);
+  --input-border-error: var(--red-650);
+  --input-border-filled: var(--nile-blue-750-t);
+  --input-border-focused: var(--bondi-blue-500);
+  --input-border-hover: var(--bondi-blue-600);
+  --input-border-warning: var(--orange-550);
+  --input-hint-default: var(--cool-gray-550);
+  --input-hint-disabled: var(--cool-gray-600);
+  --input-hint-error: var(--red-600);
+  --input-hint-filled: var(--cool-gray-200);
+  --input-hint-focused: var(--cool-gray-550);
+  --input-hint-hover: var(--cool-gray-550);
+  --input-hint-warning: var(--orange-550);
+  --input-icon-default: var(--cool-gray-550);
+  --input-icon-disabled: var(--cool-gray-600);
+  --input-icon-error: var(--cool-gray-550);
+  --input-icon-filled: var(--cool-gray-550);
+  --input-icon-focused: var(--cool-gray-550);
+  --input-icon-hover: var(--cool-gray-550);
+  --input-icon-warning: var(--cool-gray-550);
+  --input-label-icon-info: var(--cornflower-blue-400);
+  --input-label-text-default: var(--cool-gray-200);
+  --input-text-default: var(--cool-gray-550);
+  --input-text-disabled: var(--cool-gray-600);
+  --input-text-error: var(--cool-gray-200);
+  --input-text-filled: var(--cool-gray-200);
+  --input-text-focused: var(--cool-gray-550);
+  --input-text-hover: var(--cool-gray-550);
+  --input-text-warning: var(--cool-gray-200);
+}
+body.layout-theme-light {
+  --input-background-default: var(--white-950);
+  --input-background-disabled: var(--cool-gray-100);
+  --input-background-error: var(--white-950);
+  --input-background-filled: var(--white-950);
+  --input-background-focused: var(--white-950);
+  --input-background-hover: var(--white-950);
+  --input-background-warning: var(--white-950);
+  --input-border-default: var(--cool-gray-200);
+  --input-border-disabled: var(--cool-gray-200);
+  --input-border-error: var(--red-600);
+  --input-border-filled: var(--cool-gray-200);
+  --input-border-focused: var(--bondi-blue-500);
+  --input-border-hover: var(--bondi-blue-600);
+  --input-border-warning: var(--orange-600);
+  --input-hint-default: var(--cool-gray-600);
+  --input-hint-disabled: var(--cool-gray-400);
+  --input-hint-error: var(--red-600);
+  --input-hint-filled: var(--cool-gray-800);
+  --input-hint-focused: var(--cool-gray-600);
+  --input-hint-hover: var(--cool-gray-600);
+  --input-hint-warning: var(--orange-600);
+  --input-icon-default: var(--cool-gray-700);
+  --input-icon-disabled: var(--cool-gray-400);
+  --input-icon-error: var(--cool-gray-700);
+  --input-icon-filled: var(--cool-gray-700);
+  --input-icon-focused: var(--cool-gray-700);
+  --input-icon-hover: var(--cool-gray-700);
+  --input-icon-warning: var(--cool-gray-700);
+  --input-label-icon-info: var(--cornflower-blue-550);
+  --input-label-text-default: var(--cool-gray-800);
+  --input-text-default: var(--cool-gray-600);
+  --input-text-disabled: var(--cool-gray-400);
+  --input-text-error: var(--cool-gray-800);
+  --input-text-filled: var(--cool-gray-800);
+  --input-text-focused: var(--cool-gray-600);
+  --input-text-hover: var(--cool-gray-600);
+  --input-text-warning: var(--cool-gray-800);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --input-background-default: var(--white-950);
+  --input-background-disabled: var(--cool-gray-100);
+  --input-background-error: var(--white-950);
+  --input-background-filled: var(--white-950);
+  --input-background-focused: var(--white-950);
+  --input-background-hover: var(--white-950);
+  --input-background-warning: var(--white-950);
+  --input-border-default: var(--cool-gray-200);
+  --input-border-disabled: var(--cool-gray-200);
+  --input-border-error: var(--red-600);
+  --input-border-filled: var(--cool-gray-200);
+  --input-border-focused: var(--bondi-blue-500);
+  --input-border-hover: var(--bondi-blue-600);
+  --input-border-warning: var(--orange-600);
+  --input-hint-default: var(--cool-gray-600);
+  --input-hint-disabled: var(--cool-gray-400);
+  --input-hint-error: var(--red-600);
+  --input-hint-filled: var(--cool-gray-800);
+  --input-hint-focused: var(--cool-gray-600);
+  --input-hint-hover: var(--cool-gray-600);
+  --input-hint-warning: var(--orange-600);
+  --input-icon-default: var(--cool-gray-700);
+  --input-icon-disabled: var(--cool-gray-400);
+  --input-icon-error: var(--cool-gray-700);
+  --input-icon-filled: var(--cool-gray-700);
+  --input-icon-focused: var(--cool-gray-700);
+  --input-icon-hover: var(--cool-gray-700);
+  --input-icon-warning: var(--cool-gray-700);
+  --input-label-icon-info: var(--cornflower-blue-550);
+  --input-label-text-default: var(--cool-gray-800);
+  --input-text-default: var(--cool-gray-600);
+  --input-text-disabled: var(--cool-gray-400);
+  --input-text-error: var(--cool-gray-800);
+  --input-text-filled: var(--cool-gray-800);
+  --input-text-focused: var(--cool-gray-600);
+  --input-text-hover: var(--cool-gray-600);
+  --input-text-warning: var(--cool-gray-800);
+}
+body.layout-theme-dark {
+  --input-background-default: var(--nile-blue-900);
+  --input-background-disabled: var(--cool-gray-600-t);
+  --input-background-error: var(--nile-blue-900);
+  --input-background-filled: var(--nile-blue-900);
+  --input-background-focused: var(--nile-blue-900);
+  --input-background-hover: var(--nile-blue-900);
+  --input-background-warning: var(--nile-blue-900);
+  --input-border-default: var(--nile-blue-550);
+  --input-border-disabled: var(--cool-gray-600-t);
+  --input-border-error: var(--red-650);
+  --input-border-filled: var(--nile-blue-750-t);
+  --input-border-focused: var(--bondi-blue-500);
+  --input-border-hover: var(--bondi-blue-600);
+  --input-border-warning: var(--orange-550);
+  --input-hint-default: var(--cool-gray-550);
+  --input-hint-disabled: var(--cool-gray-600);
+  --input-hint-error: var(--red-600);
+  --input-hint-filled: var(--cool-gray-200);
+  --input-hint-focused: var(--cool-gray-550);
+  --input-hint-hover: var(--cool-gray-550);
+  --input-hint-warning: var(--orange-550);
+  --input-icon-default: var(--cool-gray-550);
+  --input-icon-disabled: var(--cool-gray-600);
+  --input-icon-error: var(--cool-gray-550);
+  --input-icon-filled: var(--cool-gray-550);
+  --input-icon-focused: var(--cool-gray-550);
+  --input-icon-hover: var(--cool-gray-550);
+  --input-icon-warning: var(--cool-gray-550);
+  --input-label-icon-info: var(--cornflower-blue-400);
+  --input-label-text-default: var(--cool-gray-200);
+  --input-text-default: var(--cool-gray-550);
+  --input-text-disabled: var(--cool-gray-600);
+  --input-text-error: var(--cool-gray-200);
+  --input-text-filled: var(--cool-gray-200);
+  --input-text-focused: var(--cool-gray-550);
+  --input-text-hover: var(--cool-gray-550);
+  --input-text-warning: var(--cool-gray-200);
+}
+}

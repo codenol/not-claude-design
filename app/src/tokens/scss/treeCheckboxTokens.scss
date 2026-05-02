@@ -1,0 +1,61 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: tree-checkbox
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --tree-checkbox-background-default: var(--nile-blue-900);
+  --tree-checkbox-tree-item-background-default: var(--white-0-t);
+  --tree-checkbox-tree-item-background-disabled: var(--white-0-t);
+  --tree-checkbox-tree-item-background-hover: var(--nile-blue-850);
+  --tree-checkbox-tree-item-icon-default: var(--cool-gray-550);
+  --tree-checkbox-tree-item-icon-disabled: var(--cool-gray-750);
+  --tree-checkbox-tree-item-icon-hover: var(--cool-gray-550);
+  --tree-checkbox-tree-item-text-default: var(--cool-gray-200);
+  --tree-checkbox-tree-item-text-disabled: var(--cool-gray-750);
+  --tree-checkbox-tree-item-text-hover: var(--cool-gray-200);
+}
+body.layout-theme-light {
+  --tree-checkbox-background-default: var(--white-950);
+  --tree-checkbox-tree-item-background-default: var(--white-0-t);
+  --tree-checkbox-tree-item-background-disabled: var(--white-0-t);
+  --tree-checkbox-tree-item-background-hover: var(--cool-gray-100);
+  --tree-checkbox-tree-item-icon-default: var(--cool-gray-700);
+  --tree-checkbox-tree-item-icon-disabled: var(--cool-gray-400);
+  --tree-checkbox-tree-item-icon-hover: var(--cool-gray-700);
+  --tree-checkbox-tree-item-text-default: var(--cool-gray-800);
+  --tree-checkbox-tree-item-text-disabled: var(--cool-gray-400);
+  --tree-checkbox-tree-item-text-hover: var(--cool-gray-800);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --tree-checkbox-background-default: var(--white-950);
+  --tree-checkbox-tree-item-background-default: var(--white-0-t);
+  --tree-checkbox-tree-item-background-disabled: var(--white-0-t);
+  --tree-checkbox-tree-item-background-hover: var(--cool-gray-100);
+  --tree-checkbox-tree-item-icon-default: var(--cool-gray-700);
+  --tree-checkbox-tree-item-icon-disabled: var(--cool-gray-400);
+  --tree-checkbox-tree-item-icon-hover: var(--cool-gray-700);
+  --tree-checkbox-tree-item-text-default: var(--cool-gray-800);
+  --tree-checkbox-tree-item-text-disabled: var(--cool-gray-400);
+  --tree-checkbox-tree-item-text-hover: var(--cool-gray-800);
+}
+body.layout-theme-dark {
+  --tree-checkbox-background-default: var(--nile-blue-900);
+  --tree-checkbox-tree-item-background-default: var(--white-0-t);
+  --tree-checkbox-tree-item-background-disabled: var(--white-0-t);
+  --tree-checkbox-tree-item-background-hover: var(--nile-blue-850);
+  --tree-checkbox-tree-item-icon-default: var(--cool-gray-550);
+  --tree-checkbox-tree-item-icon-disabled: var(--cool-gray-750);
+  --tree-checkbox-tree-item-icon-hover: var(--cool-gray-550);
+  --tree-checkbox-tree-item-text-default: var(--cool-gray-200);
+  --tree-checkbox-tree-item-text-disabled: var(--cool-gray-750);
+  --tree-checkbox-tree-item-text-hover: var(--cool-gray-200);
+}
+}

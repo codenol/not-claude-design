@@ -1,0 +1,137 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: radiobutton
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --radiobutton-checked-background-default: var(--nile-blue-900);
+  --radiobutton-checked-background-disabled: var(--cool-gray-600-t);
+  --radiobutton-checked-background-focus: var(--nile-blue-900);
+  --radiobutton-checked-background-hover: var(--nile-blue-900);
+  --radiobutton-checked-border-default: var(--bondi-blue-600);
+  --radiobutton-checked-border-disabled: var(--cool-gray-600-t);
+  --radiobutton-checked-border-focus: var(--bondi-blue-500);
+  --radiobutton-checked-border-hover: var(--bondi-blue-500);
+  --radiobutton-checked-circle-default: var(--bondi-blue-600);
+  --radiobutton-checked-circle-disabled: var(--cool-gray-600-t);
+  --radiobutton-checked-circle-focus: var(--bondi-blue-600);
+  --radiobutton-checked-circle-hover: var(--bondi-blue-500);
+  --radiobutton-checked-text-default: var(--cool-gray-200);
+  --radiobutton-checked-text-disabled: var(--cool-gray-700);
+  --radiobutton-checked-text-focus: var(--cool-gray-200);
+  --radiobutton-checked-text-hover: var(--cool-gray-200);
+  --radiobutton-icon-info: var(--cornflower-blue-400);
+  --radiobutton-unchecked-background-default: var(--nile-blue-900);
+  --radiobutton-unchecked-background-disabled: var(--cool-gray-600-t);
+  --radiobutton-unchecked-background-focus: var(--nile-blue-900);
+  --radiobutton-unchecked-background-hover: var(--nile-blue-900);
+  --radiobutton-unchecked-border-default: var(--nile-blue-550);
+  --radiobutton-unchecked-border-disabled: var(--cool-gray-600-t);
+  --radiobutton-unchecked-border-focus: var(--bondi-blue-300);
+  --radiobutton-unchecked-border-hover: var(--bondi-blue-500);
+  --radiobutton-unchecked-text-default: var(--cool-gray-550);
+  --radiobutton-unchecked-text-disabled: var(--cool-gray-700);
+  --radiobutton-unchecked-text-focus: var(--cool-gray-550);
+  --radiobutton-unchecked-text-hover: var(--cool-gray-550);
+}
+body.layout-theme-light {
+  --radiobutton-checked-background-default: var(--white-950);
+  --radiobutton-checked-background-disabled: var(--cool-gray-100);
+  --radiobutton-checked-background-focus: var(--white-950);
+  --radiobutton-checked-background-hover: var(--white-950);
+  --radiobutton-checked-border-default: var(--bondi-blue-600);
+  --radiobutton-checked-border-disabled: var(--bondi-blue-200);
+  --radiobutton-checked-border-focus: var(--bondi-blue-600);
+  --radiobutton-checked-border-hover: var(--bondi-blue-500);
+  --radiobutton-checked-circle-default: var(--bondi-blue-600);
+  --radiobutton-checked-circle-disabled: var(--bondi-blue-200);
+  --radiobutton-checked-circle-focus: var(--bondi-blue-600);
+  --radiobutton-checked-circle-hover: var(--bondi-blue-500);
+  --radiobutton-checked-text-default: var(--cool-gray-800);
+  --radiobutton-checked-text-disabled: var(--cool-gray-400);
+  --radiobutton-checked-text-focus: var(--cool-gray-800);
+  --radiobutton-checked-text-hover: var(--cool-gray-800);
+  --radiobutton-icon-info: var(--cornflower-blue-550);
+  --radiobutton-unchecked-background-default: var(--white-950);
+  --radiobutton-unchecked-background-disabled: var(--cool-gray-100);
+  --radiobutton-unchecked-background-focus: var(--white-950);
+  --radiobutton-unchecked-background-hover: var(--white-950);
+  --radiobutton-unchecked-border-default: var(--cool-gray-300);
+  --radiobutton-unchecked-border-disabled: var(--cool-gray-200);
+  --radiobutton-unchecked-border-focus: var(--bondi-blue-600);
+  --radiobutton-unchecked-border-hover: var(--bondi-blue-500);
+  --radiobutton-unchecked-text-default: var(--cool-gray-700);
+  --radiobutton-unchecked-text-disabled: var(--cool-gray-400);
+  --radiobutton-unchecked-text-focus: var(--cool-gray-700);
+  --radiobutton-unchecked-text-hover: var(--cool-gray-700);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --radiobutton-checked-background-default: var(--white-950);
+  --radiobutton-checked-background-disabled: var(--cool-gray-100);
+  --radiobutton-checked-background-focus: var(--white-950);
+  --radiobutton-checked-background-hover: var(--white-950);
+  --radiobutton-checked-border-default: var(--bondi-blue-600);
+  --radiobutton-checked-border-disabled: var(--bondi-blue-200);
+  --radiobutton-checked-border-focus: var(--bondi-blue-600);
+  --radiobutton-checked-border-hover: var(--bondi-blue-500);
+  --radiobutton-checked-circle-default: var(--bondi-blue-600);
+  --radiobutton-checked-circle-disabled: var(--bondi-blue-200);
+  --radiobutton-checked-circle-focus: var(--bondi-blue-600);
+  --radiobutton-checked-circle-hover: var(--bondi-blue-500);
+  --radiobutton-checked-text-default: var(--cool-gray-800);
+  --radiobutton-checked-text-disabled: var(--cool-gray-400);
+  --radiobutton-checked-text-focus: var(--cool-gray-800);
+  --radiobutton-checked-text-hover: var(--cool-gray-800);
+  --radiobutton-icon-info: var(--cornflower-blue-550);
+  --radiobutton-unchecked-background-default: var(--white-950);
+  --radiobutton-unchecked-background-disabled: var(--cool-gray-100);
+  --radiobutton-unchecked-background-focus: var(--white-950);
+  --radiobutton-unchecked-background-hover: var(--white-950);
+  --radiobutton-unchecked-border-default: var(--cool-gray-300);
+  --radiobutton-unchecked-border-disabled: var(--cool-gray-200);
+  --radiobutton-unchecked-border-focus: var(--bondi-blue-600);
+  --radiobutton-unchecked-border-hover: var(--bondi-blue-500);
+  --radiobutton-unchecked-text-default: var(--cool-gray-700);
+  --radiobutton-unchecked-text-disabled: var(--cool-gray-400);
+  --radiobutton-unchecked-text-focus: var(--cool-gray-700);
+  --radiobutton-unchecked-text-hover: var(--cool-gray-700);
+}
+body.layout-theme-dark {
+  --radiobutton-checked-background-default: var(--nile-blue-900);
+  --radiobutton-checked-background-disabled: var(--cool-gray-600-t);
+  --radiobutton-checked-background-focus: var(--nile-blue-900);
+  --radiobutton-checked-background-hover: var(--nile-blue-900);
+  --radiobutton-checked-border-default: var(--bondi-blue-600);
+  --radiobutton-checked-border-disabled: var(--cool-gray-600-t);
+  --radiobutton-checked-border-focus: var(--bondi-blue-500);
+  --radiobutton-checked-border-hover: var(--bondi-blue-500);
+  --radiobutton-checked-circle-default: var(--bondi-blue-600);
+  --radiobutton-checked-circle-disabled: var(--cool-gray-600-t);
+  --radiobutton-checked-circle-focus: var(--bondi-blue-600);
+  --radiobutton-checked-circle-hover: var(--bondi-blue-500);
+  --radiobutton-checked-text-default: var(--cool-gray-200);
+  --radiobutton-checked-text-disabled: var(--cool-gray-700);
+  --radiobutton-checked-text-focus: var(--cool-gray-200);
+  --radiobutton-checked-text-hover: var(--cool-gray-200);
+  --radiobutton-icon-info: var(--cornflower-blue-400);
+  --radiobutton-unchecked-background-default: var(--nile-blue-900);
+  --radiobutton-unchecked-background-disabled: var(--cool-gray-600-t);
+  --radiobutton-unchecked-background-focus: var(--nile-blue-900);
+  --radiobutton-unchecked-background-hover: var(--nile-blue-900);
+  --radiobutton-unchecked-border-default: var(--nile-blue-550);
+  --radiobutton-unchecked-border-disabled: var(--cool-gray-600-t);
+  --radiobutton-unchecked-border-focus: var(--bondi-blue-300);
+  --radiobutton-unchecked-border-hover: var(--bondi-blue-500);
+  --radiobutton-unchecked-text-default: var(--cool-gray-550);
+  --radiobutton-unchecked-text-disabled: var(--cool-gray-700);
+  --radiobutton-unchecked-text-focus: var(--cool-gray-550);
+  --radiobutton-unchecked-text-hover: var(--cool-gray-550);
+}
+}

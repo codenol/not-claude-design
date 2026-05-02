@@ -1,0 +1,383 @@
+.container {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid #dfe2e6;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 0;
+}
+
+/* ===== TOOLBAR ===== */
+.toolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.searchGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.filterChips {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filterChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 4000px;
+  border: 1px solid #38b1d0;
+  background: rgba(179, 229, 240, 0.3);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.14px;
+  color: #2d98b4;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.filterChip:hover {
+  background: rgba(179, 229, 240, 0.5);
+}
+
+.filterChipIcon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.toolbarActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===== BULK ACTIONS BAR ===== */
+.bulkBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  background: #eef1f5;
+  border-radius: 8px;
+  flex-shrink: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #3f4146;
+}
+
+.bulkCount {
+  font-weight: 500;
+}
+
+.bulkActions {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+/* ===== TABLE GRID ===== */
+.table {
+  border: 1px solid #dfe2e6;
+  border-radius: 16px;
+  overflow: hidden;
+  flex: 1 0 auto;
+  min-height: 0;
+}
+
+.tableInner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tableHead {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.headerCell {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 16px;
+  background: #f2f5f9;
+  border-bottom: 1px solid #dfe2e6;
+  border-right: 1px solid #dfe2e6;
+  gap: 8px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.headerCell:last-child {
+  border-right: none;
+  padding: 0 12px;
+}
+
+.headerText {
+  flex: 1 0 0;
+  min-width: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.28px;
+  color: #3f4146;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.headerSort {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  color: #75777b;
+}
+
+.headerSort:hover {
+  color: #3f4146;
+}
+
+.headerSortActive {
+  color: #2d98b4;
+}
+
+.headerFilter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  color: #75777b;
+}
+
+.headerSettings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  color: #75777b;
+  flex-shrink: 0;
+}
+
+/* ===== STICKY LEFT COLUMN ===== */
+.stickyLeft {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: #f2f5f9;
+}
+
+.rowStickyLeft {
+  background: white;
+}
+
+.rowStickyLeft.alt {
+  background: #f8f9fb;
+}
+
+/* ===== TABLE BODY ===== */
+.tableBody {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+.tableRow {
+  display: flex;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.tableRow:nth-child(even) .cell,
+.tableRow:nth-child(even) .rowStickyLeft {
+  background: #f8f9fb;
+}
+
+.tableRow:nth-child(odd) .cell,
+.tableRow:nth-child(odd) .rowStickyLeft {
+  background: white;
+}
+
+.tableRow:hover .cell,
+.tableRow:hover .rowStickyLeft {
+  background: #eef1f5;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid #dfe2e6;
+  border-right: 1px solid #dfe2e6;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cell:last-child {
+  border-right: none;
+  padding: 0 12px;
+  justify-content: center;
+}
+
+.cellText {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #3f4146;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ===== CHECKBOX ===== */
+.checkCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid #d5d9de;
+  background: white;
+  flex-shrink: 0;
+  cursor: pointer;
+  color: transparent;
+  box-sizing: border-box;
+}
+
+.checkbox:hover {
+  border-color: #2d98b4;
+}
+
+.checkboxChecked {
+  background: #2d98b4;
+  border-color: #2d98b4;
+  color: white;
+}
+
+.rowAction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  color: #75777b;
+}
+
+.rowAction:hover {
+  color: #3f4146;
+}
+
+/* ===== PAGINATION ===== */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.pageNumbers {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pageBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.14px;
+  color: #3f4146;
+  padding: 8px;
+}
+
+.pageBtn:hover {
+  background: #eef1f5;
+}
+
+.pageBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pageBtnActive {
+  background: #eef1f5;
+}
+
+.pageSize {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 8px 7px 12px;
+  border: 1px solid #dfe2e6;
+  border-radius: 8px;
+  background: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #3f4146;
+  cursor: pointer;
+}
+
+.pageSize:hover {
+  border-color: #2d98b4;
+}
+
+.pageSizeIcon {
+  width: 16px;
+  height: 16px;
+  color: #75777b;
+}

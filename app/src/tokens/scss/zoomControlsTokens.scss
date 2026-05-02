@@ -1,0 +1,81 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: zoom-controls
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --zoom-controls-icon-control-button-background-active: var(--nile-blue-850);
+  --zoom-controls-icon-control-button-background-default: var(--nile-blue-900);
+  --zoom-controls-icon-control-button-background-disabled: var(--cool-gray-600-t);
+  --zoom-controls-icon-control-button-background-focus: var(--nile-blue-900);
+  --zoom-controls-icon-control-button-background-hover: var(--nile-blue-850);
+  --zoom-controls-icon-control-button-border-active: var(--bondi-blue-600);
+  --zoom-controls-icon-control-button-border-default: var(--nile-blue-550);
+  --zoom-controls-icon-control-button-border-disabled: var(--cool-gray-600-t);
+  --zoom-controls-icon-control-button-border-focus: var(--bondi-blue-500);
+  --zoom-controls-icon-control-button-border-hover: var(--bondi-blue-600);
+  --zoom-controls-icon-control-button-icon-active: var(--cool-gray-550);
+  --zoom-controls-icon-control-button-icon-default: var(--cool-gray-550);
+  --zoom-controls-icon-control-button-icon-disabled: var(--cool-gray-600);
+  --zoom-controls-icon-control-button-icon-focus: var(--cool-gray-550);
+  --zoom-controls-icon-control-button-icon-hover: var(--cool-gray-550);
+}
+body.layout-theme-light {
+  --zoom-controls-icon-control-button-background-active: var(--cool-gray-100);
+  --zoom-controls-icon-control-button-background-default: var(--white-950);
+  --zoom-controls-icon-control-button-background-disabled: var(--white-950);
+  --zoom-controls-icon-control-button-background-focus: var(--white-950);
+  --zoom-controls-icon-control-button-background-hover: var(--cool-gray-100);
+  --zoom-controls-icon-control-button-border-active: var(--bondi-blue-600);
+  --zoom-controls-icon-control-button-border-default: var(--cool-gray-500);
+  --zoom-controls-icon-control-button-border-disabled: var(--cool-gray-200);
+  --zoom-controls-icon-control-button-border-focus: var(--bondi-blue-500);
+  --zoom-controls-icon-control-button-border-hover: var(--cool-gray-500);
+  --zoom-controls-icon-control-button-icon-active: var(--cool-gray-700);
+  --zoom-controls-icon-control-button-icon-default: var(--cool-gray-700);
+  --zoom-controls-icon-control-button-icon-disabled: var(--cool-gray-400);
+  --zoom-controls-icon-control-button-icon-focus: var(--cool-gray-700);
+  --zoom-controls-icon-control-button-icon-hover: var(--cool-gray-700);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --zoom-controls-icon-control-button-background-active: var(--cool-gray-100);
+  --zoom-controls-icon-control-button-background-default: var(--white-950);
+  --zoom-controls-icon-control-button-background-disabled: var(--white-950);
+  --zoom-controls-icon-control-button-background-focus: var(--white-950);
+  --zoom-controls-icon-control-button-background-hover: var(--cool-gray-100);
+  --zoom-controls-icon-control-button-border-active: var(--bondi-blue-600);
+  --zoom-controls-icon-control-button-border-default: var(--cool-gray-500);
+  --zoom-controls-icon-control-button-border-disabled: var(--cool-gray-200);
+  --zoom-controls-icon-control-button-border-focus: var(--bondi-blue-500);
+  --zoom-controls-icon-control-button-border-hover: var(--cool-gray-500);
+  --zoom-controls-icon-control-button-icon-active: var(--cool-gray-700);
+  --zoom-controls-icon-control-button-icon-default: var(--cool-gray-700);
+  --zoom-controls-icon-control-button-icon-disabled: var(--cool-gray-400);
+  --zoom-controls-icon-control-button-icon-focus: var(--cool-gray-700);
+  --zoom-controls-icon-control-button-icon-hover: var(--cool-gray-700);
+}
+body.layout-theme-dark {
+  --zoom-controls-icon-control-button-background-active: var(--nile-blue-850);
+  --zoom-controls-icon-control-button-background-default: var(--nile-blue-900);
+  --zoom-controls-icon-control-button-background-disabled: var(--cool-gray-600-t);
+  --zoom-controls-icon-control-button-background-focus: var(--nile-blue-900);
+  --zoom-controls-icon-control-button-background-hover: var(--nile-blue-850);
+  --zoom-controls-icon-control-button-border-active: var(--bondi-blue-600);
+  --zoom-controls-icon-control-button-border-default: var(--nile-blue-550);
+  --zoom-controls-icon-control-button-border-disabled: var(--cool-gray-600-t);
+  --zoom-controls-icon-control-button-border-focus: var(--bondi-blue-500);
+  --zoom-controls-icon-control-button-border-hover: var(--bondi-blue-600);
+  --zoom-controls-icon-control-button-icon-active: var(--cool-gray-550);
+  --zoom-controls-icon-control-button-icon-default: var(--cool-gray-550);
+  --zoom-controls-icon-control-button-icon-disabled: var(--cool-gray-600);
+  --zoom-controls-icon-control-button-icon-focus: var(--cool-gray-550);
+  --zoom-controls-icon-control-button-icon-hover: var(--cool-gray-550);
+}
+}

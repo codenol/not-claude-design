@@ -1,0 +1,49 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: breadcrumbs
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --breadcrumbs-background-default: var(--nile-blue-900-t);
+  --breadcrumbs-border-default: var(--nile-blue-750);
+  --breadcrumbs-icon-default: var(--cool-gray-550);
+  --breadcrumbs-icon-hover: var(--bondi-blue-500);
+  --breadcrumbs-text-default: var(--cool-gray-200);
+  --breadcrumbs-text-hover: var(--bondi-blue-500);
+  --breadcrumbs-text-secondary: var(--cool-gray-550);
+}
+body.layout-theme-light {
+  --breadcrumbs-background-default: var(--white-550-t);
+  --breadcrumbs-border-default: var(--cool-gray-200);
+  --breadcrumbs-icon-default: var(--cool-gray-700);
+  --breadcrumbs-icon-hover: var(--bondi-blue-500);
+  --breadcrumbs-text-default: var(--cool-gray-800);
+  --breadcrumbs-text-hover: var(--bondi-blue-500);
+  --breadcrumbs-text-secondary: var(--cool-gray-700);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --breadcrumbs-background-default: var(--white-550-t);
+  --breadcrumbs-border-default: var(--cool-gray-200);
+  --breadcrumbs-icon-default: var(--cool-gray-700);
+  --breadcrumbs-icon-hover: var(--bondi-blue-500);
+  --breadcrumbs-text-default: var(--cool-gray-800);
+  --breadcrumbs-text-hover: var(--bondi-blue-500);
+  --breadcrumbs-text-secondary: var(--cool-gray-700);
+}
+body.layout-theme-dark {
+  --breadcrumbs-background-default: var(--nile-blue-900-t);
+  --breadcrumbs-border-default: var(--nile-blue-750);
+  --breadcrumbs-icon-default: var(--cool-gray-550);
+  --breadcrumbs-icon-hover: var(--bondi-blue-500);
+  --breadcrumbs-text-default: var(--cool-gray-200);
+  --breadcrumbs-text-hover: var(--bondi-blue-500);
+  --breadcrumbs-text-secondary: var(--cool-gray-550);
+}
+}

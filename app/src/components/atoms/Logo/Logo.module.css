@@ -1,0 +1,68 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 200px;
+  position: relative;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.genom-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding-top: 4px;
+  flex-shrink: 0;
+}
+
+.genom-svg svg {
+  height: 19px;
+  width: 99px;
+}
+
+/* ===== ЛОГО ===== */
+.logo-text {
+  font-family: 'Space Mono', 'Noto Sans', monospace;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 18px;
+  color: #11244d;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ===== Спектр ===== */
+.spektr-svg {
+  height: 36px;
+  width: 114px;
+  flex-shrink: 0;
+}
+
+/* ===== Визион / Спектр.S3 ===== */
+.vision-text {
+  font-family: 'TT Hoves', 'Work Sans', sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.vision-caret {
+  color: #00bec8;
+  font-size: 31px;
+  line-height: normal;
+}
+
+.vision-name {
+  color: #11244d;
+  font-size: 31px;
+  line-height: normal;
+}
+
+/* ===== Спектр ИИ ===== */
+.spektr-ai-svg {
+  position: absolute;
+  inset: 31.25% 9.5% 18.75% 15.49%;
+}

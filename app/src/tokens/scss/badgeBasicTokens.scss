@@ -1,0 +1,45 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: badge-basic
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --badge-basic-base-background-default: var(--cool-gray-200);
+  --badge-basic-base-stroke-default: var(--white-950);
+  --badge-basic-base-text-default: var(--cool-gray-800);
+  --badge-basic-massaction-background-default: var(--red-600);
+  --badge-basic-massaction-stroke-default: var(--white-950);
+  --badge-basic-massaction-text-default: var(--white-950);
+}
+body.layout-theme-light {
+  --badge-basic-base-background-default: var(--cool-gray-800);
+  --badge-basic-base-stroke-default: var(--white-950);
+  --badge-basic-base-text-default: var(--white-950);
+  --badge-basic-massaction-background-default: var(--red-600);
+  --badge-basic-massaction-stroke-default: var(--white-950);
+  --badge-basic-massaction-text-default: var(--white-950);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --badge-basic-base-background-default: var(--cool-gray-800);
+  --badge-basic-base-stroke-default: var(--white-950);
+  --badge-basic-base-text-default: var(--white-950);
+  --badge-basic-massaction-background-default: var(--red-600);
+  --badge-basic-massaction-stroke-default: var(--white-950);
+  --badge-basic-massaction-text-default: var(--white-950);
+}
+body.layout-theme-dark {
+  --badge-basic-base-background-default: var(--cool-gray-200);
+  --badge-basic-base-stroke-default: var(--white-950);
+  --badge-basic-base-text-default: var(--cool-gray-800);
+  --badge-basic-massaction-background-default: var(--red-600);
+  --badge-basic-massaction-stroke-default: var(--white-950);
+  --badge-basic-massaction-text-default: var(--white-950);
+}
+}

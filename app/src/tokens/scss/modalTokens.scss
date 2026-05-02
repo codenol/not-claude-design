@@ -1,0 +1,57 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: modal
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --modal-background-primary: var(--nile-blue-900);
+  --modal-background-secondary: var(--nile-blue-950);
+  --modal-border-default: var(--nile-blue-750);
+  --modal-icon-primary: var(--cool-gray-200);
+  --modal-icon-secondary: var(--cool-gray-550);
+  --modal-icon-tertiary: var(--cool-gray-700);
+  --modal-text-primary: var(--cool-gray-200);
+  --modal-text-secondary: var(--cool-gray-550);
+  --modal-text-tertiary: var(--cool-gray-700);
+}
+body.layout-theme-light {
+  --modal-background-primary: var(--white-950);
+  --modal-background-secondary: var(--cool-gray-50);
+  --modal-border-default: var(--cool-gray-200);
+  --modal-icon-primary: var(--cool-gray-800);
+  --modal-icon-secondary: var(--cool-gray-700);
+  --modal-icon-tertiary: var(--cool-gray-550);
+  --modal-text-primary: var(--cool-gray-800);
+  --modal-text-secondary: var(--cool-gray-700);
+  --modal-text-tertiary: var(--cool-gray-550);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --modal-background-primary: var(--white-950);
+  --modal-background-secondary: var(--cool-gray-50);
+  --modal-border-default: var(--cool-gray-200);
+  --modal-icon-primary: var(--cool-gray-800);
+  --modal-icon-secondary: var(--cool-gray-700);
+  --modal-icon-tertiary: var(--cool-gray-550);
+  --modal-text-primary: var(--cool-gray-800);
+  --modal-text-secondary: var(--cool-gray-700);
+  --modal-text-tertiary: var(--cool-gray-550);
+}
+body.layout-theme-dark {
+  --modal-background-primary: var(--nile-blue-900);
+  --modal-background-secondary: var(--nile-blue-950);
+  --modal-border-default: var(--nile-blue-750);
+  --modal-icon-primary: var(--cool-gray-200);
+  --modal-icon-secondary: var(--cool-gray-550);
+  --modal-icon-tertiary: var(--cool-gray-700);
+  --modal-text-primary: var(--cool-gray-200);
+  --modal-text-secondary: var(--cool-gray-550);
+  --modal-text-tertiary: var(--cool-gray-700);
+}
+}

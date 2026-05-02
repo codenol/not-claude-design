@@ -1,0 +1,29 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: scrollbar
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --scrollbar-thumb-background-default: var(--nile-blue-600);
+  --scrollbar-thumb-background-hover: var(--nile-blue-550);
+}
+body.layout-theme-light {
+  --scrollbar-thumb-background-default: var(--cool-gray-500);
+  --scrollbar-thumb-background-hover: var(--cool-gray-700);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --scrollbar-thumb-background-default: var(--cool-gray-500);
+  --scrollbar-thumb-background-hover: var(--cool-gray-700);
+}
+body.layout-theme-dark {
+  --scrollbar-thumb-background-default: var(--nile-blue-600);
+  --scrollbar-thumb-background-hover: var(--nile-blue-550);
+}
+}

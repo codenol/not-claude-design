@@ -1,0 +1,37 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: toggletip
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --toggletip-background-default: var(--nile-blue-850);
+  --toggletip-icon-close-default: var(--white-400-t);
+  --toggletip-icon-close-hover: var(--cool-gray-200);
+  --toggletip-text-default: var(--cool-gray-200);
+}
+body.layout-theme-light {
+  --toggletip-background-default: var(--cool-gray-800);
+  --toggletip-icon-close-default: var(--white-400-t);
+  --toggletip-icon-close-hover: var(--white-950);
+  --toggletip-text-default: var(--white-950);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --toggletip-background-default: var(--cool-gray-800);
+  --toggletip-icon-close-default: var(--white-400-t);
+  --toggletip-icon-close-hover: var(--white-950);
+  --toggletip-text-default: var(--white-950);
+}
+body.layout-theme-dark {
+  --toggletip-background-default: var(--nile-blue-850);
+  --toggletip-icon-close-default: var(--white-400-t);
+  --toggletip-icon-close-hover: var(--cool-gray-200);
+  --toggletip-text-default: var(--cool-gray-200);
+}
+}

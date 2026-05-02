@@ -1,0 +1,43 @@
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.icon {
+  position: absolute;
+  left: 14px;
+  top: 13px;
+  width: 12px;
+  height: 12px;
+}
+
+/* ===== DEFAULT ===== */
+.default .indicator {
+  background: var(--sidebar-status-indicator-default);
+}
+
+/* ===== DANGER ===== */
+.danger .indicator {
+  background: var(--sidebar-status-indicator-danger);
+}
+
+/* ===== LOCK ===== */
+.lock .indicator {
+  background: var(--sidebar-status-indicator-lock);
+}
+.lock .icon {
+  color: #75777b;
+}

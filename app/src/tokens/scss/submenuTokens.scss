@@ -1,0 +1,85 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: submenu
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --submenu-background-default: var(--nile-blue-900);
+  --submenu-submenu-item-background-default: var(--white-0-t);
+  --submenu-submenu-item-background-disabled: var(--white-0-t);
+  --submenu-submenu-item-background-hover: var(--nile-blue-850);
+  --submenu-submenu-item-background-open: var(--nile-blue-850);
+  --submenu-submenu-item-icon-danger: var(--red-650);
+  --submenu-submenu-item-icon-default: var(--cool-gray-550);
+  --submenu-submenu-item-icon-disabled: var(--cool-gray-750);
+  --submenu-submenu-item-icon-hover: var(--cool-gray-550);
+  --submenu-submenu-item-icon-info: var(--cornflower-blue-500);
+  --submenu-submenu-item-icon-open: var(--cool-gray-550);
+  --submenu-submenu-item-icon-success: var(--green-500);
+  --submenu-submenu-item-text-default: var(--cool-gray-200);
+  --submenu-submenu-item-text-disabled: var(--cool-gray-750);
+  --submenu-submenu-item-text-hover: var(--cool-gray-200);
+  --submenu-submenu-item-text-open: var(--cool-gray-200);
+}
+body.layout-theme-light {
+  --submenu-background-default: var(--white-950);
+  --submenu-submenu-item-background-default: var(--white-0-t);
+  --submenu-submenu-item-background-disabled: var(--white-0-t);
+  --submenu-submenu-item-background-hover: var(--cool-gray-100);
+  --submenu-submenu-item-background-open: var(--cool-gray-100);
+  --submenu-submenu-item-icon-danger: var(--red-600);
+  --submenu-submenu-item-icon-default: var(--cool-gray-700);
+  --submenu-submenu-item-icon-disabled: var(--cool-gray-400);
+  --submenu-submenu-item-icon-hover: var(--cool-gray-700);
+  --submenu-submenu-item-icon-info: var(--cornflower-blue-500);
+  --submenu-submenu-item-icon-open: var(--cool-gray-700);
+  --submenu-submenu-item-icon-success: var(--green-400);
+  --submenu-submenu-item-text-default: var(--cool-gray-800);
+  --submenu-submenu-item-text-disabled: var(--cool-gray-400);
+  --submenu-submenu-item-text-hover: var(--cool-gray-800);
+  --submenu-submenu-item-text-open: var(--cool-gray-800);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --submenu-background-default: var(--white-950);
+  --submenu-submenu-item-background-default: var(--white-0-t);
+  --submenu-submenu-item-background-disabled: var(--white-0-t);
+  --submenu-submenu-item-background-hover: var(--cool-gray-100);
+  --submenu-submenu-item-background-open: var(--cool-gray-100);
+  --submenu-submenu-item-icon-danger: var(--red-600);
+  --submenu-submenu-item-icon-default: var(--cool-gray-700);
+  --submenu-submenu-item-icon-disabled: var(--cool-gray-400);
+  --submenu-submenu-item-icon-hover: var(--cool-gray-700);
+  --submenu-submenu-item-icon-info: var(--cornflower-blue-500);
+  --submenu-submenu-item-icon-open: var(--cool-gray-700);
+  --submenu-submenu-item-icon-success: var(--green-400);
+  --submenu-submenu-item-text-default: var(--cool-gray-800);
+  --submenu-submenu-item-text-disabled: var(--cool-gray-400);
+  --submenu-submenu-item-text-hover: var(--cool-gray-800);
+  --submenu-submenu-item-text-open: var(--cool-gray-800);
+}
+body.layout-theme-dark {
+  --submenu-background-default: var(--nile-blue-900);
+  --submenu-submenu-item-background-default: var(--white-0-t);
+  --submenu-submenu-item-background-disabled: var(--white-0-t);
+  --submenu-submenu-item-background-hover: var(--nile-blue-850);
+  --submenu-submenu-item-background-open: var(--nile-blue-850);
+  --submenu-submenu-item-icon-danger: var(--red-650);
+  --submenu-submenu-item-icon-default: var(--cool-gray-550);
+  --submenu-submenu-item-icon-disabled: var(--cool-gray-750);
+  --submenu-submenu-item-icon-hover: var(--cool-gray-550);
+  --submenu-submenu-item-icon-info: var(--cornflower-blue-500);
+  --submenu-submenu-item-icon-open: var(--cool-gray-550);
+  --submenu-submenu-item-icon-success: var(--green-500);
+  --submenu-submenu-item-text-default: var(--cool-gray-200);
+  --submenu-submenu-item-text-disabled: var(--cool-gray-750);
+  --submenu-submenu-item-text-hover: var(--cool-gray-200);
+  --submenu-submenu-item-text-open: var(--cool-gray-200);
+}
+}

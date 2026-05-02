@@ -1,0 +1,89 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * Generated from Figma Variables
+ *
+ * Component: option-switcher
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --option-switcher-background-default: var(--nile-blue-800-t);
+  --option-switcher-label-default: var(--cool-gray-200);
+  --option-switcher-option-background-active: var(--nile-blue-850);
+  --option-switcher-option-background-active-hover: var(--bondi-blue-500);
+  --option-switcher-option-background-default: var(--white-0-t);
+  --option-switcher-option-background-disabled: var(--white-0-t);
+  --option-switcher-option-background-hover: var(--nile-blue-800);
+  --option-switcher-option-border-active: var(--bondi-blue-600);
+  --option-switcher-option-border-active-hover: var(--white-0-t);
+  --option-switcher-option-border-default: var(--white-0-t);
+  --option-switcher-option-border-disabled: var(--white-0-t);
+  --option-switcher-option-border-hover: var(--white-0-t);
+  --option-switcher-option-text-active: var(--bondi-blue-600);
+  --option-switcher-option-text-active-hover: var(--white-950);
+  --option-switcher-option-text-default: var(--cool-gray-400);
+  --option-switcher-option-text-disabled: var(--cool-gray-600);
+  --option-switcher-option-text-hover: var(--cool-gray-400);
+}
+body.layout-theme-light {
+  --option-switcher-background-default: var(--cool-gray-100);
+  --option-switcher-label-default: var(--cool-gray-800);
+  --option-switcher-option-background-active: var(--white-950);
+  --option-switcher-option-background-active-hover: var(--bondi-blue-500);
+  --option-switcher-option-background-default: var(--white-0-t);
+  --option-switcher-option-background-disabled: var(--white-0-t);
+  --option-switcher-option-background-hover: var(--cool-gray-50);
+  --option-switcher-option-border-active: var(--bondi-blue-600);
+  --option-switcher-option-border-active-hover: var(--white-0-t);
+  --option-switcher-option-border-default: var(--white-0-t);
+  --option-switcher-option-border-disabled: var(--white-0-t);
+  --option-switcher-option-border-hover: var(--white-0-t);
+  --option-switcher-option-text-active: var(--bondi-blue-600);
+  --option-switcher-option-text-active-hover: var(--white-950);
+  --option-switcher-option-text-default: var(--cool-gray-700);
+  --option-switcher-option-text-disabled: var(--cool-gray-400);
+  --option-switcher-option-text-hover: var(--cool-gray-700);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --option-switcher-background-default: var(--cool-gray-100);
+  --option-switcher-label-default: var(--cool-gray-800);
+  --option-switcher-option-background-active: var(--white-950);
+  --option-switcher-option-background-active-hover: var(--bondi-blue-500);
+  --option-switcher-option-background-default: var(--white-0-t);
+  --option-switcher-option-background-disabled: var(--white-0-t);
+  --option-switcher-option-background-hover: var(--cool-gray-50);
+  --option-switcher-option-border-active: var(--bondi-blue-600);
+  --option-switcher-option-border-active-hover: var(--white-0-t);
+  --option-switcher-option-border-default: var(--white-0-t);
+  --option-switcher-option-border-disabled: var(--white-0-t);
+  --option-switcher-option-border-hover: var(--white-0-t);
+  --option-switcher-option-text-active: var(--bondi-blue-600);
+  --option-switcher-option-text-active-hover: var(--white-950);
+  --option-switcher-option-text-default: var(--cool-gray-700);
+  --option-switcher-option-text-disabled: var(--cool-gray-400);
+  --option-switcher-option-text-hover: var(--cool-gray-700);
+}
+body.layout-theme-dark {
+  --option-switcher-background-default: var(--nile-blue-800-t);
+  --option-switcher-label-default: var(--cool-gray-200);
+  --option-switcher-option-background-active: var(--nile-blue-850);
+  --option-switcher-option-background-active-hover: var(--bondi-blue-500);
+  --option-switcher-option-background-default: var(--white-0-t);
+  --option-switcher-option-background-disabled: var(--white-0-t);
+  --option-switcher-option-background-hover: var(--nile-blue-800);
+  --option-switcher-option-border-active: var(--bondi-blue-600);
+  --option-switcher-option-border-active-hover: var(--white-0-t);
+  --option-switcher-option-border-default: var(--white-0-t);
+  --option-switcher-option-border-disabled: var(--white-0-t);
+  --option-switcher-option-border-hover: var(--white-0-t);
+  --option-switcher-option-text-active: var(--bondi-blue-600);
+  --option-switcher-option-text-active-hover: var(--white-950);
+  --option-switcher-option-text-default: var(--cool-gray-400);
+  --option-switcher-option-text-disabled: var(--cool-gray-600);
+  --option-switcher-option-text-hover: var(--cool-gray-400);
+}
+}

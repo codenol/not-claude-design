@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+.env.local
+artifacts/figma-mirror.json
+.DS_Store
+.playwright-mcp/
