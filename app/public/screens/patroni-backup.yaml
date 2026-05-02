@@ -1,0 +1,377 @@
+meta:
+  title: "Бэкап кластера Patroni"
+  description: "Управление резервным копированием кластера Patroni — расписание, история, восстановление"
+  breadcrumbs:
+    - label: "Главная"
+    - label: "Кластеры"
+    - label: "Patroni Production"
+    - label: "Бэкапы"
+
+sidebar:
+  logoVariant: "spektr-s3"
+  menuSections:
+    - items:
+        - icon: "Binoculars"
+          label: "Обзор"
+        - icon: "Network"
+          label: "Объекты"
+    - title: "Кластер Patroni"
+      items:
+        - icon: "Activity"
+          label: "Состояние"
+        - icon: "HardDrive"
+          label: "Бэкапы"
+          active: true
+        - icon: "History"
+          label: "WAL-логи"
+        - icon: "RefreshCw"
+          label: "Репликация"
+    - title: "Управление"
+      items:
+        - icon: "Clock"
+          label: "Расписание"
+        - icon: "ShieldCheck"
+          label: "Политики хранения"
+        - icon: "Bell"
+          label: "Оповещения"
+    - title: "Безопасность"
+      items:
+        - icon: "Key"
+          label: "Токены доступа"
+
+content:
+  # ===== СТАТУС-КАРТОЧКИ =====
+  - type: section
+    heading: "Состояние бэкапов"
+    direction: row
+    gap: 16
+    items:
+      - type: row
+        gap: 0
+        items:
+          - type: tablestatus
+            label: "Последний бэкап: успешно"
+            severity: "success"
+            size: 24
+            content: "text-and-icon"
+            icon: "Check"
+      - type: row
+        gap: 0
+        items:
+          - type: tablestatus
+            label: "WAL-архив: активно"
+            severity: "info"
+            size: 24
+            content: "text-and-icon"
+            icon: "Activity"
+      - type: row
+        gap: 0
+        items:
+          - type: tablestatus
+            label: "Репликация: отставание 2 сек"
+            severity: "warning"
+            size: 24
+            content: "text-and-icon"
+            icon: "AlertTriangle"
+
+  # ===== КЛЮЧЕВЫЕ МЕТРИКИ =====
+  - type: section
+    heading: "Метрики бэкапов"
+    direction: row
+    gap: 16
+    items:
+      - type: badge
+        label: "Успешность: 99.7%"
+        color: "green"
+        content: "text-and-icon"
+        icon: "Circle"
+      - type: badge
+        label: "RPO: 5 мин"
+        color: "java"
+        content: "text-and-icon"
+        icon: "Circle"
+      - type: badge
+        label: "Объём: 2.4 TB"
+        color: "nile-blue"
+        content: "text-and-icon"
+        icon: "Circle"
+      - type: badge
+        label: "Хранилище: S3/WAL-G"
+        color: "gray-strong"
+        content: "text-only"
+
+  # ===== БЫСТРЫЕ ДЕЙСТВИЯ =====
+  - type: section
+    heading: "Действия"
+    direction: row
+    gap: 12
+    items:
+      - type: modal-trigger
+        buttonLabel: "Создать бэкап"
+        buttonSentiment: "accent"
+        buttonSize: "large"
+        title: "Создание резервной копии"
+        description: "Будет создан полный бэкап кластера Patroni через WAL-G"
+        width: 600
+        content:
+          - type: text
+            content: "Параметры создания бэкапа:"
+          - type: form
+            gap: 12
+            items:
+              - type: dropdown
+                label_dropdown: "Тип бэкапа"
+                value: "full"
+                options:
+                  - label: "Полный (full)"
+                    value: "full"
+                  - label: "Инкрементальный (delta)"
+                    value: "delta"
+              - type: dropdown
+                label_dropdown: "Хранилище"
+                value: "s3"
+                options:
+                  - label: "S3 (minio-cluster)"
+                    value: "s3"
+                  - label: "GCS (backup-bucket)"
+                    value: "gcs"
+              - type: input
+                label: "Теги (через запятую)"
+                placeholder: "manual, pre-upgrade"
+              - type: text
+                content: "Бэкап будет выполнен немедленно. Время выполнения зависит от объёма данных (~15-45 мин)."
+                variant: "caption"
+        footerButtons:
+          - label: "Отмена"
+            sentiment: "secondary"
+            type: "outline"
+          - label: "Создать бэкап"
+            sentiment: "accent"
+
+      - type: modal-trigger
+        buttonLabel: "Восстановить"
+        buttonSentiment: "warning"
+        buttonSize: "large"
+        title: "Восстановление из бэкапа"
+        description: "Point-in-Time Recovery (PITR) кластера Patroni"
+        width: 800
+        content:
+          - type: text
+            content: "Выберите параметры восстановления:"
+          - type: form
+            gap: 12
+            items:
+              - type: dropdown
+                label_dropdown: "Целевой кластер"
+                value: "staging"
+                options:
+                  - label: "Staging (staging-patroni)"
+                    value: "staging"
+                  - label: "Production (prod-patroni)"
+                    value: "production"
+              - type: input
+                label: "Точка восстановления (UTC)"
+                placeholder: "2026-05-01 14:30:00"
+                icon: "Calendar"
+                iconPosition: "left"
+              - type: dropdown
+                label_dropdown: "Из какого бэкапа"
+                value: "latest"
+                options:
+                  - label: "Последний успешный"
+                    value: "latest"
+                  - label: "Выбрать из списка"
+                    value: "select"
+              - type: text
+                content: "Внимание: восстановление в production-кластер перезапишет текущие данные. Убедитесь, что создан свежий бэкап."
+                variant: "subtle"
+        footerButtons:
+          - label: "Отмена"
+            sentiment: "secondary"
+            type: "outline"
+          - label: "Начать восстановление"
+            sentiment: "warning"
+
+      - type: button
+        label: "Расписание"
+        sentiment: "info"
+        filled: false
+        outline: true
+        size: "large"
+        icon: "Clock"
+        iconPosition: "left"
+
+      - type: button
+        label: "WAL-G статус"
+        sentiment: "secondary"
+        filled: false
+        outline: true
+        size: "large"
+        icon: "HardDrive"
+        iconPosition: "left"
+
+  # ===== ИСТОРИЯ БЭКАПОВ =====
+  - type: section
+    heading: "История бэкапов"
+    direction: col
+    gap: 0
+    items:
+      - type: datatable
+        columns:
+          - key: "createdAt"
+            title: "Дата создания"
+            width: "180px"
+            sortable: true
+            sticky: true
+          - key: "type"
+            title: "Тип"
+            width: "140px"
+            sortable: true
+            filterable: true
+          - key: "status"
+            title: "Статус"
+            width: "140px"
+            sortable: true
+            filterable: true
+            statusColumn: true
+          - key: "size"
+            title: "Размер"
+            width: "120px"
+            sortable: true
+          - key: "duration"
+            title: "Длительность"
+            width: "120px"
+            sortable: true
+          - key: "storage"
+            title: "Хранилище"
+            width: "160px"
+            filterable: true
+          - key: "walSegment"
+            title: "WAL-сегмент"
+            width: "180px"
+        generateRows: 45
+        pageSize: 10
+        selectable: true
+        searchPlaceholder: "Поиск по бэкапам..."
+        toolbarActions:
+          - label: "Настройка столбцов"
+        bulkActions:
+          - label: "Удалить"
+          - label: "Восстановить"
+        filterChips:
+          - label: "Успешные"
+            active: true
+          - label: "С ошибками"
+            active: false
+          - label: "Full"
+            active: true
+          - label: "Delta"
+            active: false
+          - label: "Авто"
+            active: true
+          - label: "Ручные"
+            active: false
+
+  # ===== РАСПИСАНИЕ =====
+  - type: section
+    heading: "Расписание бэкапов"
+    direction: col
+    gap: 0
+    items:
+      - type: datatable
+        columns:
+          - key: "name"
+            title: "Название"
+            width: "240px"
+            sortable: true
+            sticky: true
+          - key: "schedule"
+            title: "Расписание (cron)"
+            width: "200px"
+            sortable: true
+          - key: "type"
+            title: "Тип"
+            width: "120px"
+            filterable: true
+          - key: "status"
+            title: "Статус"
+            width: "140px"
+            sortable: true
+            statusColumn: true
+          - key: "retention"
+            title: "Хранение"
+            width: "140px"
+          - key: "lastRun"
+            title: "Последний запуск"
+            width: "180px"
+            sortable: true
+        generateRows: 20
+        selectable: true
+        toolbarActions:
+          - label: "Добавить"
+        bulkActions:
+          - label: "Приостановить"
+          - label: "Удалить"
+        filterChips:
+          - label: "Активные"
+            active: true
+          - label: "Приостановлены"
+            active: false
+
+  # ===== НАСТРОЙКИ ХРАНЕНИЯ =====
+  - type: section
+    heading: "Политика хранения"
+    direction: row
+    gap: 12
+    items:
+      - type: dropdown
+        label_dropdown: "Полные бэкапы"
+        value: "30d"
+        options:
+          - label: "7 дней"
+            value: "7d"
+          - label: "14 дней"
+            value: "14d"
+          - label: "30 дней"
+            value: "30d"
+          - label: "90 дней"
+            value: "90d"
+      - type: dropdown
+        label_dropdown: "WAL-логи"
+        value: "7d"
+        options:
+          - label: "3 дня"
+            value: "3d"
+          - label: "7 дней"
+            value: "7d"
+          - label: "14 дней"
+            value: "14d"
+      - type: button
+        label: "Применить"
+        sentiment: "accent"
+        size: "large"
+
+  # ===== МОНИТОРИНГ =====
+  - type: section
+    heading: "Последние ошибки"
+    direction: col
+    gap: 8
+    items:
+      - type: tablestatus
+        label: "WAL-G push timeout (2ч назад) — перезапущен"
+        severity: "warning"
+        size: 24
+        content: "text-and-icon"
+        icon: "AlertTriangle"
+      - type: tablestatus
+        label: "S3 connection reset (вчера, 23:15) — восстановлено"
+        severity: "degradation"
+        size: 24
+        content: "text-and-icon"
+        icon: "AlertTriangle"
+      - type: tablestatus
+        label: "Диск 89% — запущена очистка старых WAL"
+        severity: "info"
+        size: 24
+        content: "text-and-icon"
+        icon: "Info"

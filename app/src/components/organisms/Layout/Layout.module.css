@@ -4,7 +4,7 @@
   padding: 20px;
   min-height: 100vh;
   box-sizing: border-box;
-  background: var(--background-back-surface);
+  background: var(--layout-background-default);
   align-items: flex-start;
 }
 

@@ -1,6 +1,10 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Button, Badge, Input, Textarea, Dropdown, Icon, MenuButton, Status, Logo, MenuItem, Layout, Modal, ModalFooter, TableStatus, Drawer, DataTable } from './components'
 import type { DataTableColumn } from './components'
+import { YamlPlayground } from './pages/YamlPlayground'
+import type { YamlPlaygroundHandle } from './pages/YamlPlayground'
+import { RendererNav } from './renderer/RendererNav'
+import { YamlInputModal } from './renderer/YamlInputModal'
 import './App.css'
 
 function InteractiveMenuButton() {
@@ -101,7 +105,7 @@ function DataTableDemo() {
   )
 }
 
-function App() {
+function DemoApp() {
   const [modal, setModal] = useState<'400' | '600' | '600d' | '800' | '960' | null>(null)
   const [drawer, setDrawer] = useState<'400' | '600' | '800' | '960' | null>(null)
   const [tableSelected, setTableSelected] = useState<string[]>([])
@@ -587,6 +591,44 @@ function App() {
       <p>Drawer content 960px.</p>
     </Drawer>
     </>
+  )
+}
+
+function App() {
+  const [mode, setMode] = useState<'demo' | 'yaml'>('demo')
+  const playgroundRef = useRef<YamlPlaygroundHandle>(null)
+  const [yamlModalOpen, setYamlModalOpen] = useState(false)
+
+  const handleRender = (config: ScreenConfig) => {
+    playgroundRef.current?.renderYaml(config)
+  }
+
+  const handleClear = () => {
+    playgroundRef.current?.clear()
+  }
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+      <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
+        <RendererNav
+          mode={mode}
+          onModeChange={setMode}
+          onClear={handleClear}
+          onOpenYamlModal={() => setYamlModalOpen(true)}
+        />
+        <div style={{ flex: 1, overflow: 'hidden' }}>
+          {mode === 'demo' ? <DemoApp /> : (
+            <YamlPlayground ref={playgroundRef} />
+          )}
+        </div>
+      </div>
+
+      <YamlInputModal
+        open={yamlModalOpen}
+        onClose={() => setYamlModalOpen(false)}
+        onRender={handleRender}
+      />
+    </div>
   )
 }
 

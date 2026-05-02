@@ -1,0 +1,56 @@
+.strip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48px;
+  min-width: 48px;
+  height: 100%;
+  background: var(--sidebar-background-default);
+  border-right: 1px solid var(--sidebar-border-default);
+  box-sizing: border-box;
+  padding: 8px 0;
+  flex-shrink: 0;
+}
+
+.topGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.modeButton {
+  position: relative;
+}
+
+.popover {
+  position: absolute;
+  left: 48px;
+  top: -4px;
+  z-index: 100;
+  background: var(--sidebar-background-default);
+  border: 1px solid var(--sidebar-border-default);
+  border-radius: 8px;
+  padding: 4px;
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.divider {
+  width: 32px;
+  height: 1px;
+  background: var(--sidebar-border-default);
+  margin: 4px 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.bottomGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding-bottom: 4px;
+}

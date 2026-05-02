@@ -5,3 +5,5 @@ dist/
 artifacts/figma-mirror.json
 .DS_Store
 .playwright-mcp/
+*.png
+rendered-snapshot.md

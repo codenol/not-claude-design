@@ -1,0 +1,65 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 320px;
+  border: 1px solid var(--input-border-default);
+  border-radius: 8px;
+  padding: 12px;
+  font-family: 'Menlo', 'Monaco', 'Cascadia Code', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--table-text-primary);
+  background: var(--table-row-background-default);
+  resize: vertical;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.textarea:focus {
+  border-color: var(--input-border-hover);
+  box-shadow: 0 0 0 2px rgba(96, 196, 221, 0.3);
+}
+
+.errorBox {
+  padding: 10px 14px;
+  background: var(--status-filled-critical-background-default);
+  border: 1px solid var(--status-outline-critical-border-default);
+  border-radius: 8px;
+}
+
+.errorItem {
+  font-family: 'Menlo', monospace;
+  font-size: 12px;
+  color: var(--status-filled-critical-text-default);
+  line-height: 1.5;
+}
+
+.presets {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.presetsLabel {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: var(--table-text-primary);
+  white-space: nowrap;
+}
+
+.presetsSelect {
+  flex: 1;
+  padding: 6px 12px;
+  border: 1px solid var(--input-border-default);
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: var(--table-text-primary);
+  background: var(--table-row-background-default);
+  cursor: pointer;
+}

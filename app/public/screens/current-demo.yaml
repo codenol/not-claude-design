@@ -1,0 +1,1158 @@
+meta:
+  title: "Design System Components"
+  description: "Full component demo showcasing all Skala DS atoms, molecules, and organisms"
+  breadcrumbs:
+    - label: "Главная"
+    - label: "Компоненты"
+
+sidebar:
+  logoVariant: "genom"
+
+content:
+  # ===== BUTTONS =====
+  - type: section
+    heading: "Button — Filled"
+    direction: row
+    gap: 8
+    items:
+      - type: button
+        label: "Accent"
+        sentiment: "accent"
+        filled: true
+        size: "large"
+      - type: button
+        label: "Danger"
+        sentiment: "danger"
+        filled: true
+        size: "large"
+      - type: button
+        label: "Warning"
+        sentiment: "warning"
+        filled: true
+        size: "large"
+      - type: button
+        label: "Success"
+        sentiment: "success"
+        filled: true
+        size: "large"
+      - type: button
+        label: "Info"
+        sentiment: "info"
+        filled: true
+        size: "large"
+      - type: button
+        label: "Secondary"
+        sentiment: "secondary"
+        filled: true
+        size: "large"
+
+  - type: row
+    gap: 8
+    items:
+      - type: button
+        label: "Accent"
+        sentiment: "accent"
+        filled: true
+        size: "small"
+      - type: button
+        label: "Danger"
+        sentiment: "danger"
+        filled: true
+        size: "small"
+      - type: button
+        label: "Warning"
+        sentiment: "warning"
+        filled: true
+        size: "small"
+      - type: button
+        label: "Success"
+        sentiment: "success"
+        filled: true
+        size: "small"
+      - type: button
+        label: "Info"
+        sentiment: "info"
+        filled: true
+        size: "small"
+      - type: button
+        label: "Secondary"
+        sentiment: "secondary"
+        filled: true
+        size: "small"
+
+  - type: section
+    heading: "Button — Outline"
+    direction: row
+    gap: 8
+    items:
+      - type: button
+        label: "Accent"
+        sentiment: "accent"
+        filled: false
+        outline: true
+        size: "large"
+      - type: button
+        label: "Danger"
+        sentiment: "danger"
+        filled: false
+        outline: true
+        size: "large"
+      - type: button
+        label: "Warning"
+        sentiment: "warning"
+        filled: false
+        outline: true
+        size: "large"
+      - type: button
+        label: "Success"
+        sentiment: "success"
+        filled: false
+        outline: true
+        size: "large"
+      - type: button
+        label: "Info"
+        sentiment: "info"
+        filled: false
+        outline: true
+        size: "large"
+      - type: button
+        label: "Secondary"
+        sentiment: "secondary"
+        filled: false
+        outline: true
+        size: "large"
+
+  - type: row
+    gap: 8
+    items:
+      - type: button
+        label: "Accent"
+        sentiment: "accent"
+        filled: false
+        outline: true
+        size: "small"
+      - type: button
+        label: "Danger"
+        sentiment: "danger"
+        filled: false
+        outline: true
+        size: "small"
+      - type: button
+        label: "Warning"
+        sentiment: "warning"
+        filled: false
+        outline: true
+        size: "small"
+      - type: button
+        label: "Success"
+        sentiment: "success"
+        filled: false
+        outline: true
+        size: "small"
+      - type: button
+        label: "Info"
+        sentiment: "info"
+        filled: false
+        outline: true
+        size: "small"
+      - type: button
+        label: "Secondary"
+        sentiment: "secondary"
+        filled: false
+        outline: true
+        size: "small"
+
+  - type: section
+    heading: "Button — Ghost"
+    direction: row
+    gap: 8
+    items:
+      - type: button
+        label: "Accent"
+        sentiment: "accent"
+        filled: false
+        size: "large"
+      - type: button
+        label: "Danger"
+        sentiment: "danger"
+        filled: false
+        size: "large"
+      - type: button
+        label: "Warning"
+        sentiment: "warning"
+        filled: false
+        size: "large"
+      - type: button
+        label: "Success"
+        sentiment: "success"
+        filled: false
+        size: "large"
+      - type: button
+        label: "Info"
+        sentiment: "info"
+        filled: false
+        size: "large"
+      - type: button
+        label: "Secondary"
+        sentiment: "secondary"
+        filled: false
+        size: "large"
+
+  - type: row
+    gap: 8
+    items:
+      - type: button
+        label: "Accent"
+        sentiment: "accent"
+        filled: false
+        size: "small"
+      - type: button
+        label: "Danger"
+        sentiment: "danger"
+        filled: false
+        size: "small"
+      - type: button
+        label: "Warning"
+        sentiment: "warning"
+        filled: false
+        size: "small"
+      - type: button
+        label: "Success"
+        sentiment: "success"
+        filled: false
+        size: "small"
+      - type: button
+        label: "Info"
+        sentiment: "info"
+        filled: false
+        size: "small"
+      - type: button
+        label: "Secondary"
+        sentiment: "secondary"
+        filled: false
+        size: "small"
+
+  - type: section
+    heading: "Button + Icon (Left)"
+    direction: row
+    gap: 8
+    items:
+      - type: button
+        label: "Search"
+        sentiment: "accent"
+        filled: true
+        size: "large"
+        icon: "Search"
+        iconPosition: "left"
+      - type: button
+        label: "Delete"
+        sentiment: "danger"
+        filled: true
+        size: "large"
+        icon: "Trash2"
+        iconPosition: "left"
+      - type: button
+        label: "Download"
+        sentiment: "success"
+        filled: true
+        size: "large"
+        icon: "Download"
+        iconPosition: "left"
+      - type: button
+        label: "Add"
+        sentiment: "accent"
+        filled: false
+        outline: true
+        size: "large"
+        icon: "Plus"
+        iconPosition: "left"
+      - type: button
+        label: "Back"
+        sentiment: "accent"
+        filled: false
+        size: "large"
+        icon: "ArrowLeft"
+        iconPosition: "left"
+
+  - type: row
+    gap: 8
+    items:
+      - type: button
+        label: "Search"
+        sentiment: "accent"
+        filled: true
+        size: "small"
+        icon: "Search"
+        iconPosition: "left"
+      - type: button
+        label: "Delete"
+        sentiment: "danger"
+        filled: true
+        size: "small"
+        icon: "Trash2"
+        iconPosition: "left"
+      - type: button
+        label: "Add"
+        sentiment: "accent"
+        filled: false
+        outline: true
+        size: "small"
+        icon: "Plus"
+        iconPosition: "left"
+
+  - type: section
+    heading: "Button + Icon (Right)"
+    direction: row
+    gap: 8
+    items:
+      - type: button
+        label: "Continue"
+        sentiment: "accent"
+        filled: true
+        size: "large"
+        icon: "ArrowRight"
+        iconPosition: "right"
+      - type: button
+        label: "Confirm"
+        sentiment: "success"
+        filled: true
+        size: "large"
+        icon: "Check"
+        iconPosition: "right"
+      - type: button
+        label: "Open"
+        sentiment: "accent"
+        filled: false
+        outline: true
+        size: "large"
+        icon: "ExternalLink"
+        iconPosition: "right"
+      - type: button
+        label: "Next"
+        sentiment: "accent"
+        filled: false
+        size: "large"
+        icon: "ChevronRight"
+        iconPosition: "right"
+
+  - type: row
+    gap: 8
+    items:
+      - type: button
+        label: "Continue"
+        sentiment: "accent"
+        filled: true
+        size: "small"
+        icon: "ArrowRight"
+        iconPosition: "right"
+      - type: button
+        label: "Open"
+        sentiment: "accent"
+        filled: false
+        outline: true
+        size: "small"
+        icon: "ExternalLink"
+        iconPosition: "right"
+
+  - type: section
+    heading: "Button — Icon Only"
+    direction: row
+    gap: 8
+    items:
+      - type: button
+        label: "Add"
+        sentiment: "accent"
+        filled: true
+        size: "large"
+        icon: "Plus"
+        iconPosition: "icon-only"
+      - type: button
+        label: "Delete"
+        sentiment: "danger"
+        filled: true
+        size: "large"
+        icon: "Trash2"
+        iconPosition: "icon-only"
+      - type: button
+        label: "Confirm"
+        sentiment: "success"
+        filled: true
+        size: "large"
+        icon: "Check"
+        iconPosition: "icon-only"
+      - type: button
+        label: "Settings"
+        sentiment: "accent"
+        filled: false
+        outline: true
+        size: "large"
+        icon: "Settings"
+        iconPosition: "icon-only"
+      - type: button
+        label: "Close"
+        sentiment: "accent"
+        filled: false
+        size: "large"
+        icon: "X"
+        iconPosition: "icon-only"
+
+  - type: row
+    gap: 8
+    items:
+      - type: button
+        label: "Add"
+        sentiment: "accent"
+        filled: true
+        size: "small"
+        icon: "Plus"
+        iconPosition: "icon-only"
+      - type: button
+        label: "Delete"
+        sentiment: "danger"
+        filled: true
+        size: "small"
+        icon: "Trash2"
+        iconPosition: "icon-only"
+      - type: button
+        label: "Settings"
+        sentiment: "accent"
+        filled: false
+        outline: true
+        size: "small"
+        icon: "Settings"
+        iconPosition: "icon-only"
+      - type: button
+        label: "Close"
+        sentiment: "accent"
+        filled: false
+        size: "small"
+        icon: "X"
+        iconPosition: "icon-only"
+
+  - type: section
+    heading: "Button — States"
+    direction: row
+    gap: 8
+    items:
+      - type: button
+        label: "Default"
+        sentiment: "accent"
+        filled: true
+        size: "large"
+        state: "default"
+      - type: button
+        label: "Hover"
+        sentiment: "accent"
+        filled: true
+        size: "large"
+        state: "hover"
+      - type: button
+        label: "Focus"
+        sentiment: "accent"
+        filled: true
+        size: "large"
+        state: "focus"
+      - type: button
+        label: "Active"
+        sentiment: "accent"
+        filled: true
+        size: "large"
+        state: "active"
+      - type: button
+        label: "Disabled"
+        sentiment: "accent"
+        filled: true
+        size: "large"
+        state: "disabled"
+
+  # ===== BADGES =====
+  - type: section
+    heading: "Badge — Filled"
+    direction: row
+    gap: 8
+    items:
+      - type: badge
+        label: "gray"
+        color: "gray"
+        content: "text-only"
+      - type: badge
+        label: "gray-strong"
+        color: "gray-strong"
+        content: "text-only"
+      - type: badge
+        label: "gray-warm"
+        color: "gray-warm"
+        content: "text-only"
+      - type: badge
+        label: "nile-blue"
+        color: "nile-blue"
+        content: "text-only"
+      - type: badge
+        label: "tory-blue"
+        color: "tory-blue"
+        content: "text-only"
+      - type: badge
+        label: "cornflower-blue"
+        color: "cornflower-blue"
+        content: "text-only"
+      - type: badge
+        label: "bondi-blue"
+        color: "bondi-blue"
+        content: "text-only"
+      - type: badge
+        label: "java"
+        color: "java"
+        content: "text-only"
+      - type: badge
+        label: "green"
+        color: "green"
+        content: "text-only"
+      - type: badge
+        label: "shamrock"
+        color: "shamrock"
+        content: "text-only"
+      - type: badge
+        label: "yellow"
+        color: "yellow"
+        content: "text-only"
+      - type: badge
+        label: "orange"
+        color: "orange"
+        content: "text-only"
+      - type: badge
+        label: "red"
+        color: "red"
+        content: "text-only"
+      - type: badge
+        label: "rose"
+        color: "rose"
+        content: "text-only"
+      - type: badge
+        label: "violet"
+        color: "violet"
+        content: "text-only"
+
+  - type: section
+    heading: "Badge — Outline"
+    direction: row
+    gap: 8
+    items:
+      - type: badge
+        label: "gray"
+        color: "gray"
+        content: "outline"
+      - type: badge
+        label: "gray-strong"
+        color: "gray-strong"
+        content: "outline"
+      - type: badge
+        label: "gray-warm"
+        color: "gray-warm"
+        content: "outline"
+      - type: badge
+        label: "nile-blue"
+        color: "nile-blue"
+        content: "outline"
+      - type: badge
+        label: "tory-blue"
+        color: "tory-blue"
+        content: "outline"
+      - type: badge
+        label: "cornflower-blue"
+        color: "cornflower-blue"
+        content: "outline"
+      - type: badge
+        label: "bondi-blue"
+        color: "bondi-blue"
+        content: "outline"
+      - type: badge
+        label: "java"
+        color: "java"
+        content: "outline"
+      - type: badge
+        label: "green"
+        color: "green"
+        content: "outline"
+      - type: badge
+        label: "shamrock"
+        color: "shamrock"
+        content: "outline"
+      - type: badge
+        label: "yellow"
+        color: "yellow"
+        content: "outline"
+      - type: badge
+        label: "orange"
+        color: "orange"
+        content: "outline"
+      - type: badge
+        label: "red"
+        color: "red"
+        content: "outline"
+      - type: badge
+        label: "rose"
+        color: "rose"
+        content: "outline"
+      - type: badge
+        label: "violet"
+        color: "violet"
+        content: "outline"
+
+  - type: section
+    heading: "Badge — Text + Icon"
+    direction: row
+    gap: 8
+    items:
+      - type: badge
+        label: "gray"
+        color: "gray"
+        content: "text-and-icon"
+        icon: "Circle"
+      - type: badge
+        label: "gray-strong"
+        color: "gray-strong"
+        content: "text-and-icon"
+        icon: "Circle"
+      - type: badge
+        label: "gray-warm"
+        color: "gray-warm"
+        content: "text-and-icon"
+        icon: "Circle"
+      - type: badge
+        label: "nile-blue"
+        color: "nile-blue"
+        content: "text-and-icon"
+        icon: "Circle"
+      - type: badge
+        label: "tory-blue"
+        color: "tory-blue"
+        content: "text-and-icon"
+        icon: "Circle"
+      - type: badge
+        label: "cornflower-blue"
+        color: "cornflower-blue"
+        content: "text-and-icon"
+        icon: "Circle"
+      - type: badge
+        label: "bondi-blue"
+        color: "bondi-blue"
+        content: "text-and-icon"
+        icon: "Circle"
+      - type: badge
+        label: "java"
+        color: "java"
+        content: "text-and-icon"
+        icon: "Circle"
+      - type: badge
+        label: "green"
+        color: "green"
+        content: "text-and-icon"
+        icon: "Circle"
+      - type: badge
+        label: "shamrock"
+        color: "shamrock"
+        content: "text-and-icon"
+        icon: "Circle"
+      - type: badge
+        label: "yellow"
+        color: "yellow"
+        content: "text-and-icon"
+        icon: "Circle"
+      - type: badge
+        label: "orange"
+        color: "orange"
+        content: "text-and-icon"
+        icon: "Circle"
+      - type: badge
+        label: "red"
+        color: "red"
+        content: "text-and-icon"
+        icon: "Circle"
+      - type: badge
+        label: "rose"
+        color: "rose"
+        content: "text-and-icon"
+        icon: "Circle"
+      - type: badge
+        label: "violet"
+        color: "violet"
+        content: "text-and-icon"
+        icon: "Circle"
+
+  # ===== INPUT =====
+  - type: section
+    heading: "Input"
+    direction: col
+    gap: 12
+    items:
+      - type: input
+        placeholder: "Default input"
+      - type: input
+        state: "warning"
+        value: "Warning value"
+      - type: input
+        state: "error"
+        value: "Error value"
+      - type: input
+        state: "disabled"
+        placeholder: "Disabled"
+      - type: input
+        label: "Label"
+        placeholder: "With label"
+      - type: input
+        label: "Label"
+        hint: "hint message"
+        placeholder: "Label + hint"
+      - type: input
+        icon: "Search"
+        iconPosition: "left"
+        placeholder: "Left icon"
+      - type: input
+        icon: "Search"
+        iconPosition: "right"
+        placeholder: "Right icon"
+      - type: input
+        inputType: "password"
+        placeholder: "Password"
+      - type: input
+        inputType: "password"
+        value: "password"
+        placeholder: "Password filled"
+      - type: input
+        inputType: "password"
+        state: "warning"
+        value: "password"
+        hint: "hint message"
+      - type: input
+        inputType: "password"
+        state: "error"
+        value: "password"
+        hint: "hint message"
+
+  # ===== DROPDOWN =====
+  - type: section
+    heading: "Dropdown"
+    direction: col
+    gap: 12
+    items:
+      - type: dropdown
+        placeholder: "Select..."
+      - type: dropdown
+        placeholder: "Selected"
+        value: "opt1"
+        options:
+          - label: "Option 1"
+            value: "opt1"
+          - label: "Option 2"
+            value: "opt2"
+      - type: dropdown
+        state: "warning"
+        value: "opt1"
+        options:
+          - label: "Option 1"
+            value: "opt1"
+          - label: "Option 2"
+            value: "opt2"
+      - type: dropdown
+        state: "error"
+        value: "opt1"
+        options:
+          - label: "Option 1"
+            value: "opt1"
+          - label: "Option 2"
+            value: "opt2"
+      - type: dropdown
+        state: "disabled"
+        placeholder: "Disabled"
+      - type: dropdown
+        label_dropdown: "Label"
+        placeholder: "Select..."
+      - type: dropdown
+        label_dropdown: "Label"
+        hint: "hint message"
+        placeholder: "Select..."
+
+  # ===== ICONS =====
+  - type: section
+    heading: "Icon (Lucide)"
+    direction: row
+    gap: 8
+    items: []
+
+  # ===== MENU ITEM =====
+  - type: section
+    heading: "MenuItem"
+    direction: col
+    gap: 0
+    items:
+      - type: text
+        content: "(menu items use Sidebar's built-in rendering)"
+        variant: "caption"
+
+  # ===== STATUS =====
+  - type: section
+    heading: "Status"
+    direction: row
+    gap: 8
+    items:
+      - type: text
+        content: "(Status indicators are in the Sidebar's minibar)"
+        variant: "caption"
+
+  # ===== TABLE STATUS =====
+  - type: section
+    heading: "TableStatus"
+    direction: col
+    gap: 8
+    items:
+      - type: row
+        gap: 6
+        items:
+          - type: tablestatus
+            label: "Success"
+            severity: "success"
+            size: 24
+          - type: tablestatus
+            label: "Degradation"
+            severity: "degradation"
+            size: 24
+          - type: tablestatus
+            label: "Warning"
+            severity: "warning"
+            size: 24
+          - type: tablestatus
+            label: "Critical"
+            severity: "critical"
+            size: 24
+          - type: tablestatus
+            label: "Info"
+            severity: "info"
+            size: 24
+      - type: row
+        gap: 6
+        items:
+          - type: tablestatus
+            label: "Maint"
+            severity: "maintenance"
+            size: 24
+          - type: tablestatus
+            label: "Additional"
+            severity: "additional"
+            size: 24
+          - type: tablestatus
+            label: "Stop"
+            severity: "stop"
+            size: 24
+          - type: tablestatus
+            label: "New"
+            severity: "new"
+            size: 24
+          - type: tablestatus
+            label: "Loading"
+            severity: "load"
+            size: 24
+      - type: row
+        gap: 6
+        items:
+          - type: tablestatus
+            label: "17px"
+            severity: "success"
+            size: 17
+          - type: tablestatus
+            label: "17px"
+            severity: "warning"
+            size: 17
+          - type: tablestatus
+            label: "17px"
+            severity: "critical"
+            size: 17
+          - type: tablestatus
+            label: "17px"
+            severity: "info"
+            size: 17
+          - type: tablestatus
+            label: "Loading"
+            severity: "load"
+            size: 17
+      - type: row
+        gap: 6
+        items:
+          - type: tablestatus
+            label: "With icon"
+            severity: "success"
+            size: 24
+            content: "text-and-icon"
+            icon: "Check"
+          - type: tablestatus
+            label: "Warning"
+            severity: "warning"
+            size: 24
+            content: "text-and-icon"
+            icon: "AlertTriangle"
+          - type: tablestatus
+            label: "Critical"
+            severity: "critical"
+            size: 24
+            content: "text-and-icon"
+            icon: "XCircle"
+          - type: tablestatus
+            severity: "info"
+            size: 24
+            content: "icon-only"
+            icon: "Info"
+          - type: tablestatus
+            severity: "success"
+            size: 24
+            content: "icon-only"
+            icon: "Check"
+      - type: row
+        gap: 6
+        items:
+          - type: tablestatus
+            label: "S"
+            severity: "success"
+            size: 24
+            content: "outline-text-only"
+          - type: tablestatus
+            label: "W"
+            severity: "warning"
+            size: 24
+            content: "outline-text-only"
+          - type: tablestatus
+            label: "C"
+            severity: "critical"
+            size: 24
+            content: "outline-text-only"
+          - type: tablestatus
+            label: "I"
+            severity: "info"
+            size: 24
+            content: "outline-text-only"
+          - type: tablestatus
+            label: "L"
+            severity: "load"
+            size: 24
+            content: "outline-text-only"
+
+  # ===== DRAWER =====
+  - type: section
+    heading: "Drawer"
+    direction: row
+    gap: 8
+    items:
+      - type: drawer-trigger
+        buttonLabel: "400"
+        buttonSentiment: "secondary"
+        title: "Drawer 400"
+        width: 400
+        content:
+          - type: text
+            content: "Drawer content 400px."
+        footerButtons:
+          - label: "Cancel"
+            sentiment: "accent"
+            type: "outline"
+          - label: "Confirm"
+            sentiment: "accent"
+      - type: drawer-trigger
+        buttonLabel: "600"
+        buttonSentiment: "secondary"
+        title: "Drawer 600"
+        width: 600
+        content:
+          - type: text
+            content: "Drawer content 600px."
+        footerButtons:
+          - label: "Cancel"
+            sentiment: "accent"
+            type: "outline"
+          - label: "Confirm"
+            sentiment: "accent"
+      - type: drawer-trigger
+        buttonLabel: "800"
+        buttonSentiment: "secondary"
+        title: "Drawer 800"
+        width: 800
+        backdrop: false
+        content:
+          - type: text
+            content: "Drawer without backdrop and footer. 800px."
+      - type: drawer-trigger
+        buttonLabel: "960"
+        buttonSentiment: "secondary"
+        title: "Drawer 960"
+        width: 960
+        content:
+          - type: text
+            content: "Drawer content 960px."
+        footerButtons:
+          - label: "Cancel"
+            sentiment: "accent"
+            type: "outline"
+          - label: "Submit"
+            sentiment: "accent"
+
+  # ===== DATATABLE =====
+  - type: section
+    heading: "DataTable"
+    direction: col
+    gap: 0
+    items:
+      - type: datatable
+        columns:
+          - key: "name"
+            title: "Название"
+            width: "240px"
+            sticky: true
+            sortable: true
+          - key: "type"
+            title: "Тип"
+            width: "160px"
+            sortable: true
+            filterable: true
+          - key: "status"
+            title: "Статус"
+            width: "120px"
+            sortable: true
+            filterable: true
+            statusColumn: true
+          - key: "location"
+            title: "Расположение"
+            width: "200px"
+            sortable: true
+            filterable: true
+          - key: "version"
+            title: "Версия"
+            width: "120px"
+        generateRows: 45
+        pageSize: 10
+        selectable: true
+        toolbarActions:
+          - label: "Настройка шаблонов"
+        bulkActions:
+          - label: "Delete"
+          - label: "Export"
+        filterChips:
+          - label: "Нормальные"
+            active: true
+          - label: "Критические"
+            active: true
+          - label: "Предупреждения"
+            active: false
+
+  # ===== TEXTAREA =====
+  - type: section
+    heading: "Textarea"
+    direction: col
+    gap: 16
+    items:
+      - type: textarea
+        state: "default"
+        placeholder: "Enter a description..."
+      - type: textarea
+        state: "warning"
+        value: "Warning text"
+      - type: textarea
+        state: "error"
+        value: "Error text"
+      - type: textarea
+        state: "disabled"
+        placeholder: "Enter a description..."
+      - type: textarea
+        state: "default"
+        label: "Label"
+        placeholder: "Enter a description..."
+      - type: textarea
+        state: "default"
+        label: "Label"
+        hint: "hint message"
+        placeholder: "Enter a description..."
+        copyText: true
+
+  # ===== MODAL =====
+  - type: section
+    heading: "Modal"
+    direction: row
+    gap: 8
+    items:
+      - type: modal-trigger
+        buttonLabel: "400"
+        buttonSentiment: "accent"
+        title: "Modal 400"
+        width: 400
+        content:
+          - type: text
+            content: "Modal content with width 400px."
+          - type: text
+            content: "This is a small modal for simple confirmations."
+        footerButtons:
+          - label: "Cancel"
+            sentiment: "accent"
+            type: "outline"
+          - label: "Confirm"
+            sentiment: "accent"
+      - type: modal-trigger
+        buttonLabel: "600"
+        buttonSentiment: "accent"
+        title: "Modal 600"
+        width: 600
+        content:
+          - type: text
+            content: "Medium modal with width 600px."
+          - type: text
+            content: "Good for forms, detailed content, or multi-step flows."
+        footerButtons:
+          - label: "Cancel"
+            sentiment: "accent"
+            type: "outline"
+          - label: "Confirm"
+            sentiment: "accent"
+      - type: modal-trigger
+        buttonLabel: "600+desc"
+        buttonSentiment: "accent"
+        title: "Modal 600"
+        description: "With description line"
+        width: 600
+        content:
+          - type: text
+            content: "Medium modal with description in the header."
+          - type: text
+            content: "Header height: 74px instead of 56px."
+        footerButtons:
+          - label: "Cancel"
+            sentiment: "accent"
+            type: "outline"
+          - label: "Confirm"
+            sentiment: "accent"
+      - type: modal-trigger
+        buttonLabel: "800"
+        buttonSentiment: "accent"
+        title: "Modal 800"
+        width: 800
+        content:
+          - type: text
+            content: "Large modal with width 800px."
+          - type: text
+            content: "Ideal for complex forms, tables, or rich content."
+        footerButtons:
+          - label: "Cancel"
+            sentiment: "accent"
+            type: "outline"
+          - label: "Save"
+            sentiment: "accent"
+      - type: modal-trigger
+        buttonLabel: "960"
+        buttonSentiment: "accent"
+        title: "Modal 960"
+        width: 960
+        content:
+          - type: text
+            content: "Extra large modal with width 960px."
+          - type: text
+            content: "For full-featured interfaces, wizards, or dashboards."
+        footerButtons:
+          - label: "Cancel"
+            sentiment: "accent"
+            type: "outline"
+          - label: "Submit"
+            sentiment: "accent"
