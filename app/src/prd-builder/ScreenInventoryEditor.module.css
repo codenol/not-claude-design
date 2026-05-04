@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-spacer-800, 16px);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-default, #111827);
+}
+
+.empty {
+  font-size: 14px;
+  color: var(--color-neutral-400, #9ca3af);
+  margin: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-spacer-600, 12px);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-spacer-400, 8px);
+  padding: var(--spacing-spacer-600, 12px);
+  border: 1px solid var(--color-neutral-200, #e5e7eb);
+  border-radius: var(--border-radius-m, 8px);
+}
+
+.fullWidth {
+  width: 100% !important;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-spacer-400, 8px);
+}
+
+.cardHeader > :first-child {
+  flex: 1;
+}
+
+.ucSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-spacer-200, 4px);
+}
+
+.ucLabel {
+  font-size: 13px;
+  color: var(--color-neutral-500, #6b7280);
+}
+
+.ucChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-spacer-200, 4px);
+}
+
+.ucChip {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: var(--border-radius-xs, 4px);
+  background: var(--color-neutral-100, #f3f4f6);
+  color: var(--color-neutral-500, #6b7280);
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.1s;
+}
+
+.ucChip:hover {
+  background: var(--color-neutral-200, #e5e7eb);
+}
+
+.ucChipActive {
+  background: var(--color-brand-primary, #3b82f6);
+  color: #ffffff;
+}
+
+.elemSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-spacer-300, 6px);
+  padding-top: var(--spacing-spacer-300, 6px);
+  border-top: 1px solid var(--color-neutral-100, #f3f4f6);
+}
+
+.sectionLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-neutral-500, #6b7280);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.elemRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-spacer-300, 6px);
+}

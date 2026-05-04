@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--spacing-spacer-1000, 20px);
+  gap: var(--spacing-spacer-1200, 24px);
+}
+
+.brand {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-text-default, #111827);
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--color-neutral-400, #9ca3af);
+}
+
+.roleGrid {
+  display: flex;
+  gap: var(--spacing-spacer-400, 8px);
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 440px;
+}
+
+.roleCard {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-spacer-300, 6px);
+  padding: var(--spacing-spacer-400, 8px) var(--spacing-spacer-600, 12px);
+  border: 1px solid var(--color-neutral-200, #e5e7eb);
+  border-radius: var(--border-radius-m, 8px);
+  background: var(--color-bg-default, #ffffff);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.15s;
+}
+.roleCard:hover { border-color: var(--color-neutral-400, #9ca3af); }
+
+.roleActive { background: var(--color-neutral-50, #f9fafb); }
+
+.roleDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.roleLabel {
+  color: var(--color-text-default, #111827);
+  font-weight: 500;
+}
+
+.usersBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-spacer-600, 12px);
+}
+
+.usersTitle {
+  font-size: 14px;
+  color: var(--color-neutral-500, #6b7280);
+}
+
+.userList {
+  display: flex;
+  gap: var(--spacing-spacer-400, 8px);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.userCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-spacer-300, 6px);
+  padding: var(--spacing-spacer-600, 12px) var(--spacing-spacer-800, 16px);
+  border: 1px solid var(--color-neutral-200, #e5e7eb);
+  border-radius: var(--border-radius-m, 8px);
+  background: var(--color-bg-default, #ffffff);
+  cursor: pointer;
+  font-family: inherit;
+  min-width: 120px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.userCard:hover {
+  border-color: var(--color-brand-primary, #3b82f6);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.userName {
+  font-size: 13px;
+  color: var(--color-text-default, #111827);
+  text-align: center;
+  line-height: 1.3;
+}

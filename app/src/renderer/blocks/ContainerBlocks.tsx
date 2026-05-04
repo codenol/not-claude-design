@@ -20,7 +20,7 @@ export function ContainerBlock({
 }) {
   const style: React.CSSProperties = {
     display: 'flex',
-    flexDirection: direction,
+    flexDirection: direction === 'col' ? 'column' : direction,
     gap: gap,
     flexWrap: direction === 'row' ? 'wrap' : undefined,
   }
@@ -40,7 +40,7 @@ export function SectionBlock({
 }) {
   const style: React.CSSProperties = {
     display: 'flex',
-    flexDirection: direction,
+    flexDirection: direction === 'col' ? 'column' : direction,
     gap: gap,
     flexWrap: direction === 'row' ? 'wrap' : undefined,
     marginTop: heading ? 12 : 0,

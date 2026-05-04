@@ -1,0 +1,211 @@
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--color-neutral-200, #e5e7eb);
+  background: var(--color-bg-default, #ffffff);
+  padding: var(--spacing-spacer-800, 16px);
+  gap: var(--spacing-spacer-800, 16px);
+  box-sizing: border-box;
+}
+
+.sidebarHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.projectLabel {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-neutral-400, #9ca3af);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pageLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-neutral-500, #6b7280);
+}
+
+.featureInfo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-spacer-400, 8px);
+}
+
+.featureName {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text-default, #111827);
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.versionBadge {
+  font-size: 12px;
+  font-family: monospace;
+  color: var(--color-neutral-500, #6b7280);
+  background: var(--color-neutral-100, #f3f4f6);
+  border-radius: var(--border-radius-xxs, 2px);
+  padding: 2px 6px;
+  flex-shrink: 0;
+}
+
+.stagesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-spacer-100, 2px);
+  flex: 1;
+}
+
+.stageItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-spacer-400, 8px);
+  padding: var(--spacing-spacer-400, 8px) var(--spacing-spacer-300, 6px);
+  border-radius: var(--border-radius-s, 6px);
+  cursor: default;
+  transition: background 0.1s ease;
+}
+
+.stageItem:hover {
+  background: var(--color-neutral-50, #f9fafb);
+}
+
+.stageActive {
+  background: var(--color-neutral-100, #f3f4f6);
+}
+
+.stageLabel {
+  font-size: 14px;
+  color: var(--color-neutral-500, #6b7280);
+}
+
+.stageActive .stageLabel {
+  color: var(--color-text-default, #111827);
+  font-weight: 500;
+}
+
+.stageCompleted .stageLabel {
+  color: var(--color-neutral-400, #9ca3af);
+}
+
+.sidebarFooter {
+  margin-top: auto;
+  padding-top: var(--spacing-spacer-600, 12px);
+  border-top: 1px solid var(--color-neutral-200, #e5e7eb);
+}
+
+.backBtn {
+  width: 100%;
+  background: none;
+  border: 1px solid var(--color-neutral-300, #d1d5db);
+  border-radius: var(--border-radius-s, 6px);
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--color-neutral-500, #6b7280);
+  font-family: inherit;
+  text-align: left;
+}
+
+.backBtn:hover {
+  background: var(--color-neutral-50, #f9fafb);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--color-bg-default, #ffffff);
+}
+
+.contentPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: var(--spacing-spacer-600, 12px);
+  color: var(--color-neutral-400, #9ca3af);
+}
+
+.stageIndicator {
+  font-size: 14px;
+}
+
+.placeholderText {
+  font-size: 14px;
+  color: var(--color-neutral-300, #d1d5db);
+  margin: 0;
+}
+
+.readOnlyBadge {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.readOnlyNote {
+  font-size: 12px;
+  color: var(--color-neutral-400, #9ca3af);
+  padding: var(--spacing-spacer-300, 6px) var(--spacing-spacer-400, 8px);
+  background: var(--color-neutral-50, #f9fafb);
+  border-radius: var(--border-radius-xs, 4px);
+}
+
+.publishedBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: var(--spacing-spacer-800, 16px);
+  padding: var(--spacing-spacer-1000, 20px);
+}
+
+.publishedBadge {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-accent-success, #10b981);
+  padding: var(--spacing-spacer-600, 12px) var(--spacing-spacer-1000, 20px);
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: var(--border-radius-m, 8px);
+}
+
+.publishedText {
+  font-size: 14px;
+  color: var(--color-neutral-500, #6b7280);
+  margin: 0;
+}
+
+.publishedActions {
+  display: flex;
+  gap: var(--spacing-spacer-400, 8px);
+}
+
+.reopenBtn {
+  padding: var(--spacing-spacer-300, 6px) var(--spacing-spacer-600, 12px);
+  font-size: 14px;
+  border: 1px solid var(--color-neutral-300, #d1d5db);
+  border-radius: var(--border-radius-s, 6px);
+  background: var(--color-bg-default, #ffffff);
+  color: var(--color-text-default, #111827);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.reopenBtn:hover {
+  background: var(--color-neutral-50, #f9fafb);
+  border-color: var(--color-brand-primary, #3b82f6);
+}

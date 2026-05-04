@@ -1,0 +1,99 @@
+.container {
+  padding: var(--spacing-spacer-1000, 20px);
+  padding-bottom: var(--spacing-spacer-1600, 32px);
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header {
+  margin-bottom: var(--spacing-spacer-800, 16px);
+}
+
+.title {
+  font-size: 24px; font-weight: 700; line-height: 32px;
+  margin: 0; color: var(--color-text-default, #111827);
+}
+
+.list { display: flex; flex-direction: column; gap: var(--spacing-spacer-400, 8px); }
+
+.card {
+  border: 1px solid var(--color-neutral-200, #e5e7eb);
+  border-radius: var(--border-radius-l, 10px);
+  background: var(--color-bg-default, #ffffff);
+  overflow: clip;
+  padding-bottom: var(--spacing-spacer-300, 6px);
+}
+
+.libHeader {
+  display: flex; align-items: center; gap: var(--spacing-spacer-400, 8px);
+  padding: var(--spacing-spacer-600, 12px) var(--spacing-spacer-800, 16px);
+  cursor: pointer; user-select: none;
+}
+.libHeader:hover { background: var(--color-neutral-50, #f9fafb); }
+
+.libName { font-size: 16px; font-weight: 600; color: var(--color-text-default, #111827); }
+
+.chevron {
+  display: inline-block; width: 16px; font-size: 12px;
+  color: var(--color-neutral-400, #9ca3af);
+  transition: transform 0.15s ease; flex-shrink: 0; text-align: center;
+}
+.chevronDown { transform: rotate(90deg); }
+
+.subItem {
+  display: flex; align-items: center; gap: var(--spacing-spacer-400, 8px);
+  padding: var(--spacing-spacer-400, 8px) var(--spacing-spacer-800, 16px) var(--spacing-spacer-400, 8px) var(--spacing-spacer-1200, 24px);
+  cursor: pointer; user-select: none; font-size: 14px; font-weight: 500;
+  color: var(--color-text-default, #111827); border-left: 1px solid var(--color-neutral-200, #e5e7eb);
+  margin-left: var(--spacing-spacer-1200, 24px);
+}
+.subItem:hover { background: var(--color-neutral-50, #f9fafb); }
+
+.subName { flex: 1; }
+
+.count {
+  font-size: 12px; color: var(--color-neutral-400, #9ca3af);
+  background: var(--color-neutral-100, #f3f4f6); padding: 2px 6px; border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.leafItem {
+  display: flex; align-items: center; gap: var(--spacing-spacer-400, 8px);
+  padding: var(--spacing-spacer-200, 4px) var(--spacing-spacer-800, 16px) var(--spacing-spacer-200, 4px) var(--spacing-spacer-2400, 48px);
+  font-size: 14px; color: var(--color-text-default, #111827);
+}
+
+.leafBullet {
+  font-size: 12px; color: var(--color-neutral-300, #d1d5db); flex-shrink: 0; width: 12px; text-align: center;
+}
+
+.linkItem {
+  cursor: pointer; color: var(--color-brand-primary, #3b82f6);
+}
+.linkItem:hover { background: var(--color-neutral-50, #f9fafb); }
+
+.linkArrow {
+  color: var(--color-brand-primary, #3b82f6); font-size: 14px; width: 16px; text-align: center; flex-shrink: 0;
+}
+
+.tokenSwatch {
+  width: 10px; height: 10px; border-radius: 50%;
+  flex-shrink: 0;
+  border: 1px solid var(--color-neutral-200, #e5e7eb);
+}
+
+.tokenCategory {
+  padding: var(--spacing-spacer-200, 4px) var(--spacing-spacer-800, 16px) var(--spacing-spacer-200, 4px) var(--spacing-spacer-2000, 40px);
+}
+
+.tokenCategoryName {
+  font-size: 13px; font-weight: 500; color: var(--color-neutral-500, #6b7280);
+}
+
+.tokenSwatch {
+  width: 10px; height: 10px; border-radius: 50%;
+  flex-shrink: 0;
+  border: 1px solid var(--color-neutral-200, #e5e7eb);
+}

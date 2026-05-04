@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
 import { ChevronDown } from 'lucide-react'
-import { MenuItem } from '../../index'
 import styles from './Dropdown.module.css'
 
 export type DropdownState = 'default' | 'warning' | 'error' | 'disabled'

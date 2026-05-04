@@ -1,6 +1,6 @@
-# Skala DS
+# Skala DS & Norka
 
-Design System parity environment: React ↔ Figma. Every component in code mirrors a Figma component.
+Design System (React ↔ Figma) + Norka — collaborative PRD builder and design workspace.
 
 **Stack:** React 19 + TypeScript + Vite / Figma MCP / CSS Modules + SCSS tokens
 
@@ -8,13 +8,16 @@ Design System parity environment: React ↔ Figma. Every component in code mirro
 
 | Layer | Path |
 |-------|------|
-| Directives | `directives/` |
 | Tokens | `artifacts/tokens.json` → `app/src/tokens/` |
 | Components | `app/src/components/{atoms,molecules,organisms}/` |
-| Pages | `app/src/pages/` |
 | Renderer | `app/src/renderer/` — YAML → React blocks |
-| Contracts | `contracts/` — YAML DSL schema |
-| Figma config | `figma.config.json` |
+| Pages | `app/src/pages/` — Login, Projects, Libraries, Workspace, Entry |
+| Features | `app/src/features/` — workflow state machine, types, routes |
+| PRD Builder | `app/src/prd-builder/` — Persona, UseCase, DataModel, Screen editors |
+| Stages | `app/src/stages/` — Analytics, Discussion, Prototypes, Finalize |
+| Services | `app/src/services/` — storage (IndexedDB), LLM, git, routing |
+| Contracts | `contracts/` — screen DSL + PRD JSON Schema |
+| Figma | `figma.config.json` |
 
 ## Quick start
 
@@ -22,27 +25,10 @@ Design System parity environment: React ↔ Figma. Every component in code mirro
 cd app && npm install && npm run dev
 ```
 
+## Norka
+
+A tool for product teams to collaboratively build PRDs. Features progress through staged workflows (analytics → prototypes → discussion → finalize), with structured editors, role-based permissions, and LLM integration.
+
 ## YAML Playground
 
-Declare screens in YAML and render them live. The renderer maps YAML block types to Skala DS components:
-
-```yaml
-meta:
-  title: "My Screen"
-  breadcrumbs:
-    - label: "Home"
-    - label: "Dashboard"
-content:
-  - type: section
-    heading: "Actions"
-    direction: row
-    gap: 8
-    items:
-      - type: button
-        label: "Save"
-        sentiment: "accent"
-        filled: true
-        size: "large"
-```
-
-See `contracts/screen-contract.md` for the full DSL reference.
+Declare screens in YAML and render them live. See `contracts/screen-contract.md`.

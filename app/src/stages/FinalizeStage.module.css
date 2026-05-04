@@ -1,0 +1,104 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-spacer-800, 16px);
+  padding: var(--spacing-spacer-1000, 20px);
+  height: 100%;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-default, #111827);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-spacer-800, 16px);
+}
+
+.card {
+  padding: var(--spacing-spacer-800, 16px);
+  border: 1px solid var(--color-neutral-200, #e5e7eb);
+  border-radius: var(--border-radius-m, 8px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-spacer-600, 12px);
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-default, #111827);
+}
+
+.checks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-spacer-400, 8px);
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-spacer-400, 8px);
+  font-size: 14px;
+}
+
+.checkIcon {
+  width: 18px;
+  font-size: 14px;
+  color: var(--color-neutral-400, #9ca3af);
+}
+
+.checkDone .checkIcon { color: var(--color-accent-success, #10b981); }
+.checkDone .checkLabel { color: var(--color-accent-success, #10b981); }
+
+.checkLabel { color: var(--color-neutral-500, #6b7280); }
+
+.artifactRow {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-spacer-400, 8px);
+  font-size: 13px;
+}
+
+.artifactLabel {
+  width: 140px;
+  flex-shrink: 0;
+  color: var(--color-neutral-400, #9ca3af);
+}
+
+.artifactValue {
+  color: var(--color-text-default, #111827);
+  word-break: break-word;
+}
+
+.warning {
+  padding: var(--spacing-spacer-600, 12px);
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: var(--border-radius-s, 6px);
+  font-size: 14px;
+  color: #92400e;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--color-neutral-400, #9ca3af);
+  font-size: 14px;
+}

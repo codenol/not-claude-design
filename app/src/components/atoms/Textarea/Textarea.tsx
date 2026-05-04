@@ -1,5 +1,4 @@
 import * as LucideIcons from 'lucide-react'
-import { type LucideProps } from 'lucide-react'
 import styles from './Textarea.module.css'
 
 export type TextareaState = 'default' | 'warning' | 'error' | 'disabled'

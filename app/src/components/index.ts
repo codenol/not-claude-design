@@ -1,11 +1,11 @@
 export { Button } from './atoms/Button'
-export type { ButtonProps, ButtonSentiment, ButtonType, ButtonSize } from './atoms/Button'
+export type { ButtonProps, ButtonSentiment, ButtonType, ButtonSize, ButtonIconPosition } from './atoms/Button'
 
 export { Badge } from './atoms/Badge'
-export type { BadgeProps, BadgeTone, BadgeSize } from './atoms/Badge'
+export type { BadgeProps, BadgeColor, BadgeContent } from './atoms/Badge'
 
 export { Input } from './atoms/Input'
-export type { InputProps, InputState } from './atoms/Input'
+export type { InputProps, InputState, InputIconPosition } from './atoms/Input'
 
 export { Textarea } from './atoms/Textarea'
 export type { TextareaProps, TextareaState } from './atoms/Textarea'
@@ -25,6 +25,12 @@ export type { LogoProps, LogoVariant } from './atoms/Logo'
 export { TableStatus } from './atoms/TableStatus'
 export type { TableStatusProps, TableStatusSeverity, TableStatusContent } from './atoms/TableStatus'
 
+export { ProgressDots } from './atoms/ProgressDots'
+export type { ProgressDotsProps } from './atoms/ProgressDots'
+
+export { KebabMenu } from './atoms/KebabMenu'
+export type { KebabMenuProps, KebabMenuItem } from './atoms/KebabMenu'
+
 export { MenuItem } from './molecules/MenuItem'
 export type { MenuItemProps } from './molecules/MenuItem'
 
@@ -42,6 +48,8 @@ export type { LayoutProps } from './organisms/Layout'
 
 export { Modal, ModalFooter } from './organisms/Modal'
 export type { ModalProps, ModalWidth } from './organisms/Modal'
+
+export { SettingsModal } from './molecules/SettingsModal/SettingsModal'
 
 export { Drawer } from './organisms/Drawer'
 export type { DrawerProps, DrawerWidth } from './organisms/Drawer'

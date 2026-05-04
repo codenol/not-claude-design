@@ -1,5 +1,4 @@
 import { X } from 'lucide-react'
-import { Button } from '../../index'
 import styles from './Modal.module.css'
 
 export type ModalWidth = 400 | 600 | 800 | 960

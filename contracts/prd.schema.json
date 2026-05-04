@@ -1,0 +1,131 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Norka PRD Schema",
+  "description": "Structured Product Requirements Document for YAML variant generation",
+  "type": "object",
+  "required": ["personas", "useCases", "dataModel", "screenInventory", "variantMatrix"],
+  "properties": {
+    "personas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "role", "goal"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "role": { "type": "string" },
+          "goal": { "type": "string" },
+          "painPoints": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "useCases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "actor", "goal", "trigger", "mainFlow"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "actor": { "type": "string" },
+          "goal": { "type": "string" },
+          "trigger": { "type": "string" },
+          "mainFlow": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["actor", "action"],
+              "properties": {
+                "actor": { "type": "string", "enum": ["user", "system"] },
+                "action": { "type": "string" },
+                "screenId": { "type": "string" }
+              }
+            }
+          },
+          "errorFlows": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["condition", "resolution"],
+              "properties": {
+                "condition": { "type": "string" },
+                "resolution": { "type": "string" }
+              }
+            }
+          },
+          "relatedFeatures": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "dataModel": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "fields"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "type", "required"],
+              "properties": {
+                "name": { "type": "string" },
+                "type": { "type": "string" },
+                "required": { "type": "boolean" }
+              }
+            }
+          },
+          "relations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["target", "type"],
+              "properties": {
+                "target": { "type": "string" },
+                "type": { "type": "string", "enum": ["1:1", "1:N", "N:M"] }
+              }
+            }
+          }
+        }
+      }
+    },
+    "screenInventory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "purpose"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "purpose": { "type": "string" },
+          "relatedUseCases": { "type": "array", "items": { "type": "string" } },
+          "keyElements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["type", "label"],
+              "properties": {
+                "type": { "type": "string" },
+                "label": { "type": "string" },
+                "dataBinding": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "variantMatrix": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["axis", "description"],
+        "properties": {
+          "axis": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -67,7 +67,7 @@ export function DataTable<T = any>({
   selected = [],
   onSelectionChange,
   sortBy,
-  sortDir = 'asc',
+  sortDir: _sortDir = 'asc',
   onSort,
   pagination,
   onPageChange,
@@ -77,7 +77,7 @@ export function DataTable<T = any>({
 }: DataTableProps<T>) {
   const [search, setSearch] = useState('')
   const [columnSettings, setColumnSettings] = useState(false)
-  const [visibleCols, setVisibleCols] = useState<string[]>(columns.map(c => c.key))
+  const [visibleCols, _setVisibleCols] = useState<string[]>(columns.map(c => c.key))
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value)

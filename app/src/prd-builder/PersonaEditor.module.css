@@ -1,0 +1,95 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-spacer-800, 16px);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-default, #111827);
+}
+
+.empty {
+  font-size: 14px;
+  color: var(--color-neutral-400, #9ca3af);
+  margin: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-spacer-600, 12px);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-spacer-400, 8px);
+  padding: var(--spacing-spacer-600, 12px);
+  border: 1px solid var(--color-neutral-200, #e5e7eb);
+  border-radius: var(--border-radius-m, 8px);
+  background: var(--color-bg-default, #ffffff);
+}
+
+.fullWidth {
+  width: 100% !important;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-spacer-400, 8px);
+}
+
+.cardHeader > *:first-child {
+  flex: 1;
+}
+
+.cardHeader > *:nth-child(2) {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.painSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-spacer-300, 6px);
+}
+
+.painLabel {
+  font-size: 13px;
+  color: var(--color-neutral-500, #6b7280);
+}
+
+.painList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-spacer-200, 4px);
+}
+
+.painTag {
+  cursor: pointer;
+}
+
+.painInput {
+  font-family: inherit;
+  font-size: 13px;
+  padding: var(--spacing-spacer-300, 6px) var(--spacing-spacer-400, 8px);
+  border: 1px solid var(--color-neutral-200, #e5e7eb);
+  border-radius: var(--border-radius-xs, 4px);
+  color: var(--color-text-default, #111827);
+  background: var(--color-bg-default, #ffffff);
+}
+
+.painInput:focus {
+  outline: none;
+  border-color: var(--color-brand-primary, #3b82f6);
+}
