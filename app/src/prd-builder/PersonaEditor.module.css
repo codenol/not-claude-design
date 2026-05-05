@@ -39,6 +39,38 @@
   background: var(--color-bg-default, #ffffff);
 }
 
+.aiCard {
+  border-color: #7c3aed;
+  border-width: 1px;
+  box-shadow: 0 0 0 1px #7c3aed;
+}
+
+.headerButtons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-spacer-400, 8px);
+}
+
+.aiLoading {
+  padding: var(--spacing-spacer-400, 8px) var(--spacing-spacer-600, 12px);
+  border: 1px dashed var(--color-brand-primary, #3b82f6);
+  border-radius: var(--border-radius-m, 8px);
+  background: rgba(59, 130, 246, 0.04);
+}
+
+.aiLoadingHint {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-neutral-400, #9ca3af);
+}
+
+.aiLoadingPhrase {
+  margin: 2px 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-brand-primary, #3b82f6);
+}
+
 .fullWidth {
   width: 100% !important;
 }

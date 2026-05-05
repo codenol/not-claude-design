@@ -31,6 +31,11 @@ body {
   --border-radius-xxs: var(--border-radiusxxs, 2px);
   --border-radius-xxxxl: var(--border-radiusxxxxl, 4000px);
 
+  // --- App space aliases ---
+  --space-3: var(--spacing-spacer-600, 12px);
+  --space-6: var(--spacing-spacer-1200, 24px);
+  --space-8: var(--spacing-spacer-1400, 28px);
+
   // --- Old semantic → new palette ---
   --color-brand-primary: var(--bondi-blue-600, #2d98b4);
   --color-brand-secondary: var(--violet-550, #9747ff);

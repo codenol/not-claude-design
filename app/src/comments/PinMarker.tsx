@@ -2,10 +2,11 @@ export interface PinMarkerProps {
   x: number
   y: number
   color: string
+  initials: string
   size?: number
 }
 
-export function PinMarker({ x, y, color, size = 16 }: PinMarkerProps) {
+export function PinMarker({ x, y, color, initials, size = 24 }: PinMarkerProps) {
   return (
     <div
       style={{
@@ -20,6 +21,14 @@ export function PinMarker({ x, y, color, size = 16 }: PinMarkerProps) {
         boxShadow: '0 1px 4px rgba(0,0,0,0.2)',
         cursor: 'pointer',
         zIndex: 10,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: '#ffffff',
+        fontSize: 10,
+        fontWeight: 700,
+        fontFamily: 'inherit',
+        lineHeight: 1,
         transition: 'transform 0.1s ease',
       }}
       onMouseEnter={e => {
@@ -28,6 +37,8 @@ export function PinMarker({ x, y, color, size = 16 }: PinMarkerProps) {
       onMouseLeave={e => {
         (e.currentTarget as HTMLElement).style.transform = 'scale(1)'
       }}
-    />
+    >
+      {initials}
+    </div>
   )
 }

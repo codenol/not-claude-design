@@ -261,7 +261,10 @@ export class NorkaRepo {
         }
       }
 
-      variants.push({ id, name, yaml: content, params, archived })
+      const requestRaw = await this.storage.readFile(`${dir}/${id}.request.json`)
+      const request = requestRaw || undefined
+
+      variants.push({ id, name, yaml: content, params, request, archived })
     }
     return variants
   }
@@ -284,6 +287,9 @@ export class NorkaRepo {
     header += '\n'
 
     await this.storage.writeFile(`${dir}/${variant.id}.yaml`, header + variant.yaml)
+    if (variant.request) {
+      await this.storage.writeFile(`${dir}/${variant.id}.request.json`, variant.request)
+    }
   }
 
   async archiveVariant(

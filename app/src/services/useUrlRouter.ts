@@ -1,5 +1,12 @@
 import { useState, useEffect, useCallback } from 'react'
 import type { AppRoute } from '../features/routes'
+import type { FeatureStage } from '../features/types'
+
+const VALID_STAGES: FeatureStage[] = ['draft', 'analytics', 'prototypes', 'discussion', 'final', 'published']
+
+function isValiStage(s: string): s is FeatureStage {
+  return VALID_STAGES.includes(s as FeatureStage)
+}
 
 function parseUrl(pathname: string): AppRoute {
   const segments = pathname.split('/').filter(Boolean)
@@ -8,30 +15,36 @@ function parseUrl(pathname: string): AppRoute {
   if (segments[0] === 'libraries') return { page: 'libraries' }
   if (segments[0] === 'projects' && segments.length === 1) return { page: 'projects' }
 
-  // /projects/:projectId/:pageId/:featureId
-  if (segments[0] === 'projects' && segments.length === 4) {
-    const verMatch = segments[3].match(/^v(\d+)\.(\d+)$/)
-    return {
+  // /projects/:projectId/:pageId/:featureId[/v:major.:minor[/:stage]]
+  if (segments[0] === 'projects' && (segments.length === 4 || segments.length === 5 || segments.length === 6)) {
+    const base: any = {
       page: 'feature',
       projectId: segments[1],
       pageId: segments[2],
-      featureId: verMatch ? segments[3] : segments[3],
+      featureId: segments[3],
     }
-  }
 
-  // /projects/:projectId/:pageId/:featureId/v:major.:minor
-  if (segments[0] === 'projects' && segments.length === 5) {
-    const verMatch = segments[4].match(/^v(\d+)\.(\d+)$/)
-    if (verMatch) {
-      return {
-        page: 'feature-version',
-        projectId: segments[1],
-        pageId: segments[2],
-        featureId: segments[3],
-        major: parseInt(verMatch[1], 10),
-        minor: parseInt(verMatch[2], 10),
+    // /projects/:projectId/:pageId/:featureId/v:major.:minor[/:stage]
+    if (segments.length >= 5) {
+      const verMatch = segments[4].match(/^v(\d+)\.(\d+)$/)
+      if (verMatch) {
+        base.page = 'feature-version'
+        base.major = parseInt(verMatch[1], 10)
+        base.minor = parseInt(verMatch[2], 10)
+        if (segments.length === 6 && isValiStage(segments[5])) {
+          base.stage = segments[5]
+        }
+        return base
       }
     }
+
+    // /projects/:projectId/:pageId/:featureId[/:stage]
+    if (segments.length === 5 && isValiStage(segments[4])) {
+      base.stage = segments[4]
+      return base
+    }
+
+    return base
   }
 
   return { page: 'projects' }

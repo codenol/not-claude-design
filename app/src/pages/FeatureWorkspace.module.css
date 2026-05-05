@@ -1,6 +1,7 @@
 .wrapper {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .sidebar {
@@ -85,6 +86,20 @@
   background: var(--color-neutral-100, #f3f4f6);
 }
 
+.stageClickable {
+  cursor: pointer;
+}
+
+.stageClickable:hover {
+  background: var(--color-brand-primary, #3b82f6);
+  color: #ffffff;
+}
+
+.stageClickable:hover .stageLabel {
+  color: #ffffff;
+  font-weight: 500;
+}
+
 .stageLabel {
   font-size: 14px;
   color: var(--color-neutral-500, #6b7280);
@@ -103,6 +118,28 @@
   margin-top: auto;
   padding-top: var(--spacing-spacer-600, 12px);
   border-top: 1px solid var(--color-neutral-200, #e5e7eb);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-spacer-300, 6px);
+}
+
+.demoBtn {
+  width: 100%;
+  background: var(--color-brand-primary, #3b82f6);
+  border: none;
+  border-radius: var(--border-radius-s, 6px);
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: inherit;
+  text-align: center;
+  transition: background 0.15s;
+}
+
+.demoBtn:hover {
+  background: var(--color-brand-primary-hover, #2563eb);
 }
 
 .backBtn {

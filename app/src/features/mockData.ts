@@ -235,8 +235,8 @@ export function createDemoTree(): NorkaFsNode {
           anchor: { type: 'yaml-node', path: 'content[0]' },
           x: 120, y: 80,
           messages: [
-            { author: 'ПО', text: 'Тут нужен подзаголовок с описанием карты для новых пользователей?', timestamp: NOW },
-            { author: 'Дизайнер', text: 'Добавил в v2.1, смотри обновлённый макет', timestamp: NOW },
+            { author: 'ПО', authorId: 'u-po-1', authorName: 'Алексей Соколов', authorInitials: 'АС', text: 'Тут нужен подзаголовок с описанием карты для новых пользователей?', timestamp: NOW },
+            { author: 'Дизайнер', authorId: 'u-ds-1', authorName: 'Анна Фёдорова', authorInitials: 'АФ', text: 'Добавил в v2.1, смотри обновлённый макет', timestamp: NOW },
           ],
           resolved: false,
         }], null, 2))

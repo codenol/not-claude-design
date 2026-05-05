@@ -7,3 +7,4 @@ artifacts/figma-mirror.json
 .playwright-mcp/
 *.png
 rendered-snapshot.md
+packages/

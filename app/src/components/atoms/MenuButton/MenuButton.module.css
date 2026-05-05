@@ -11,7 +11,7 @@
   padding: 0;
   cursor: pointer;
   transition: all 0.15s ease;
-  background: var(--sidebar-menubutton-bg-default);
+  background: var(--sidebar-menubutton-background-default);
   border-color: var(--sidebar-menubutton-border-default);
   outline: none;
   box-sizing: border-box;
@@ -27,7 +27,7 @@
 
 /* ===== HOVER (not active) ===== */
 .menubutton:hover:not(.active) {
-  background: var(--sidebar-menubutton-bg-hover);
+  background: var(--sidebar-menubutton-background-hover);
   border-color: var(--sidebar-menubutton-border-hover);
 }
 .menubutton:hover:not(.active) .icon {
@@ -36,7 +36,7 @@
 
 /* ===== ACTIVE (not hovered) ===== */
 .menubutton.active {
-  background: var(--sidebar-menubutton-bg-active);
+  background: var(--sidebar-menubutton-background-active);
   border-color: var(--sidebar-menubutton-border-active);
 }
 .menubutton.active .icon {
@@ -45,7 +45,7 @@
 
 /* ===== ACTIVE + HOVER ===== */
 .menubutton.active:hover {
-  background: var(--sidebar-menubutton-bg-active-hover);
+  background: var(--sidebar-menubutton-background-active-hover);
   border-color: var(--sidebar-menubutton-border-active-hover);
 }
 .menubutton.active:hover .icon {

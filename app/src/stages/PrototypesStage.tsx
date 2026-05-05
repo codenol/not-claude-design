@@ -1,5 +1,6 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, Component } from 'react'
 import yaml from 'js-yaml'
+import { Agentation } from 'agentation'
 import type { FeatureStage, PrototypeVariant } from '../features/types'
 import type { NorkaRepo } from '../services/norkaRepo'
 import type { ScreenConfig } from '../types/screen'
@@ -7,6 +8,25 @@ import { generateVariants } from '../services/llmService'
 import { YamlRenderer } from '../renderer/YamlRenderer'
 import { Button, Drawer } from '../components'
 import styles from './PrototypesStage.module.css'
+
+class ErrorBoundary extends Component<{ children: React.ReactNode }, { error: string | null }> {
+  state: { error: string | null } = { error: null }
+  static getDerivedStateFromError(error: Error) { return { error: error.message } }
+  render() {
+    if (this.state.error) {
+      return <div className={styles.parseError}>Ошибка рендеринга макета: {this.state.error}</div>
+    }
+    return this.props.children
+  }
+}
+
+const PHRASES = [
+  'Ща-ща-ща…', 'Уже почти…', 'Ещё чуть-чуть…', 'Секунду…', 'Скоро будет…',
+  'Думаю…', 'Почти готово…', 'Собираю…', 'Минуточку…', 'Подожди чуток…',
+  'Готовлю ответ…', 'Нейроны греются…', 'Формулирую…', 'Сейчас-сейчас…',
+  'Загружаю мысль…', 'Обрабатываю…', 'Почти на финише…', 'Пару секунд…',
+  'Финишная прямая…', 'Шестерёнки крутятся…',
+]
 
 export interface PrototypesStageProps {
   repo: NorkaRepo
@@ -16,6 +36,7 @@ export interface PrototypesStageProps {
   version: { major: number; minor: number }
   readOnly?: boolean
   onTransition: (to: FeatureStage) => void
+  userColor?: string
 }
 
 function parseConfig(yamlStr: string): ScreenConfig | null {
@@ -28,7 +49,7 @@ function parseConfig(yamlStr: string): ScreenConfig | null {
   } catch { return null }
 }
 
-export function PrototypesStage({ repo, projectId, pageId, featureId, version, readOnly, onTransition }: PrototypesStageProps) {
+export function PrototypesStage({ repo, projectId, pageId, featureId, version, readOnly, onTransition, userColor }: PrototypesStageProps) {
   const [variants, setVariants] = useState<PrototypeVariant[]>([])
   const [activeIdx, setActiveIdx] = useState(0)
   const [loaded, setLoaded] = useState(false)
@@ -36,6 +57,17 @@ export function PrototypesStage({ repo, projectId, pageId, featureId, version, r
   const [selecting, setSelecting] = useState(false)
   const [generating, setGenerating] = useState(false)
   const [genError, setGenError] = useState('')
+  const [aiPhrase, setAiPhrase] = useState('')
+  const [drawerTab, setDrawerTab] = useState<'yaml' | 'request'>('yaml')
+
+  useEffect(() => {
+    if (!generating) { setAiPhrase(''); return }
+    setAiPhrase(PHRASES[Math.floor(Math.random() * PHRASES.length)])
+    const interval = setInterval(() => {
+      setAiPhrase(PHRASES[Math.floor(Math.random() * PHRASES.length)])
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [generating])
 
   const loadVariants = () => {
     repo.getVersion(projectId, pageId, featureId, version.major, version.minor).then(ver => {
@@ -66,7 +98,7 @@ export function PrototypesStage({ repo, projectId, pageId, featureId, version, r
         throw new Error('PRD не заполнен. Добавьте хотя бы одну персону и один use case.')
       }
 
-      const yamls = await generateVariants(prd)
+      const { yamls, request } = await generateVariants(prd)
       const names = ['V1 — Sidebar', 'V2 — Top Nav', 'V3 — Minimal']
 
       for (let i = 0; i < yamls.length; i++) {
@@ -75,6 +107,7 @@ export function PrototypesStage({ repo, projectId, pageId, featureId, version, r
           name: names[i],
           yaml: yamls[i],
           params: { variant: names[i].split('—')[1]?.trim().toLowerCase() || String(i + 1) },
+          request,
         }
         await repo.saveVariant(projectId, pageId, featureId, version.major, version.minor, variant)
       }
@@ -124,8 +157,8 @@ export function PrototypesStage({ repo, projectId, pageId, featureId, version, r
           <Button type="ghost" sentiment="secondary" size="small" onClick={() => onTransition('analytics')}>
             ← Аналитика
           </Button>
-          <Button sentiment="secondary" size="small" type="ghost" onClick={() => setYamlDrawer(true)}>
-            {'</> YAML'}
+          <Button sentiment="secondary" size="small" type="ghost" onClick={() => { setDrawerTab('yaml'); setYamlDrawer(true) }}>
+            Запрос и YAML
           </Button>
           {!readOnly && <>
           <Button sentiment="accent" size="small" onClick={handleSelectFinal} disabled={selecting}>
@@ -141,12 +174,13 @@ export function PrototypesStage({ repo, projectId, pageId, featureId, version, r
       <div className={styles.preview}>
         {generating && (
           <div className={styles.generating}>
-            <p>Генерирую макеты через LLM...</p>
+            <p className={styles.generatingTitle}>Генерирую макеты через LLM...</p>
             <p className={styles.generatingHint}>Это может занять до минуты</p>
+            <p className={styles.generatingPhrase}>{aiPhrase}</p>
           </div>
         )}
         {genError && !generating && <p className={styles.errorText}>{genError}</p>}
-        {!generating && config && <YamlRenderer config={config} />}
+        {!generating && config && <ErrorBoundary><YamlRenderer config={config} /></ErrorBoundary>}
         {!generating && !config && activeVariant && (
           <div className={styles.parseError}>
             Не удалось распарсить YAML варианта «{activeVariant.name}»
@@ -157,11 +191,22 @@ export function PrototypesStage({ repo, projectId, pageId, featureId, version, r
       <Drawer
         open={yamlDrawer}
         onClose={() => setYamlDrawer(false)}
-        title={`YAML: ${activeVariant?.name ?? ''}`}
+        title={`${activeVariant?.name ?? ''}`}
         width={600}
       >
-        <pre className={styles.yamlCode}>{activeVariant?.yaml ?? ''}</pre>
+        <div className={styles.drawerTabs}>
+          <button className={`${styles.drawerTab} ${drawerTab === 'yaml' ? styles.drawerTabActive : ''}`} onClick={() => setDrawerTab('yaml')}>YAML</button>
+          <button className={`${styles.drawerTab} ${drawerTab === 'request' ? styles.drawerTabActive : ''}`} onClick={() => setDrawerTab('request')}>Запрос</button>
+        </div>
+        {drawerTab === 'yaml' && (
+          <pre className={styles.yamlCode}>{activeVariant?.yaml ?? ''}</pre>
+        )}
+        {drawerTab === 'request' && (
+          <pre className={styles.yamlCode}>{activeVariant?.request ?? 'Запрос не сохранён'}</pre>
+        )}
       </Drawer>
+
+      <Agentation color={userColor} />
     </div>
   )
 }

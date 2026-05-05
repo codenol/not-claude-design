@@ -22,6 +22,8 @@
 
 body {
   margin: 0;
+  background: var(--layout-background-default);
+  color: var(--color-text-default);
 }
 
 html {

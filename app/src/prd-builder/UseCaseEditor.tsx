@@ -1,15 +1,36 @@
+import { useEffect, useState } from 'react'
 import type { UseCase, UseCaseStep, UseCaseErrorFlow } from '../features/types'
 import { Button, Input, Dropdown } from '../components'
 import styles from './UseCaseEditor.module.css'
+
+const PHRASES = [
+  'Ща-ща-ща…', 'Уже почти…', 'Ещё чуть-чуть…', 'Секунду…', 'Скоро будет…',
+  'Думаю…', 'Почти готово…', 'Собираю…', 'Минуточку…', 'Подожди чуток…',
+  'Готовлю ответ…', 'Нейроны греются…', 'Формулирую…', 'Сейчас-сейчас…',
+  'Загружаю мысль…', 'Обрабатываю…', 'Почти на финише…', 'Пару секунд…',
+  'Финишная прямая…', 'Шестерёнки крутятся…',
+]
 
 export interface UseCaseEditorProps {
   useCases: UseCase[]
   personaNames: string[]
   screenNames: string[]
   onChange: (useCases: UseCase[]) => void
+  onFillWithAi?: () => void
+  aiLoading?: boolean
 }
 
-export function UseCaseEditor({ useCases, personaNames, screenNames, onChange }: UseCaseEditorProps) {
+export function UseCaseEditor({ useCases, personaNames, screenNames, onChange, onFillWithAi, aiLoading }: UseCaseEditorProps) {
+  const [aiPhrase, setAiPhrase] = useState('')
+
+  useEffect(() => {
+    if (!aiLoading) { setAiPhrase(''); return }
+    setAiPhrase(PHRASES[Math.floor(Math.random() * PHRASES.length)])
+    const interval = setInterval(() => {
+      setAiPhrase(PHRASES[Math.floor(Math.random() * PHRASES.length)])
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [aiLoading])
   const add = () => {
     onChange([
       ...useCases,
@@ -77,16 +98,30 @@ export function UseCaseEditor({ useCases, personaNames, screenNames, onChange }:
     <div className={styles.container}>
       <div className={styles.header}>
         <h2 className={styles.title}>Use Cases</h2>
-        <Button sentiment="accent" size="small" onClick={add}>+ Добавить</Button>
+        <div className={styles.headerButtons}>
+          <Button sentiment="accent" size="small" onClick={add}>+ Добавить</Button>
+          {onFillWithAi && (
+            <Button sentiment="accent" type="outline" size="small" onClick={onFillWithAi} disabled={aiLoading}>
+              {aiLoading ? '...' : 'Заполнить с ИИ'}
+            </Button>
+          )}
+        </div>
       </div>
 
-      {useCases.length === 0 && (
+      {aiLoading && (
+        <div className={styles.aiLoading}>
+          <p className={styles.aiLoadingHint}>Это может занять до минуты</p>
+          <p className={styles.aiLoadingPhrase}>{aiPhrase}</p>
+        </div>
+      )}
+
+      {useCases.length === 0 && !aiLoading && (
         <p className={styles.empty}>Нет use cases.</p>
       )}
 
       <div className={styles.list}>
         {useCases.map((uc, idx) => (
-          <div key={idx} className={styles.card}>
+          <div key={idx} className={`${styles.card} ${uc._aiGenerated ? styles.aiCard : ''}`}>
             <div className={styles.cardTop}>
               <div className={styles.cardFields}>
                 <Input

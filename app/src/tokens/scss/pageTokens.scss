@@ -1,0 +1,55 @@
+/**
+ * Page-level semantic tokens
+ * Backward-compat aliases for commonly used page variables
+ */
+@import './colors.scss';
+
+@media (prefers-color-scheme: dark) {
+body {
+  --color-bg-default: var(--nile-blue-950);
+  --color-text-default: var(--cool-gray-200);
+  --color-text-secondary: var(--cool-gray-550);
+  --color-neutral-50: var(--nile-blue-850);
+  --color-neutral-100: var(--nile-blue-800);
+  --color-neutral-200: var(--nile-blue-550);
+  --color-neutral-400: var(--cool-gray-550);
+  --text-h: var(--cool-gray-200);
+  --code-bg: var(--nile-blue-900);
+}
+body.layout-theme-light {
+  --color-bg-default: var(--white-950);
+  --color-text-default: var(--cool-gray-800);
+  --color-text-secondary: var(--cool-gray-600);
+  --color-neutral-50: var(--cool-gray-50);
+  --color-neutral-100: var(--cool-gray-100);
+  --color-neutral-200: var(--cool-gray-200);
+  --color-neutral-400: var(--cool-gray-600);
+  --text-h: var(--cool-gray-800);
+  --code-bg: var(--cool-gray-100);
+}
+}
+
+@media (prefers-color-scheme: light) {
+body {
+  --color-bg-default: var(--white-950);
+  --color-text-default: var(--cool-gray-800);
+  --color-text-secondary: var(--cool-gray-600);
+  --color-neutral-50: var(--cool-gray-50);
+  --color-neutral-100: var(--cool-gray-100);
+  --color-neutral-200: var(--cool-gray-200);
+  --color-neutral-400: var(--cool-gray-600);
+  --text-h: var(--cool-gray-800);
+  --code-bg: var(--cool-gray-100);
+}
+body.layout-theme-dark {
+  --color-bg-default: var(--nile-blue-950);
+  --color-text-default: var(--cool-gray-200);
+  --color-text-secondary: var(--cool-gray-550);
+  --color-neutral-50: var(--nile-blue-850);
+  --color-neutral-100: var(--nile-blue-800);
+  --color-neutral-200: var(--nile-blue-550);
+  --color-neutral-400: var(--cool-gray-550);
+  --text-h: var(--cool-gray-200);
+  --code-bg: var(--nile-blue-900);
+}
+}

@@ -1,11 +1,16 @@
+import { useCallback, useState } from 'react'
 import type { Feature, FeatureStage } from '../features/types'
 import type { NorkaRepo } from '../services/norkaRepo'
-import { ACTIVE_STAGES, getDotProgress, versionLabel, getLatestVersion, getTransition } from '../features/workflowMachine'
+import type { UserInfo } from '../services/roleConfig'
+import { getRoleColor } from '../services/roleConfig'
+import type { PrototypeVariant } from '../features/types'
+import { ACTIVE_STAGES, getDotProgress, versionLabel, getLatestVersion, getTransition, canTransition } from '../features/workflowMachine'
 import { ProgressDots } from '../components/atoms/ProgressDots'
 import { AnalyticsStage } from '../stages/AnalyticsStage'
 import { PrototypesStage } from '../stages/PrototypesStage'
 import { DiscussionStage } from '../stages/DiscussionStage'
 import { FinalizeStage } from '../stages/FinalizeStage'
+import { DEMO_PRD, DEMO_YAMLS, DEMO_DESCRIPTION } from '../features/demoData'
 import styles from './FeatureWorkspace.module.css'
 
 export interface FeatureWorkspaceProps {
@@ -15,7 +20,10 @@ export interface FeatureWorkspaceProps {
   repo: NorkaRepo
   readOnly?: boolean
   viewVersion?: { major: number; minor: number; stage: FeatureStage }
+  explicitStage?: FeatureStage
+  currentUser: UserInfo
   onBack: () => void
+  onStageChange?: (stage: FeatureStage, version?: { major: number; minor: number }) => void
   onFeatureUpdate: (feature: Feature) => void
 }
 
@@ -26,14 +34,42 @@ const STAGE_LABELS: Record<string, string> = {
   final: 'Оформление',
 }
 
-export function FeatureWorkspace({ feature, projectName, pageName, repo, readOnly, viewVersion, onBack, onFeatureUpdate }: FeatureWorkspaceProps) {
+export function FeatureWorkspace({ feature, projectName, pageName, repo, readOnly, viewVersion, explicitStage, currentUser, onBack, onStageChange, onFeatureUpdate }: FeatureWorkspaceProps) {
   const latestVer = getLatestVersion(feature)
   const activeVer = viewVersion || latestVer
-  const currentStage: FeatureStage = viewVersion?.stage || feature.status
+  const featureStage: FeatureStage = feature.status
+  const [renderKey, setRenderKey] = useState(0)
 
-  const handleTransition = (to: FeatureStage) => {
+  const displayStage: FeatureStage = explicitStage && (explicitStage === featureStage || canTransition(featureStage, explicitStage)) ? explicitStage : featureStage
+
+  const handleDemo = useCallback(async () => {
+    if (!activeVer) return
+    const { projectId, pageId, id } = feature
+
+    if (displayStage === 'analytics') {
+      await repo.updateFeatureDesc(projectId, pageId, id, DEMO_DESCRIPTION)
+      await repo.savePrd(projectId, pageId, id, activeVer.major, activeVer.minor, DEMO_PRD)
+    }
+
+    if (displayStage === 'prototypes') {
+      for (const v of DEMO_YAMLS) {
+        const variant: PrototypeVariant = {
+          id: v.id,
+          name: v.name,
+          yaml: v.yaml,
+          params: v.params,
+        }
+        await repo.saveVariant(projectId, pageId, id, activeVer.major, activeVer.minor, variant)
+      }
+    }
+
+    setRenderKey(k => k + 1)
+  }, [displayStage, activeVer, feature, repo])
+
+  const handleTransition = useCallback((to: FeatureStage, viaClick = false) => {
     if (readOnly) return
-    const transition = getTransition(currentStage, to)
+    const from = displayStage
+    const transition = getTransition(from, to)
     if (!transition) return
 
     if (transition.bumpsMinor && latestVer) {
@@ -49,21 +85,36 @@ export function FeatureWorkspace({ feature, projectName, pageName, repo, readOnl
           versions: [...feature.versions, { major: latestVer.major, minor: newMinor, stage: to, selectedVariant: null }],
         }
         onFeatureUpdate(updated)
+        if (onStageChange) onStageChange(to, { major: latestVer.major, minor: newMinor })
       })
     } else {
       repo.updateFeatureStatus(feature.projectId, feature.pageId, feature.id, to).then(() => {
         onFeatureUpdate({ ...feature, status: to })
+        if (onStageChange) onStageChange(to)
       })
     }
+  }, [readOnly, displayStage, latestVer, repo, feature, onFeatureUpdate, onStageChange])
+
+  const handleStageClick = (stage: FeatureStage) => {
+    if (stage === displayStage) return
+    if (readOnly) return
+    const transition = getTransition(displayStage, stage)
+    if (!transition) return
+    handleTransition(stage, true)
+  }
+
+  const handleStageTransition = (to: FeatureStage) => {
+    handleTransition(to, true)
   }
 
   const renderStage = () => {
     if (!activeVer) return <div className={styles.placeholderText}>Нет версий фичи</div>
 
-    switch (currentStage) {
+    switch (displayStage) {
       case 'analytics':
         return (
           <AnalyticsStage
+            key={renderKey}
             repo={repo}
             projectId={feature.projectId}
             pageId={feature.pageId}
@@ -72,19 +123,21 @@ export function FeatureWorkspace({ feature, projectName, pageName, repo, readOnl
             projectName={projectName}
             pageName={pageName}
             readOnly={readOnly}
-            onTransition={handleTransition}
+            onTransition={handleStageTransition}
           />
         )
       case 'prototypes':
         return (
           <PrototypesStage
+            key={renderKey}
             repo={repo}
             projectId={feature.projectId}
             pageId={feature.pageId}
             featureId={feature.id}
             version={{ major: activeVer.major, minor: activeVer.minor }}
             readOnly={readOnly}
-            onTransition={handleTransition}
+            onTransition={handleStageTransition}
+            userColor={getRoleColor(currentUser.role)}
           />
         )
       case 'discussion':
@@ -96,7 +149,8 @@ export function FeatureWorkspace({ feature, projectName, pageName, repo, readOnl
             featureId={feature.id}
             version={{ major: activeVer.major, minor: activeVer.minor }}
             readOnly={readOnly}
-            onTransition={handleTransition}
+            currentUser={currentUser}
+            onTransition={handleStageTransition}
           />
         )
       case 'final':
@@ -108,7 +162,7 @@ export function FeatureWorkspace({ feature, projectName, pageName, repo, readOnl
             featureId={feature.id}
             version={{ major: activeVer.major, minor: activeVer.minor }}
             readOnly={readOnly}
-            onTransition={handleTransition}
+            onTransition={handleStageTransition}
           />
         )
       case 'published':
@@ -118,7 +172,7 @@ export function FeatureWorkspace({ feature, projectName, pageName, repo, readOnl
             <p className={styles.publishedText}>Фича передана в разработку. Доступна для просмотра.</p>
             {!readOnly && (
               <div className={styles.publishedActions}>
-                <button className={styles.reopenBtn} onClick={() => handleTransition('analytics')}>
+                <button className={styles.reopenBtn} onClick={() => handleStageClick('analytics')}>
                   Переоткрыть (v{activeVer.major + 1}.0)
                 </button>
               </div>
@@ -128,7 +182,7 @@ export function FeatureWorkspace({ feature, projectName, pageName, repo, readOnl
       default:
         return (
           <div className={styles.contentPlaceholder}>
-            <p className={styles.placeholderText}>Стадия не поддерживается: {currentStage}</p>
+            <p className={styles.placeholderText}>Стадия не поддерживается: {displayStage}</p>
           </div>
         )
     }
@@ -161,13 +215,15 @@ export function FeatureWorkspace({ feature, projectName, pageName, repo, readOnl
         <div className={styles.stagesList}>
           {ACTIVE_STAGES.map(stage => {
             const dotIdx = getDotProgress(stage)
-            const isActive = stage === currentStage
-            const isCompleted = getDotProgress(currentStage) > dotIdx
+            const isActive = stage === displayStage
+            const isCompleted = getDotProgress(featureStage) > dotIdx
+            const isReachable = !readOnly && canTransition(displayStage, stage)
 
             return (
               <div
                 key={stage}
-                className={`${styles.stageItem} ${isActive ? styles.stageActive : ''} ${isCompleted ? styles.stageCompleted : ''}`}
+                className={`${styles.stageItem} ${isActive ? styles.stageActive : ''} ${isCompleted ? styles.stageCompleted : ''} ${isReachable && !isActive ? styles.stageClickable : ''}`}
+                onClick={() => isReachable && !isActive && handleStageClick(stage)}
               >
                 <ProgressDots
                   stage={isCompleted ? stage : isActive ? stage : 'draft'}
@@ -179,6 +235,11 @@ export function FeatureWorkspace({ feature, projectName, pageName, repo, readOnl
         </div>
 
         <div className={styles.sidebarFooter}>
+          {!readOnly && (displayStage === 'analytics' || displayStage === 'prototypes') && (
+            <button className={styles.demoBtn} onClick={handleDemo}>
+              Демо
+            </button>
+          )}
           <button className={styles.backBtn} onClick={onBack}>
             ← Назад к проекту
           </button>

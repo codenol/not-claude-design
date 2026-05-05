@@ -47,6 +47,10 @@ export const TRANSITIONS: StageTransition[] = [
   { from: 'discussion', to: 'prototypes', label: 'Вернуть в макеты', bumpsMinor: true },
   { from: 'prototypes', to: 'analytics', label: 'Вернуть в аналитику', bumpsMinor: true },
 
+  { from: 'final', to: 'discussion', label: 'Вернуть в обсуждение', bumpsMinor: true },
+  { from: 'final', to: 'prototypes', label: 'Вернуть в макеты', bumpsMinor: true },
+  { from: 'final', to: 'analytics', label: 'Вернуть в аналитику', bumpsMinor: true },
+
   { from: 'published', to: 'analytics', label: 'Переоткрыть', bumpsMinor: false },
 ]
 

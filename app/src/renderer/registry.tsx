@@ -20,15 +20,15 @@ import {
 export function renderBlock(block: ContentBlock): React.ReactNode {
   switch (block.type) {
     case 'section': {
-      const b = block as { heading?: string; direction?: string; gap?: number; items: ContentBlock[] }
+      const b = block as { heading?: string; direction?: string; gap?: number; items?: ContentBlock[] }
       return <SectionBlock key={Math.random()} heading={b.heading} direction={b.direction as 'row' | 'col'} gap={b.gap}>{renderBlocks(b.items)}</SectionBlock>
     }
     case 'row': {
-      const b = block as { gap?: number; items: ContentBlock[] }
+      const b = block as { gap?: number; items?: ContentBlock[] }
       return <ContainerBlock key={Math.random()} direction="row" gap={b.gap}>{renderBlocks(b.items)}</ContainerBlock>
     }
     case 'col': {
-      const b = block as { gap?: number; items: ContentBlock[] }
+      const b = block as { gap?: number; items?: ContentBlock[] }
       return <ContainerBlock key={Math.random()} direction="col" gap={b.gap}>{renderBlocks(b.items)}</ContainerBlock>
     }
     case 'button':
@@ -54,7 +54,7 @@ export function renderBlock(block: ContentBlock): React.ReactNode {
     case 'drawer-trigger':
       return <DrawerTriggerBlock key={Math.random()} config={block as Parameters<typeof DrawerTriggerBlock>[0]['config']} />
     case 'form': {
-      const b = block as { gap?: number; items: ContentBlock[] }
+      const b = block as { gap?: number; items?: ContentBlock[] }
       return <FormBlock key={Math.random()} gap={b.gap}>{renderBlocks(b.items)}</FormBlock>
     }
     default:
@@ -62,6 +62,7 @@ export function renderBlock(block: ContentBlock): React.ReactNode {
   }
 }
 
-export function renderBlocks(blocks: ContentBlock[]): React.ReactNode[] {
+export function renderBlocks(blocks: ContentBlock[] | undefined): React.ReactNode[] {
+  if (!blocks || !Array.isArray(blocks)) return []
   return blocks.map(block => renderBlock(block))
 }

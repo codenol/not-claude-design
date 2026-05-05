@@ -1,10 +1,21 @@
+import { useEffect, useState } from 'react'
 import type { Entity, EntityField, EntityRelation } from '../features/types'
 import { Button, Input, Dropdown } from '../components'
 import styles from './DataModelEditor.module.css'
 
+const PHRASES = [
+  'Ща-ща-ща…', 'Уже почти…', 'Ещё чуть-чуть…', 'Секунду…', 'Скоро будет…',
+  'Думаю…', 'Почти готово…', 'Собираю…', 'Минуточку…', 'Подожди чуток…',
+  'Готовлю ответ…', 'Нейроны греются…', 'Формулирую…', 'Сейчас-сейчас…',
+  'Загружаю мысль…', 'Обрабатываю…', 'Почти на финише…', 'Пару секунд…',
+  'Финишная прямая…', 'Шестерёнки крутятся…',
+]
+
 export interface DataModelEditorProps {
   entities: Entity[]
   onChange: (entities: Entity[]) => void
+  onFillWithAi?: () => void
+  aiLoading?: boolean
 }
 
 const TYPE_OPTIONS = [
@@ -22,7 +33,18 @@ const REL_OPTIONS = [
   { label: 'N:M', value: 'N:M' },
 ]
 
-export function DataModelEditor({ entities, onChange }: DataModelEditorProps) {
+export function DataModelEditor({ entities, onChange, onFillWithAi, aiLoading }: DataModelEditorProps) {
+  const [aiPhrase, setAiPhrase] = useState('')
+
+  useEffect(() => {
+    if (!aiLoading) { setAiPhrase(''); return }
+    setAiPhrase(PHRASES[Math.floor(Math.random() * PHRASES.length)])
+    const interval = setInterval(() => {
+      setAiPhrase(PHRASES[Math.floor(Math.random() * PHRASES.length)])
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [aiLoading])
+
   const add = () => {
     onChange([
       ...entities,
@@ -80,16 +102,30 @@ export function DataModelEditor({ entities, onChange }: DataModelEditorProps) {
     <div className={styles.container}>
       <div className={styles.header}>
         <h2 className={styles.title}>Модель данных</h2>
-        <Button sentiment="accent" size="small" onClick={add}>+ Сущность</Button>
+        <div className={styles.headerButtons}>
+          <Button sentiment="accent" size="small" onClick={add}>+ Сущность</Button>
+          {onFillWithAi && (
+            <Button sentiment="accent" type="outline" size="small" onClick={onFillWithAi} disabled={aiLoading}>
+              {aiLoading ? '...' : 'Заполнить с ИИ'}
+            </Button>
+          )}
+        </div>
       </div>
 
-      {entities.length === 0 && (
+      {aiLoading && (
+        <div className={styles.aiLoading}>
+          <p className={styles.aiLoadingHint}>Это может занять до минуты</p>
+          <p className={styles.aiLoadingPhrase}>{aiPhrase}</p>
+        </div>
+      )}
+
+      {entities.length === 0 && !aiLoading && (
         <p className={styles.empty}>Нет сущностей.</p>
       )}
 
       <div className={styles.list}>
         {entities.map((e, ei) => (
-          <div key={ei} className={styles.card}>
+          <div key={ei} className={`${styles.card} ${e._aiGenerated ? styles.aiCard : ''}`}>
             <div className={styles.cardHeader}>
               <Input
                 placeholder="Название сущности"

@@ -1,11 +1,22 @@
+import { useEffect, useState } from 'react'
 import type { ScreenDef, ScreenKeyElement } from '../features/types'
 import { Button, Input, Dropdown } from '../components'
 import styles from './ScreenInventoryEditor.module.css'
+
+const PHRASES = [
+  'Ща-ща-ща…', 'Уже почти…', 'Ещё чуть-чуть…', 'Секунду…', 'Скоро будет…',
+  'Думаю…', 'Почти готово…', 'Собираю…', 'Минуточку…', 'Подожди чуток…',
+  'Готовлю ответ…', 'Нейроны греются…', 'Формулирую…', 'Сейчас-сейчас…',
+  'Загружаю мысль…', 'Обрабатываю…', 'Почти на финише…', 'Пару секунд…',
+  'Финишная прямая…', 'Шестерёнки крутятся…',
+]
 
 export interface ScreenInventoryEditorProps {
   screens: ScreenDef[]
   useCaseNames: { id: string; title: string }[]
   onChange: (screens: ScreenDef[]) => void
+  onFillWithAi?: () => void
+  aiLoading?: boolean
 }
 
 const ELEM_TYPES = [
@@ -21,7 +32,18 @@ const ELEM_TYPES = [
   { label: 'text', value: 'text' },
 ]
 
-export function ScreenInventoryEditor({ screens, useCaseNames, onChange }: ScreenInventoryEditorProps) {
+export function ScreenInventoryEditor({ screens, useCaseNames, onChange, onFillWithAi, aiLoading }: ScreenInventoryEditorProps) {
+  const [aiPhrase, setAiPhrase] = useState('')
+
+  useEffect(() => {
+    if (!aiLoading) { setAiPhrase(''); return }
+    setAiPhrase(PHRASES[Math.floor(Math.random() * PHRASES.length)])
+    const interval = setInterval(() => {
+      setAiPhrase(PHRASES[Math.floor(Math.random() * PHRASES.length)])
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [aiLoading])
+
   const add = () => {
     onChange([
       ...screens,
@@ -68,16 +90,30 @@ export function ScreenInventoryEditor({ screens, useCaseNames, onChange }: Scree
     <div className={styles.container}>
       <div className={styles.header}>
         <h2 className={styles.title}>Экраны</h2>
-        <Button sentiment="accent" size="small" onClick={add}>+ Экран</Button>
+        <div className={styles.headerButtons}>
+          <Button sentiment="accent" size="small" onClick={add}>+ Экран</Button>
+          {onFillWithAi && (
+            <Button sentiment="accent" type="outline" size="small" onClick={onFillWithAi} disabled={aiLoading}>
+              {aiLoading ? '...' : 'Заполнить с ИИ'}
+            </Button>
+          )}
+        </div>
       </div>
 
-      {screens.length === 0 && (
+      {aiLoading && (
+        <div className={styles.aiLoading}>
+          <p className={styles.aiLoadingHint}>Это может занять до минуты</p>
+          <p className={styles.aiLoadingPhrase}>{aiPhrase}</p>
+        </div>
+      )}
+
+      {screens.length === 0 && !aiLoading && (
         <p className={styles.empty}>Нет экранов.</p>
       )}
 
       <div className={styles.list}>
         {screens.map((s, si) => (
-          <div key={si} className={styles.card}>
+          <div key={si} className={`${styles.card} ${s._aiGenerated ? styles.aiCard : ''}`}>
             <div className={styles.cardHeader}>
               <Input
                 placeholder="Название экрана"

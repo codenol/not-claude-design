@@ -8,7 +8,7 @@ import { ScreenInventoryEditor } from '../prd-builder/ScreenInventoryEditor'
 import { VariantMatrixEditor } from '../prd-builder/VariantMatrixEditor'
 import { CompletenessCheck, checkPrd } from '../prd-builder/CompletenessCheck'
 import { Button } from '../components'
-import { improveDescription } from '../services/llmService'
+import { improveDescription, fillSectionWithAi } from '../services/llmService'
 import styles from './AnalyticsStage.module.css'
 
 export interface AnalyticsStageProps {
@@ -50,12 +50,13 @@ export function AnalyticsStage({ repo, projectId, pageId, featureId, version, pr
   const [descSaved, setDescSaved] = useState(false)
   const [toast, setToast] = useState('')
   const [improveState, setImproveState] = useState<'idle' | 'loading' | 'result'>('idle')
-  const [improveText, setImproveText] = useState('')
+  const [_improveText, setImproveText] = useState('')
   const [originalDesc, setOriginalDesc] = useState('')
   const [improveError, setImproveError] = useState('')
   const [improvePhrase, setImprovePhrase] = useState('')
   const [loaded, setLoaded] = useState(false)
-  const saveTimer = useRef<ReturnType<typeof setTimeout>>()
+  const [aiLoadingSections, setAiLoadingSections] = useState<Set<string>>(new Set())
+  const saveTimer = useRef<number | undefined>(undefined)
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
   useEffect(() => {
@@ -106,18 +107,22 @@ export function AnalyticsStage({ repo, projectId, pageId, featureId, version, pr
     showToast('Сохранено')
   }
 
-  const PHRASES = ['Ща…', 'Почти-почти…', 'Вот-вот уже…', 'Думаю…', 'Ещё секунду…', 'Собираю мысли…']
+  const PHRASES = [
+    'Ща-ща-ща…', 'Уже почти…', 'Ещё чуть-чуть…', 'Секунду…', 'Скоро будет…',
+    'Думаю…', 'Почти готово…', 'Собираю…', 'Минуточку…', 'Подожди чуток…',
+    'Готовлю ответ…', 'Нейроны греются…', 'Формулирую…', 'Сейчас-сейчас…',
+    'Загружаю мысль…', 'Обрабатываю…', 'Почти на финише…', 'Пару секунд…',
+    'Финишная прямая…', 'Шестерёнки крутятся…',
+  ]
 
   const handleImprove = async () => {
     setImproveState('loading')
     setImproveError('')
     setOriginalDesc(description)
-    setImprovePhrase('Ща…')
+    setImprovePhrase(PHRASES[Math.floor(Math.random() * PHRASES.length)])
 
-    let phraseIdx = 0
     const interval = setInterval(() => {
-      phraseIdx = (phraseIdx + 1) % PHRASES.length
-      setImprovePhrase(PHRASES[phraseIdx])
+      setImprovePhrase(PHRASES[Math.floor(Math.random() * PHRASES.length)])
     }, 1000)
 
     try {
@@ -144,6 +149,46 @@ export function AnalyticsStage({ repo, projectId, pageId, featureId, version, pr
     setImproveState('idle')
     setImproveText('')
   }
+
+  const handleFillSection = useCallback(async (section: string) => {
+    setAiLoadingSections(prev => new Set(prev).add(section))
+    setImproveError('')
+    try {
+      const items = await fillSectionWithAi(prd, section, {
+        projectName,
+        pageName,
+        featureDescription: description,
+      })
+      const withIds = items.map((item: any) => ({ ...item, id: section === 'variants' ? `d${Date.now()}_${Math.random().toString(36).slice(2, 8)}` : `${section === 'personas' ? 'p' : section === 'useCases' ? 'uc' : section === 'dataModel' ? 'e' : section === 'screens' ? 's' : 'd'}${Date.now()}_${Math.random().toString(36).slice(2, 8)}`, _aiGenerated: true }))
+      const updated = { ...prd }
+      switch (section) {
+        case 'personas':
+          updated.personas = [...prd.personas, ...withIds]
+          break
+        case 'useCases':
+          updated.useCases = [...prd.useCases, ...withIds]
+          break
+        case 'dataModel':
+          updated.dataModel = [...prd.dataModel, ...withIds]
+          break
+        case 'screens':
+          updated.screenInventory = [...prd.screenInventory, ...withIds]
+          break
+        case 'variants':
+          updated.variantMatrix = [...prd.variantMatrix, ...withIds]
+          break
+      }
+      autoSavePrd(updated)
+    } catch (err: any) {
+      setImproveError(err.message || 'Не удалось заполнить раздел')
+    } finally {
+      setAiLoadingSections(prev => {
+        const next = new Set(prev)
+        next.delete(section)
+        return next
+      })
+    }
+  }, [prd, autoSavePrd, projectName, pageName, description])
 
   const handleTransition = () => {
     onTransition('prototypes')
@@ -194,16 +239,24 @@ export function AnalyticsStage({ repo, projectId, pageId, featureId, version, pr
                 disabled={improveState === 'loading'}
               />
               {!readOnly && improveState !== 'result' && (
-                <div className={styles.descActions}>
-                  <Button sentiment="accent" size="large" onClick={handleSaveDesc} disabled={saving || !description.trim()}>
-                    {saving ? 'Сохранение...' : 'Сохранить'}
-                  </Button>
-                  {descSaved && (
-                    <Button sentiment="secondary" size="small" type="ghost" onClick={handleImprove} disabled={improveState === 'loading'}>
-                      {improveState === 'loading' ? improvePhrase : 'Улучшить с ИИ'}
-                    </Button>
+                <>
+                  {improveState === 'loading' && (
+                    <div className={styles.aiLoadingDesc}>
+                      <p className={styles.aiLoadingHint}>Это может занять до минуты</p>
+                      <p className={styles.aiLoadingPhrase}>{improvePhrase}</p>
+                    </div>
                   )}
-                </div>
+                  <div className={styles.descActions}>
+                    <Button sentiment="accent" size="large" onClick={handleSaveDesc} disabled={saving || !description.trim() || improveState === 'loading'}>
+                      {saving ? 'Сохранение...' : 'Сохранить'}
+                    </Button>
+                    {descSaved && (
+                      <Button sentiment="secondary" size="small" type="ghost" onClick={handleImprove} disabled={improveState === 'loading'}>
+                        {improveState === 'loading' ? '...' : 'Улучшить с ИИ'}
+                      </Button>
+                    )}
+                  </div>
+                </>
               )}
               {improveState === 'result' && (
                 <div className={styles.descActions}>
@@ -219,6 +272,8 @@ export function AnalyticsStage({ repo, projectId, pageId, featureId, version, pr
             <PersonaEditor
               personas={prd.personas}
               onChange={personas => autoSavePrd({ ...prd, personas })}
+              onFillWithAi={readOnly ? undefined : () => handleFillSection('personas')}
+              aiLoading={aiLoadingSections.has('personas')}
             />
           )}
           {activeTab === 'usecases' && (
@@ -227,12 +282,16 @@ export function AnalyticsStage({ repo, projectId, pageId, featureId, version, pr
               personaNames={personaNames}
               screenNames={screenNames.map(s => s.title)}
               onChange={useCases => autoSavePrd({ ...prd, useCases })}
+              onFillWithAi={readOnly ? undefined : () => handleFillSection('useCases')}
+              aiLoading={aiLoadingSections.has('useCases')}
             />
           )}
           {activeTab === 'datamodel' && (
             <DataModelEditor
               entities={prd.dataModel}
               onChange={dataModel => autoSavePrd({ ...prd, dataModel })}
+              onFillWithAi={readOnly ? undefined : () => handleFillSection('dataModel')}
+              aiLoading={aiLoadingSections.has('dataModel')}
             />
           )}
           {activeTab === 'screens' && (
@@ -240,15 +299,21 @@ export function AnalyticsStage({ repo, projectId, pageId, featureId, version, pr
               screens={prd.screenInventory}
               useCaseNames={useCaseNames}
               onChange={screenInventory => autoSavePrd({ ...prd, screenInventory })}
+              onFillWithAi={readOnly ? undefined : () => handleFillSection('screens')}
+              aiLoading={aiLoadingSections.has('screens')}
             />
           )}
           {activeTab === 'variants' && (
             <VariantMatrixEditor
               dimensions={prd.variantMatrix}
               onChange={variantMatrix => autoSavePrd({ ...prd, variantMatrix })}
+              onFillWithAi={readOnly ? undefined : () => handleFillSection('variants')}
+              aiLoading={aiLoadingSections.has('variants')}
             />
           )}
         </div>
+
+        {improveError && <p className={styles.errorText}>{improveError}</p>}
       </div>
 
       <div className={styles.sidebar}>

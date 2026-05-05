@@ -8,7 +8,8 @@ import { initStorage } from './services/initNorka'
 import { NorkaRepo } from './services/norkaRepo'
 import { NoopGit } from './services/norkaGit'
 import { useUrlRouter } from './services/useUrlRouter'
-import type { Project, Page, Feature } from './features/types'
+import { getLatestVersion } from './features/workflowMachine'
+import type { Project, Page, Feature, FeatureStage } from './features/types'
 import type { UserInfo } from './services/roleConfig'
 import './App.css'
 
@@ -21,8 +22,15 @@ function loadSavedUser(): UserInfo | null {
   } catch { return null }
 }
 
-function featureUrl(projectId: string, pageId: string, featureId: string) {
-  return `/projects/${projectId}/${pageId}/${featureId}`
+function featureUrl(projectId: string, pageId: string, featureId: string, stage?: FeatureStage, version?: { major: number; minor: number }) {
+  let base = `/projects/${projectId}/${pageId}/${featureId}`
+  if (version) {
+    base += `/v${version.major}.${version.minor}`
+  }
+  if (stage) {
+    base += `/${stage}`
+  }
+  return base
 }
 
 function versionUrl(projectId: string, pageId: string, featureId: string, major: number, minor: number) {
@@ -83,14 +91,16 @@ function App() {
   }, [repo])
 
   useEffect(() => {
-    if (repo && (route.page === 'projects' || route.page === 'entry')) {
+    if (repo && (route.page === 'projects' || route.page === 'entry' || route.page === 'feature' || route.page === 'feature-version')) {
       loadProjects()
     }
   }, [repo, route.page, loadProjects])
 
   const handleSelectFeature = useCallback((projectId: string, pageId: string, featureId: string) => {
-    navigate(featureUrl(projectId, pageId, featureId))
-  }, [navigate])
+    const feature = features.find(f => f.id === featureId)
+    const ver = feature ? getLatestVersion(feature) : null
+    navigate(featureUrl(projectId, pageId, featureId, undefined, ver ? { major: ver.major, minor: ver.minor } : undefined))
+  }, [navigate, features])
 
   const handleSelectVersion = useCallback((projectId: string, pageId: string, featureId: string, major: number, minor: number) => {
     navigate(versionUrl(projectId, pageId, featureId, major, minor))
@@ -153,17 +163,22 @@ function App() {
 
       if (!project || !page || !feature) {
         return (
-          <div style={{ padding: 20 }}>
-            <p>Фича не найдена</p>
-            <button onClick={() => navigate('/projects')}>← Назад</button>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', color: '#9ca3af', fontSize: 14 }}>
+            Загрузка...
           </div>
         )
       }
 
       const isReadOnly = route.page === 'feature-version'
-      const viewVersion = isReadOnly
-        ? { major: route.major, minor: route.minor, stage: feature.versions.find(v => v.major === route.major && v.minor === route.minor)?.stage || feature.status }
+      const viewedVersion = isReadOnly
+        ? feature.versions.find(v => v.major === route.major && v.minor === route.minor)
+        : null
+      const viewVersion = viewedVersion
+        ? { major: viewedVersion.major, minor: viewedVersion.minor, stage: viewedVersion.stage }
         : undefined
+
+      const latestVersion = getLatestVersion(feature)
+      const isLatestVersion = !isReadOnly || (latestVersion && latestVersion.major === route.major && latestVersion.minor === route.minor)
 
       return (
         <FeatureWorkspace
@@ -171,9 +186,17 @@ function App() {
           projectName={project.name}
           pageName={page.name}
           repo={repo!}
-          readOnly={isReadOnly}
+          readOnly={isReadOnly && !isLatestVersion}
           viewVersion={viewVersion}
+          explicitStage={route.stage}
+          currentUser={user}
           onBack={() => navigate('/projects')}
+          onStageChange={(to, newVer) => {
+            const ver = newVer ?? (route.page === 'feature-version'
+              ? { major: route.major!, minor: route.minor! }
+              : (latestVersion ? { major: latestVersion.major, minor: latestVersion.minor } : { major: 1, minor: 0 }))
+            navigate(featureUrl(route.projectId!, route.pageId!, route.featureId!, to, ver))
+          }}
           onFeatureUpdate={(updated) => {
             setFeatures(prev => prev.map(f => f.id === updated.id ? updated : f))
           }}

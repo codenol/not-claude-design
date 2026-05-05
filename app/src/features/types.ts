@@ -99,6 +99,7 @@ export interface Persona {
   role: string
   goal: string
   painPoints: string[]
+  _aiGenerated?: boolean
 }
 
 export interface UseCaseStep {
@@ -121,6 +122,7 @@ export interface UseCase {
   mainFlow: UseCaseStep[]
   errorFlows: UseCaseErrorFlow[]
   relatedFeatures: string[]
+  _aiGenerated?: boolean
 }
 
 export interface EntityField {
@@ -139,6 +141,7 @@ export interface Entity {
   name: string
   fields: EntityField[]
   relations: EntityRelation[]
+  _aiGenerated?: boolean
 }
 
 export interface ScreenKeyElement {
@@ -153,11 +156,13 @@ export interface ScreenDef {
   purpose: string
   relatedUseCases: string[]
   keyElements: ScreenKeyElement[]
+  _aiGenerated?: boolean
 }
 
 export interface VariantDimension {
   axis: string
   description: string
+  _aiGenerated?: boolean
 }
 
 export interface PRD {
@@ -175,12 +180,16 @@ export interface PrototypeVariant {
   name: string
   yaml: string
   params: Record<string, string>
+  request?: string
 }
 
 // --- Comments ---
 
 export interface CommentMessage {
   author: NorkaRole
+  authorId?: string
+  authorName?: string
+  authorInitials?: string
   text: string
   timestamp: string
 }

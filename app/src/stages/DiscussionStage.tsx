@@ -1,13 +1,12 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import yaml from 'js-yaml'
-import type { FeatureStage, CommentThread as CommentThreadType, NorkaRole } from '../features/types'
+import { Agentation, type Annotation } from 'agentation'
+import type { FeatureStage, CommentThread as CommentThreadType } from '../features/types'
 import type { NorkaRepo } from '../services/norkaRepo'
+import type { UserInfo } from '../services/roleConfig'
 import type { ScreenConfig } from '../types/screen'
 import { YamlRenderer } from '../renderer/YamlRenderer'
 import { Button } from '../components'
-import { FloatingPanel } from '../comments/FloatingPanel'
-import { PinMarker } from '../comments/PinMarker'
-import { CommentThread } from '../comments/CommentThread'
 import { getRoleColor } from '../services/roleConfig'
 import styles from './DiscussionStage.module.css'
 
@@ -18,6 +17,7 @@ export interface DiscussionStageProps {
   featureId: string
   version: { major: number; minor: number }
   readOnly?: boolean
+  currentUser: UserInfo
   onTransition: (to: FeatureStage) => void
 }
 
@@ -29,14 +29,38 @@ function parseConfig(yamlStr: string): ScreenConfig | null {
   } catch { return null }
 }
 
-export function DiscussionStage({ repo, projectId, pageId, featureId, version, readOnly, onTransition }: DiscussionStageProps) {
+function commentToAnnotation(
+  c: CommentThreadType,
+  variantId: string
+): Annotation {
+  const lastMsg = c.messages[c.messages.length - 1]
+  return {
+    id: c.id,
+    x: Math.round(c.x),
+    y: Math.round(c.y),
+    comment: lastMsg?.text ?? '',
+    messages: c.messages.map((m, i) => ({
+      id: `${c.id}_msg_${i}`,
+      authorRole: m.author ?? '',
+      authorName: m.authorName ?? '',
+      authorInitials: m.authorInitials ?? '',
+      roleColor: getRoleColor(m.author ?? 'ПО'),
+      text: m.text,
+      timestamp: new Date(m.timestamp).getTime(),
+      forLLM: false,
+    })),
+    element: 'Комментарий',
+    elementPath: `variant:${variantId} click@${c.x},${c.y}`,
+    timestamp: Date.now(),
+  }
+}
+
+export function DiscussionStage({ repo, projectId, pageId, featureId, version, readOnly, currentUser, onTransition }: DiscussionStageProps) {
   const [variants, setVariants] = useState<{ id: string; name: string; yaml: string }[]>([])
   const [activeIdx, setActiveIdx] = useState(0)
   const [loaded, setLoaded] = useState(false)
-  const [comments, setComments] = useState<CommentThreadType[]>([])
-  const [newPin, setNewPin] = useState<{ x: number; y: number } | null>(null)
-  const [newPinText, setNewPinText] = useState('')
   const [selecting, setSelecting] = useState(false)
+  const [initialAnnotations, setInitialAnnotations] = useState<Annotation[]>([])
   const previewRef = useRef<HTMLDivElement>(null)
 
   const loadData = useCallback(async () => {
@@ -44,10 +68,15 @@ export function DiscussionStage({ repo, projectId, pageId, featureId, version, r
     const ver = await repo.getVersion(projectId, pageId, featureId, version.major, version.minor)
     if (ver) {
       setVariants(ver.variants.map(v => ({ id: v.id, name: v.name, yaml: v.yaml })))
-      setComments(ver.comments)
+      // Convert comments to annotations for active variant
+      const activeVar = ver.variants[activeIdx]
+      if (activeVar) {
+        const variantComments = ver.comments.filter(c => c.variantId === activeVar.id)
+        setInitialAnnotations(variantComments.map(c => commentToAnnotation(c, activeVar.id)))
+      }
     }
     setLoaded(true)
-  }, [repo, projectId, pageId, featureId, version])
+  }, [repo, projectId, pageId, featureId, version, activeIdx])
 
   useEffect(() => {
     loadData()
@@ -59,52 +88,7 @@ export function DiscussionStage({ repo, projectId, pageId, featureId, version, r
     return parseConfig(activeVariant.yaml)
   }, [activeVariant])
 
-  const variantComments = comments.filter(c => c.variantId === activeVariant?.id)
-
-  const handlePreviewClick = (e: React.MouseEvent) => {
-    if (readOnly) return
-    if (!previewRef.current || !activeVariant) return
-    const rect = previewRef.current.getBoundingClientRect()
-    const x = Math.round(e.clientX - rect.left + previewRef.current.scrollLeft)
-    const y = Math.round(e.clientY - rect.top + previewRef.current.scrollTop)
-    setNewPin({ x, y })
-    setNewPinText('')
-  }
-
-  const handleAddComment = () => {
-    if (!newPin || !activeVariant || !newPinText.trim()) return
-    const thread: CommentThreadType = {
-      id: `c${Date.now()}`,
-      variantId: activeVariant.id,
-      anchor: { type: 'yaml-node', path: `click@${newPin.x},${newPin.y}` },
-      x: newPin.x,
-      y: newPin.y,
-      messages: [{ author: 'Аналитик' as NorkaRole, text: newPinText.trim(), timestamp: new Date().toISOString() }],
-      resolved: false,
-    }
-    const updated = [...comments, thread]
-    setComments(updated)
-    repo.saveComments(projectId, pageId, featureId, version.major, version.minor, updated)
-    setNewPin(null)
-  }
-
-  const handleReply = (threadId: string, text: string) => {
-    const updated = comments.map(c => {
-      if (c.id !== threadId) return c
-      return {
-        ...c,
-        messages: [...c.messages, { author: 'ПО' as NorkaRole, text, timestamp: new Date().toISOString() }],
-      }
-    })
-    setComments(updated)
-    repo.saveComments(projectId, pageId, featureId, version.major, version.minor, updated)
-  }
-
-  const handleResolve = (threadId: string) => {
-    const updated = comments.map(c => c.id === threadId ? { ...c, resolved: true } : c)
-    setComments(updated)
-    repo.saveComments(projectId, pageId, featureId, version.major, version.minor, updated)
-  }
+  const storageKey = `feedback-annotations-${projectId}/${pageId}/${featureId}/v${version.major}.${version.minor}/${activeVariant?.id ?? ''}`
 
   const handleSelectFinal = async () => {
     if (!activeVariant) return
@@ -112,6 +96,8 @@ export function DiscussionStage({ repo, projectId, pageId, featureId, version, r
     await repo.selectVariant(projectId, pageId, featureId, version.major, version.minor, activeVariant.id)
     setSelecting(false)
   }
+
+  const roleColor = getRoleColor(currentUser.role)
 
   if (!loaded) return <div className={styles.loading}>Загрузка...</div>
 
@@ -127,7 +113,7 @@ export function DiscussionStage({ repo, projectId, pageId, featureId, version, r
       <div className={styles.toolbar}>
         <div className={styles.tabs}>
           {variants.map((v, i) => (
-            <button key={v.id} className={`${styles.tab} ${i === activeIdx ? styles.tabActive : ''}`} onClick={() => setActiveIdx(i)}>
+            <button key={v.id} className={`${styles.tab} ${i === activeIdx ? styles.tabActive : ''}`} onClick={() => { setActiveIdx(i); setInitialAnnotations([]) }}>
               {v.name}
             </button>
           ))}
@@ -151,45 +137,44 @@ export function DiscussionStage({ repo, projectId, pageId, featureId, version, r
       </div>
 
       <div className={styles.body}>
-        <div className={styles.preview} ref={previewRef} onClick={handlePreviewClick}>
+        <div className={styles.preview} ref={previewRef}>
           {config && <YamlRenderer config={config} />}
-          {variantComments.map(tc => (
-            <PinMarker key={tc.id} x={tc.x} y={tc.y} color={getRoleColor(tc.messages[0]?.author ?? 'ПО')} />
-          ))}
-          {newPin && (
-            <div style={{ position: 'absolute', left: newPin.x, top: newPin.y, zIndex: 20 }} onClick={e => e.stopPropagation()}>
-              <div className={styles.newCommentBox}>
-                <textarea
-                  className={styles.newCommentInput}
-                  value={newPinText}
-                  onChange={e => setNewPinText(e.target.value)}
-                  placeholder="Новый комментарий..."
-                  rows={2}
-                  autoFocus
-                />
-                <div className={styles.newCommentActions}>
-                  <button className={styles.cancelBtn} onClick={() => setNewPin(null)}>×</button>
-                  <button className={styles.sendBtn} onClick={handleAddComment}>→</button>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
-
-        <FloatingPanel title={`Комментарии (${variantComments.length})`}>
-          <div className={styles.commentsList}>
-            {variantComments.length === 0 && <p className={styles.noComments}>Нет комментариев. Кликните на макет чтобы добавить.</p>}
-            {variantComments.map(tc => (
-              <CommentThread
-                key={tc.id}
-                thread={tc}
-                onResolve={() => handleResolve(tc.id)}
-                onReply={text => handleReply(tc.id, text)}
-              />
-            ))}
-          </div>
-        </FloatingPanel>
       </div>
+
+      <Agentation
+        key={activeVariant?.id}
+        storageKey={storageKey}
+        color={roleColor}
+        userInfo={{
+          role: currentUser.role,
+          name: currentUser.name,
+          initials: currentUser.initials,
+          roleColor,
+        }}
+        scrollRef={previewRef}
+        initialAnnotations={initialAnnotations}
+        onSubmit={(output, annotations) => {
+          // Save all annotations back to repo as CommentThreads
+          const comments: CommentThreadType[] = annotations.map(a => ({
+            id: a.id,
+            variantId: activeVariant?.id ?? '',
+            anchor: { type: 'yaml-node', path: a.elementPath },
+            x: a.x,
+            y: a.y,
+            messages: (a.messages || []).map(m => ({
+              author: m.authorRole as any,
+              authorId: '',
+              authorName: m.authorName,
+              authorInitials: m.authorInitials,
+              text: m.text,
+              timestamp: new Date(m.timestamp).toISOString(),
+            })),
+            resolved: false,
+          }))
+          repo.saveComments(projectId, pageId, featureId, version.major, version.minor, comments)
+        }}
+      />
     </div>
   )
 }

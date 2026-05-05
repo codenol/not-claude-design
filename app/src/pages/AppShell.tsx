@@ -44,8 +44,8 @@ export function AppShell({ user, currentModule, onModuleChange, onLogout, childr
       {/* Minibar */}
       <div style={{
         width: 40, flexShrink: 0, display: 'flex', flexDirection: 'column',
-        borderRight: '1px solid var(--color-neutral-200, #e5e7eb)',
-        background: 'var(--color-bg-default, #ffffff)',
+        borderRight: '1px solid var(--sidebar-border-default, #dfe2e6)',
+        background: 'var(--sidebar-background-default, #ffffff)',
         alignItems: 'center', padding: '8px 0', gap: 2,
       }}>
         {/* Top slot */}
@@ -58,8 +58,8 @@ export function AppShell({ user, currentModule, onModuleChange, onLogout, childr
                 style={{
                   width: 32, height: 32, display: 'flex', alignItems: 'center', justifyContent: 'center',
                   border: 'none', borderRadius: 6, cursor: 'pointer',
-                  background: menuOpen ? 'var(--color-neutral-100, #f3f4f6)' : 'transparent',
-                  color: 'var(--color-neutral-400, #9ca3af)',
+                  background: menuOpen ? 'var(--sidebar-menubutton-background-hover, #eef1f5)' : 'transparent',
+                  color: 'var(--sidebar-menubutton-icon-default, #a8aab0)',
                 }}
               >
                 <Icon name="LayoutGrid" size={18} />
@@ -67,8 +67,8 @@ export function AppShell({ user, currentModule, onModuleChange, onLogout, childr
               {menuOpen && (
                 <div style={{
                   position: 'absolute', left: '100%', top: 0, zIndex: 100,
-                  background: 'var(--color-bg-default, #ffffff)',
-                  border: '1px solid var(--color-neutral-200, #e5e7eb)',
+                  background: 'var(--sidebar-background-default, #ffffff)',
+                  border: '1px solid var(--sidebar-border-default, #dfe2e6)',
                   borderRadius: 8, boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
                   minWidth: 160, padding: 4, display: 'flex', flexDirection: 'column', gap: 2,
                   marginLeft: 8,
@@ -98,7 +98,7 @@ export function AppShell({ user, currentModule, onModuleChange, onLogout, childr
             style={{
               width: 32, height: 32, display: 'flex', alignItems: 'center', justifyContent: 'center',
               border: 'none', borderRadius: 6, cursor: 'pointer',
-              background: 'transparent', color: 'var(--color-neutral-400, #9ca3af)',
+              background: 'transparent', color: 'var(--sidebar-menubutton-icon-default, #a8aab0)',
             }}
           >
             <Icon name={theme === 'dark' ? 'Sun' : 'Moon'} size={18} />
@@ -111,7 +111,7 @@ export function AppShell({ user, currentModule, onModuleChange, onLogout, childr
             style={{
               width: 32, height: 32, display: 'flex', alignItems: 'center', justifyContent: 'center',
               border: 'none', borderRadius: 6, cursor: 'pointer',
-              background: 'transparent', color: 'var(--color-neutral-400, #9ca3af)',
+              background: 'transparent', color: 'var(--sidebar-menubutton-icon-default, #a8aab0)',
             }}
           >
             <Icon name="Settings" size={18} />
@@ -133,21 +133,21 @@ export function AppShell({ user, currentModule, onModuleChange, onLogout, childr
             {userMenuOpen && (
               <div style={{
                 position: 'absolute', left: '100%', bottom: 0, zIndex: 100,
-                background: 'var(--color-bg-default, #ffffff)',
-                border: '1px solid var(--color-neutral-200, #e5e7eb)',
+                background: 'var(--sidebar-background-default, #ffffff)',
+                border: '1px solid var(--sidebar-border-default, #dfe2e6)',
                 borderRadius: 8, boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
                 minWidth: 200, padding: 8, marginLeft: 8,
               }}>
-                <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--color-text-default, #111827)', marginBottom: 4 }}>
+                <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--sidebar-text-default, #3f4146)', marginBottom: 4 }}>
                   {user.name}
                 </div>
-                <div style={{ fontSize: 12, color: 'var(--color-neutral-400, #9ca3af)', marginBottom: 8 }}>
+                <div style={{ fontSize: 12, color: 'var(--sidebar-menubutton-icon-default, #a8aab0)', marginBottom: 8 }}>
                   {user.role}
                 </div>
                 <button
                   onClick={() => { setUserMenuOpen(false); onLogout() }}
                   style={{
-                    width: '100%', padding: '4px 8px', border: '1px solid var(--color-neutral-200, #e5e7eb)',
+                    width: '100%', padding: '4px 8px', border: '1px solid var(--sidebar-border-default, #dfe2e6)',
                     borderRadius: 4, background: 'none', cursor: 'pointer',
                     fontSize: 13, color: '#ef4444', fontFamily: 'inherit',
                   }}
@@ -161,7 +161,7 @@ export function AppShell({ user, currentModule, onModuleChange, onLogout, childr
       </div>
 
       {/* Content */}
-      <div style={{ flex: 1, minWidth: 0, overflow: 'auto', height: '100vh' }}>
+      <div style={{ flex: 1, minWidth: 0, overflow: 'auto', height: '100vh', background: 'var(--layout-background-default)', color: 'var(--color-text-default)' }}>
         {children}
       </div>
     </div>
@@ -178,11 +178,11 @@ function ModuleMenuItem({ label, active, onClick }: { label: string; active?: bo
       style={{
         padding: '6px 10px', fontSize: 13, textAlign: 'left', fontFamily: 'inherit',
         border: 'none', borderRadius: 4, cursor: 'pointer',
-        background: active ? 'var(--color-neutral-100, #f3f4f6)' : 'none',
-        color: active ? 'var(--color-text-default, #111827)' : 'var(--color-text-default, #111827)',
+        background: active ? 'var(--sidebar-menubutton-background-hover, #eef1f5)' : 'none',
+        color: active ? 'var(--sidebar-text-default, #3f4146)' : 'var(--sidebar-text-default, #3f4146)',
         fontWeight: active ? 600 : 400,
       }}
-      onMouseEnter={e => { if (!active) (e.currentTarget as HTMLElement).style.background = 'var(--color-neutral-50, #f9fafb)' }}
+      onMouseEnter={e => { if (!active) (e.currentTarget as HTMLElement).style.background = 'var(--sidebar-menubutton-background-hover, #f8f9fb)' }}
       onMouseLeave={e => { if (!active) (e.currentTarget as HTMLElement).style.background = 'none' }}
     >
       {label}
